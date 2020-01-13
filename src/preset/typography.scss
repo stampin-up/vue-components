@@ -140,3 +140,15 @@ hr {
 .text-strikethrough {
   text-decoration: line-through !important;
 }
+
+.font-weight-bold.active-bolder {
+  &:hover, &:focus {
+    font-weight: 900 !important;
+  }
+}
+
+// default letter spacing 0px
+// wide .8
+.font-wide.v-btn .v-btn__content {
+  letter-spacing: .05rem;
+}

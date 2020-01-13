@@ -9,6 +9,7 @@
       'link': isText,
     }"
     :text="isText"
+    v-on="$listeners"
   >
     <slot />
   </VBtn>
@@ -88,6 +89,10 @@ export default class SBtn extends Vue {
     font-size: 1.286rem !important;
     height: 46px !important;
   }
+}
+
+.secondary-button {
+  &:hover { background-color: var(--v-hover-base) !important; }
 }
 
 </style>
