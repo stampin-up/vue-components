@@ -1,0 +1,7 @@
+
+
+@for $i from 9 through 24 {
+  [class*="font#{$i}"] {
+    font-size: map-get($font-sizes, $i) !important;
+  }
+}

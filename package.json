@@ -1,0 +1,45 @@
+{
+  "name": "@stampinup/vue-components",
+  "version": "1.0.0",
+  "description": "Stampinup vue components",
+  "license": "MIT",
+  "repository": "stampin-up/vue-components",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsc && nuxt-ts test/fixture",
+    "build": "tsc",
+    "lint": "eslint --ext .ts,.js,.vue .",
+    "test": "yarn lint",
+    "release": "yarn test && yarn build && standard-version && git push --follow-tags && npm publish"
+  },
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "sass": "^1.24.4",
+    "sass-loader": "^8.0.1",
+    "nuxt-property-decorator": "^2.5.0",
+    "vuetify": "^2.2.3"
+  },
+  "exports": {
+    "./": "./src/"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@nuxt/typescript-build": "latest",
+    "@nuxt/typescript-runtime": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "@types/jest": "latest",
+    "@types/sass": "latest",
+    "codecov": "latest",
+    "eslint": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "standard-version": "latest",
+    "ts-jest": "latest",
+    "typescript": "^3.7.4"
+  }
+}
