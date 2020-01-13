@@ -118,6 +118,9 @@
 .v-text-field {
   &.v-text-field--filled {
     .v-input__control {
+      .v-input__slot::before {
+        content: none;
+      }
       .v-input__slot::before,
       .v-input__slot::after {
         border: none;
