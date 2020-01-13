@@ -61,25 +61,25 @@ h2 {
 }
 
 h3 {
-  font-size: 1.643rem;
+  font-size: map-get($font-sizes, 23);
   font-weight: 700; // semi-bold
   text-transform: uppercase;
 }
 
 h4 {
-  font-size: 1.643rem;
+  font-size: map-get($font-sizes, 23);
   font-weight: 900;
   text-transform: uppercase;
 }
 
 h5 {
-  font-size: 1.429rem;
+  font-size: map-get($font-sizes, 20);
   font-weight: 900;
   text-transform: uppercase;
 }
 
 h6 {
-  font-size: 1.286rem;
+  font-size: map-get($font-sizes, 18);
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -96,16 +96,16 @@ hr {
   h1 { font-size: 3.429rem; }
   h2 { font-size: 2.286rem; }
   h3 { font-size: 1.714rem; }
-  h4 { font-size: 1.25rem; }
-  h5 { font-size: 1.357rem; }
+  h4 { font-size: map-get($font-sizes, 21); }
+  h5 { font-size: map-get($font-sizes, 19); }
 }
 
 @media only screen and (max-width: 599px) {
   h1 { font-size: 2.286rem; }
   h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.25rem; }
-  h4 { font-size: 1.25rem; }
-  h5 { font-size: 1.357rem; }
+  h3 { font-size: map-get($font-sizes, 21); }
+  h4 { font-size: map-get($font-sizes, 21); }
+  h5 { font-size: map-get($font-sizes, 19); }
 }
 
 .subheader {
@@ -151,4 +151,9 @@ hr {
 // wide .8
 .font-wide.v-btn .v-btn__content {
   letter-spacing: .05rem;
+}
+@media #{map-get($display-breakpoints, 'sm-and-down')}  {
+  .subheader {
+    font-size: map-get($font-sizes, 14) !important;
+  }
 }
