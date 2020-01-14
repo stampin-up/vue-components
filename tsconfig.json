@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "lib": ["dom", "esnext"],
+    "target": "es2018",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "outDir": "dist",
     "declaration": true,
     "sourceMap": true,
@@ -14,7 +17,16 @@
     "noImplicitReturns": true,
     "stripInternal": true,
     "experimentalDecorators": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "typeRoots": [
+      "./shims"
+    ],
+    "types": [
+      "@types/node",
+      "@types/jest"
+    ]
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

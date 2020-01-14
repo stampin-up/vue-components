@@ -11,8 +11,8 @@
     "dev": "tsc && nuxt-ts test/fixture",
     "build": "tsc",
     "lint": "eslint --ext .ts,.js,.vue .",
-    "test": "yarn lint",
-    "release": "yarn test && standard-version && git push --follow-tags && npm publish"
+    "test": "jest test",
+    "release": "yarn lint && yarn test && standard-version && git push --follow-tags && npm publish"
   },
   "files": [
     "src"
@@ -21,7 +21,8 @@
     "sass": "^1.24.4",
     "sass-loader": "^8.0.1",
     "nuxt-property-decorator": "^2.5.0",
-    "vuetify": "^2.2.3"
+    "vuetify": "^2.2.3",
+    "vue": "^2.6.11"
   },
   "exports": {
     "./": "./src/"
@@ -40,6 +41,9 @@
     "jest": "latest",
     "standard-version": "latest",
     "ts-jest": "latest",
+    "vue-jest": "^4.0.0-beta.2",
+    "util": "^0.12.1",
+    "@vue/test-utils": "^1.0.0-beta.30",
     "typescript": "^3.7.4"
   }
 }
