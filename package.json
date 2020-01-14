@@ -42,6 +42,7 @@
     "standard-version": "latest",
     "ts-jest": "latest",
     "vue-jest": "^4.0.0-beta.2",
+    "vue-template-compiler": "^2.6.11",
     "util": "^0.12.1",
     "@vue/test-utils": "^1.0.0-beta.30",
     "typescript": "^3.7.4"

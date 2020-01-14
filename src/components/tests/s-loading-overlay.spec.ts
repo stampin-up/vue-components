@@ -3,6 +3,7 @@ import { Vue } from 'vue/types/vue'
 import SLoadingOverlay from '~/components/SLoadingOverlay.vue'
 
 let localVue: typeof Vue
+
 describe('SLoadingOverlay', () => {
   let component: Wrapper<SLoadingOverlay>
   const spinnerSize = '65'
