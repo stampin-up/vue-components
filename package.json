@@ -8,10 +8,11 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "tsc && nuxt-ts test/fixture",
     "build": "tsc",
     "lint": "eslint --ext .ts,.js,.vue .",
     "test": "jest test",
+    "demo:build": "nuxt-ts build demo",
+    "demo:dev": "nuxt-ts dev demo",
     "release": "yarn lint && yarn test && standard-version && git push --follow-tags && npm publish"
   },
   "files": [
@@ -32,6 +33,7 @@
     "@commitlint/config-conventional": "latest",
     "@nuxt/typescript-build": "latest",
     "@nuxt/typescript-runtime": "latest",
+    "nuxt": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
     "@types/jest": "latest",
     "@types/sass": "latest",
@@ -45,6 +47,7 @@
     "vue-template-compiler": "^2.6.11",
     "util": "^0.12.1",
     "@vue/test-utils": "^1.0.0-beta.30",
+    "@nuxtjs/vuetify": "^1.10.2",
     "typescript": "^3.7.4"
   }
 }

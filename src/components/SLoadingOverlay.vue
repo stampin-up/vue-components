@@ -18,7 +18,7 @@
 import { Component, Vue, Prop } from 'nuxt-property-decorator'
 
 @Component({})
-export default class LoadingOverlay extends Vue {
+export default class SLoadingOverlay extends Vue {
   @Prop({ required: false, type: Boolean })
   loading!: boolean
 

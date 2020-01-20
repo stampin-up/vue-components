@@ -27,10 +27,11 @@
     ]
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/*.spec.ts"
   ],
   "include": [
-    "**/*.ts",
-    "**/*.vue"
+    "src/**/*.ts",
+    "src/**/*.vue"
   ]
 }
