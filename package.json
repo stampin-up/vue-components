@@ -9,9 +9,10 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "eslint --ext .ts,.js,.vue ./src",
-    "lint:fix": "eslint --ext .ts,.js,.vue --fix ./src",
+    "lint": "eslint --ext .ts,.js,.vue . ",
+    "lint:fix": "eslint --ext .ts,.js,.vue --fix . ",
     "test": "jest test",
+    "ci": "yarn lint && yarn test",
     "demo:build": "nuxt-ts build demo",
     "demo:dev": "nuxt-ts dev demo",
     "release": "yarn lint && yarn test && standard-version && git push --follow-tags && npm publish"
