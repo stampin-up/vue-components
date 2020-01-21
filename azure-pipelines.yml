@@ -26,7 +26,7 @@ steps:
     key: 'yarn | "$(Agent.OS) | yarn.lock'
     path: 'node_modules'
     cacheHitVar: 'YARN_CACHE_HIT'
-  enabled: false
+  enabled: true
   
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
   displayName: 'Yarn Install'
