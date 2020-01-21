@@ -4,7 +4,11 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- rc
+  branches:
+    include:
+    - '*'
+    exclude:
+    - master
 
 variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
