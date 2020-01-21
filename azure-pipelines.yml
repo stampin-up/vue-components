@@ -24,7 +24,7 @@ steps:
   displayName: 'Yarn Cache'
   inputs:
     key: 'yarn | "$(Agent.OS) | yarn.lock'
-    path: 'node_modules'
+    path: $(YARN_CACHE_FOLDER)
     cacheHitVar: 'YARN_CACHE_HIT'
   enabled: true
   
