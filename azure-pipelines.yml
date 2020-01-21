@@ -1,0 +1,36 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- rc
+
+variables:
+  YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
+
+pool:
+  vmImage: 'ubuntu-latest'''
+
+steps:
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
+  displayName: 'Use Yarn 1.x'
+
+- task: Cache@2
+  displayName: 'Yarn Cache'
+  inputs:
+    key: 'yarn | "$(Agent.OS) | yarn.lock'
+    path: 'node_modules'
+    cacheHitVar: 'YARN_CACHE_HIT'
+- script: yarn --frozen-lockfile
+
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
+  displayName: 'Yarn Lint'
+  inputs:
+    Arguments: ci
+
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
+  displayName: 'Yarn Test'
+  inputs:
+    Arguments: 'test:ci'
+  enabled: false
