@@ -1,0 +1,47 @@
+{
+  "include": [
+    "**/*.ts",
+    "**/*.vue"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "strictNullChecks": true,
+    "allowUnusedLabels": true,
+    "noImplicitAny": false,
+    "baseUrl": "./",
+    "target": "es2018",
+    "strict": true,
+    "typeRoots": [
+      "./shims"
+    ],
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ]
+    },
+    "types": [
+      "@types/node",
+      "@nuxt/types"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "esnext",
+      "esnext.asynciterable",
+      "dom"
+    ],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "noEmit": true
+  }
+}

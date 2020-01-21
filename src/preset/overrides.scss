@@ -1,0 +1,252 @@
+@import './variables';
+@import './typography';
+@import './global';
+
+@media #{map-get($display-breakpoints, 'lg-and-up')} {
+  .container:not(.container--fluid) {
+    max-width: 1500px !important;
+  }
+}
+@media #{map-get($display-breakpoints, 'md-and-down')} {
+  .container {
+    max-width: 100% !important;
+  }
+}
+
+@media #{map-get($display-breakpoints, 'md-and-up')} {
+  #content--cms .card-banner-hero:first-of-type {
+    margin-top: -58px;
+  }
+}
+
+// shrink letter spacing
+.v-btn .v-btn__content {
+  letter-spacing: 0;
+}
+
+.v-btn.v-btn--text,
+.v-btn:hover:before,
+.v-btn.v-btn--text:before,
+.v-btn.v-btn--text:hover:before,
+.v-btn.v-btn--text:focus:before,
+.v-btn--text .v-ripple__animation {
+  background-color: transparent !important;
+  height: initial;
+}
+
+
+.v-btn.v-btn--text {
+  margin: 0px;
+  height: unset;
+  font-size: map-get($font-sizes, 14);
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  border-radius: 0;
+  &.v-btn:not(.v-btn--round).v-size--default,
+  &.v-btn:not(.v-btn--round).v-size--small {
+    background-color: transparent !important;
+    padding-left: 0px;
+    padding-right: 0px;
+    min-width: 0;
+    height: unset;
+  }
+  &.font-weight-black {
+    font-weight: 900 !important;
+  }
+}
+
+// vuetify overstyles
+
+.v-chip.v-size--large {
+  height: 48px !important;
+}
+
+// set color for divider
+.v-divider {
+  border-color: var(--v-border-base) !important;
+  height: unset;
+}
+.v-divider.v-divider--vertical {
+  border-width: 0 1px 0 0;
+}
+
+// remove border-radius (alert, card, dialog, input)
+.v-alert.v-sheet,
+.v-card.v-sheet,
+.v-dialog.v-dialog--active,
+.v-input.v-text-field {
+  border-radius: 0;
+}
+
+// radio
+.v-input {
+  &.v-input--radio-group {
+    .v-radio {
+      .v-input--selection-controls__ripple {
+        margin-left: 8px;
+      }
+      .v-label {
+        font-size: map-get($font-sizes, 14);
+      }
+      .v-icon {
+        font-size: 2rem;
+      }
+    }
+  }
+  &.v-input--checkbox {
+    margin-top: 8px;
+    .v-label {
+      font-size: map-get($font-sizes, 14);
+      color: var(--v-primary-base);
+    }
+    .v-input--selection-controls__input {
+      margin-right: 0px;
+      .v-input--selection-controls__ripple {
+        height: 20px;
+        width: 20px;
+        left: -8px;
+        top: -5px;
+      }
+      .v-icon {
+        font-size:  map-get($font-sizes, 18);
+      }
+    }
+  }
+}
+
+// text-field
+.v-text-field {
+  &.v-text-field--filled {
+    .v-input__control {
+      .v-input__slot::before {
+        content: none;
+      }
+      .v-input__slot::before,
+      .v-input__slot::after {
+        border: none;
+        transform: none;
+        outline: currentColor;
+      }
+      .v-input__slot {
+        background: white !important;
+        min-height: 46px;
+        height: 46px;
+        border: 1px solid;
+        color: var(--v-border-base);
+        border-radius: 0;
+        .v-select__slot,
+        .v-text-field__slot {
+          input {
+            margin-top: 0;
+            max-height: initial;
+          }
+          label + input {
+            margin-top: 19px;
+          }
+          .v-label {
+            top: 12px;
+            color: var(--v-greyedOut-base);
+          }
+          .v-select__selection--comma {
+            margin-top: 0;
+          }
+        }
+        .v-input__append-inner {
+          margin-top: 0 !important;
+          align-self: center;
+        }
+      }
+    }
+  }
+  &.v-input {
+    font-size: inherit;
+  }
+  &.v-input--hide-details:not(.v-autocomplete) {
+    padding-bottom: 10px !important;
+  }
+  &.v-input--is-label-active > .v-input__control > .v-input__slot {
+    color: var(--v-greyedOut-base);
+  }
+  &.error--text > .v-input__control {
+    .v-input__slot {
+      color: currentColor;
+    }
+    .v-text-field__details {
+      margin-bottom: 20px;
+      padding: 0px;
+    }
+  }
+}
+
+// remove box shadow from expansion panel
+.v-expansion-panel::before {
+  box-shadow: 0px 0px 1px 0px var(--v-hover-base) !important;
+}
+
+// white background search dropdown
+.v-toolbar__extension {
+  padding: 0;
+  background-color: white;
+  border-top: 1px solid var(--v-border-base);
+}
+
+// list items
+.v-list {
+  .v-list-group--sub-group {
+    .v-list-group__items {
+      .v-list-item.v-list-item--dense {
+        padding-left: 16px;
+      }
+    }
+  }
+  .v-list-item.v-list-item--dense {
+    height: 25px !important;
+    min-height: 25px !important;
+  }
+  .v-list-item.v-list-item--nav {
+    height: 30px !important;
+    min-height: 30px !important;
+  }
+  .v-list-item__subtitle {
+    font-size: map-get($font-sizes, 14);
+    color: var(--v-primary-text) !important;
+  }
+}
+
+.v-content.site-content {
+  padding-bottom: 40px;
+  > .v-content__wrap {
+    .container { padding: 0; }
+    .container.container--fluid { padding: 0; }
+    .container--fluid + .container,
+    .container--fluid > .container {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
+
+.v-card {
+  box-shadow: none !important;
+  text-decoration: none;
+  .v-card__title {
+    font-size: unset;
+  }
+}
+.v-footer--fixed {
+  position: fixed !important;
+}
+
+// todo remove once resolved  https://github.com/vuetifyjs/vuetify/issues/9130
+.v-card__text, .v-card__title {
+  word-break: normal;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+  box-shadow: 0 0 0 30px white inset !important;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
