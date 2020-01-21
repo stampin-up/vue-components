@@ -29,7 +29,7 @@ steps:
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
   displayName: 'Yarn Install'
   inputs:
-    Arguments: yarn install --frozen-lockfile
+    Arguments: install --frozen-lockfile
 
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
   displayName: 'Yarn CI'
