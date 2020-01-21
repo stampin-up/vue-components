@@ -36,7 +36,6 @@
     "@nuxt/typescript-runtime": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
     "@nuxtjs/vuetify": "^1.10.2",
-    "@stampinup/vue-components": "^1.2.1",
     "@types/jest": "latest",
     "@types/sass": "latest",
     "@vue/test-utils": "^1.0.0-beta.30",

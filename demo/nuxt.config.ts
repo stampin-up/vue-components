@@ -1,4 +1,6 @@
-export default {
+import { Configuration } from '@nuxt/types'
+
+const config: Configuration = {
   mode: 'spa',
   /*
   ** Headers of the page
@@ -30,7 +32,8 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxt/typescript-build'
   ],
   /*
   ** Nuxt.js modules
@@ -38,16 +41,13 @@ export default {
   modules: [
   ],
   vuetify: {
-    customVariables: ['@stampinup/vue-components/src/preset/variables.scss'],
-    defaultAssets: {
-      icons: false
-    },
-    preset: '@stampinup/vue-components/src/preset',
+    customVariables: ['~/../src/preset/variables.scss'],
+    preset: '~/../src/preset',
     treeShake: {
       loaderOptions: {
         match (_originalTag, { kebabTag, camelTag }) {
           if (kebabTag.startsWith('s-')) {
-            return [camelTag, `import ${camelTag} from '@stampinup/vue-components/src/components/${camelTag}.vue'`]
+            return [camelTag, `import ${camelTag} from '~/../src/components/${camelTag}.vue'`]
           }
         }
       }
@@ -58,7 +58,7 @@ export default {
   */
   build: {
     transpile: [
-      './../src/components'
+      '~/../src/components'
     ],
     /*
     ** You can extend webpack config here
@@ -67,3 +67,5 @@ export default {
     }
   }
 }
+
+export default config

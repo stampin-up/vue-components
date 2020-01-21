@@ -3,30 +3,30 @@
     flat
     tile
   >
-    <VContainer>
-      <SLoadingOverlay loading :spinner-size="spinnerSize" :spinner-width="spinnerWidth" :spinner-color="spinnerColor">
-        SBtn
-      </SLoadingOverlay>
-    </VContainer>
+    <VCardText>
+      <VContainer class="add-processing cont">
+        <SLoadingOverlay loading :spinner-size="spinnerSize" :spinner-width="spinnerWidth" :spinner-color="spinnerColor">
+          SBtn
+        </SLoadingOverlay>
+      </VContainer>
+    </VCardText>
 
     <VCardActions>
-      <VInput v-model="spinnerSize" class="mx-2" label="Size" />
-      <VInput v-model="spinnerWidth" class="mx-2" label="Width" />
-      <VInput v-model="spinnerColor" class="mx-2" label="Color" />
+      <VTextField v-model="spinnerSize" class="mx-2" label="Size" />
+      <VTextField v-model="spinnerWidth" class="mx-2" label="Width" />
+      <VTextField v-model="spinnerColor" class="mx-2" label="Color" />
     </VCardActions>
   </VCard>
 </template>
 
 <script>
 import { Component, Vue } from 'nuxt-property-decorator'
-import SLoadingOverlay from './../../src/components/SLoadingOverlay.vue'
 
 @Component({
   components: {
-    SLoadingOverlay
   }
 })
-export default class SLoadingOverlayDemo extends Vue {
+export default class LoadingOverlayDemo extends Vue {
   spinnerSize = '60'
 
   spinnerWidth = '6'
@@ -35,5 +35,8 @@ export default class SLoadingOverlayDemo extends Vue {
 }
 </script>
 
-<style>
+<style lang="scss">
+.cont {
+  height: 100px;
+}
 </style>
