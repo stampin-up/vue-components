@@ -1400,6 +1400,16 @@
     mustache "^2.3.0"
     stack-trace "0.0.10"
 
+"@stampinup/vue-components@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@stampinup/vue-components/-/vue-components-1.2.1.tgz#d46833877cb7e161712829e57a78c2f96f2777a1"
+  integrity sha512-L67XbCDRj4TJt9yLcRKrTLz6lkdvcyype8dvRU5FfvLqvfYrkdvJekYN4l5FaP3zqJp9NwKb5MH6XamBhKMCpA==
+  dependencies:
+    nuxt-property-decorator "^2.5.0"
+    sass "^1.24.4"
+    sass-loader "^8.0.1"
+    vuetify "^2.2.3"
+
 "@types/anymatch@*":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@types/anymatch/-/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"

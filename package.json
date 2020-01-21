@@ -20,11 +20,11 @@
     "src"
   ],
   "dependencies": {
+    "nuxt-property-decorator": "^2.5.0",
     "sass": "^1.24.4",
     "sass-loader": "^8.0.1",
-    "nuxt-property-decorator": "^2.5.0",
-    "vuetify": "^2.2.3",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vuetify": "^2.2.3"
   },
   "exports": {
     "./": "./src/"
@@ -34,21 +34,22 @@
     "@commitlint/config-conventional": "latest",
     "@nuxt/typescript-build": "latest",
     "@nuxt/typescript-runtime": "latest",
-    "nuxt": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
+    "@nuxtjs/vuetify": "^1.10.2",
+    "@stampinup/vue-components": "^1.2.1",
     "@types/jest": "latest",
     "@types/sass": "latest",
+    "@vue/test-utils": "^1.0.0-beta.30",
     "codecov": "latest",
     "eslint": "latest",
     "husky": "latest",
     "jest": "latest",
+    "nuxt": "latest",
     "standard-version": "latest",
     "ts-jest": "latest",
-    "vue-jest": "^4.0.0-beta.2",
-    "vue-template-compiler": "^2.6.11",
+    "typescript": "^3.7.4",
     "util": "^0.12.1",
-    "@vue/test-utils": "^1.0.0-beta.30",
-    "@nuxtjs/vuetify": "^1.10.2",
-    "typescript": "^3.7.4"
+    "vue-jest": "^4.0.0-beta.2",
+    "vue-template-compiler": "^2.6.11"
   }
 }

@@ -22,7 +22,7 @@
         <ButtonDemo />
       </VTabItem>
       <VTabItem>
-        <SLoadingOverlayDemo />
+        <LoadingOverlayDemo />
       </VTabItem>
     </VTabs>
   </VContainer>
@@ -31,10 +31,10 @@
 <script>
 import { Component, Vue } from 'nuxt-property-decorator'
 import ButtonDemo from '../components/ButtonDemo'
-import SLoadingOverlayDemo from '../components/SLoadingOverlayDemo'
+import LoadingOverlayDemo from '../components/LoadingOverlayDemo'
 
 @Component({
-  components: { SLoadingOverlayDemo, ButtonDemo }
+  components: { LoadingOverlayDemo, ButtonDemo }
 })
 export default class Homepage extends Vue {
     tab = 0

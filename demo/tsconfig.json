@@ -1,9 +1,7 @@
 {
   "include": [
     "**/*.ts",
-    "**/*.vue",
-    "./../src/**/*.vue",
-    "./../src/**/*.ts"
+    "**/*.vue"
   ],
   "exclude": [
     "node_modules"
@@ -18,7 +16,7 @@
     "target": "es2018",
     "strict": true,
     "typeRoots": [
-      "./../shims"
+      "./shims"
     ],
     "experimentalDecorators": true,
     "resolveJsonModule": true,

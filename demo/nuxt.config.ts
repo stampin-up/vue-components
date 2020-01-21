@@ -38,19 +38,19 @@ export default {
   modules: [
   ],
   vuetify: {
-    customVariables: ['~/../src/preset/variables.scss'],
+    customVariables: ['@stampinup/vue-components/src/preset/variables.scss'],
     defaultAssets: {
       icons: false
     },
-    preset: '~/../src/preset',
+    preset: '@stampinup/vue-components/src/preset',
     treeShake: {
-      // loaderOptions: {
-      //   match (_originalTag, { kebabTag, camelTag }) {
-      //     if (kebabTag.startsWith('s-')) {
-      //       return [camelTag, `import ${camelTag} from './../../src/components/${camelTag}.vue'`]
-      //     }
-      //   }
-      // }
+      loaderOptions: {
+        match (_originalTag, { kebabTag, camelTag }) {
+          if (kebabTag.startsWith('s-')) {
+            return [camelTag, `import ${camelTag} from '@stampinup/vue-components/src/components/${camelTag}.vue'`]
+          }
+        }
+      }
     }
   },
   /*
