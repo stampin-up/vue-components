@@ -29,12 +29,6 @@ steps:
 - script: yarn --frozen-lockfile
 
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
-  displayName: 'Yarn Lint'
+  displayName: 'Yarn CI'
   inputs:
     Arguments: ci
-
-- task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
-  displayName: 'Yarn Test'
-  inputs:
-    Arguments: 'test:ci'
-  enabled: false
