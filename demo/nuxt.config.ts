@@ -41,7 +41,10 @@ const config: Configuration = {
   modules: [
   ],
   router: {
-    base: '/vue-components/demo/dist/'
+    base: '/vue-components/'
+  },
+  generate: {
+    dir: '../docs'
   },
   vuetify: {
     customVariables: ['~/../src/preset/variables.scss'],
