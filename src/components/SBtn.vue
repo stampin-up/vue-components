@@ -56,6 +56,9 @@ export default class SBtn extends Vue {
   &.small {
     height: 46px !important;
   }
+  @media #{map-get($display-breakpoints, 'sm-and-up')} {
+    &:hover { background-color: var(--v-hover-base) !important; }
+  }
   &:hover { background-color: var(--v-hover-base) !important; }
   &.secondary:hover { background-color: #a00041 !important; }
 }
