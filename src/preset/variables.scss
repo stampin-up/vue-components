@@ -1,5 +1,5 @@
-@import '~vuetify/src/styles/styles.sass';
 $body-font-family: proxima_nova;
+@import '~vuetify/src/styles/styles.sass';
 $btn-border-radius: 0;
 $card-border-radius: 0;
 $material-light: map-merge($material-light, (text: map-merge(map-get($material-light, 'text'), (primary: #333333))));
