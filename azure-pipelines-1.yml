@@ -1,7 +1,5 @@
 trigger:
-  branches:
-    include:
-    - 'master'
+  - 'master'
 
 variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
