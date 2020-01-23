@@ -17,6 +17,14 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
+
+- checkout: self
+  clean: true
+  fetchDepth: 1
+  lfs: false
+  submodules: false
+  persistCredentials: true
+
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
   displayName: 'Use Yarn 1.x'
 
