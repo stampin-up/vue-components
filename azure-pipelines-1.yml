@@ -25,12 +25,14 @@ steps:
     path: $(YARN_CACHE_FOLDER)
     cacheHitVar: 'YARN_CACHE_HIT'
   enabled: true
-  
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
   displayName: 'Yarn Install'
   inputs:
     Arguments: install --frozen-lockfile
-
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'git switch master'
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
   displayName: 'Yarn Publish'
   inputs:
