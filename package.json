@@ -38,7 +38,7 @@
     "@nuxtjs/vuetify": "^1.10.2",
     "@types/jest": "latest",
     "@types/sass": "latest",
-    "@vue/test-utils": "^1.0.0-beta.30",
+    "@vue/test-utils": "^1.0.0-beta.31",
     "codecov": "latest",
     "eslint": "latest",
     "husky": "latest",

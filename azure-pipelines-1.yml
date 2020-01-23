@@ -1,0 +1,37 @@
+trigger:
+  - 'master'
+
+variables:
+  YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
+  displayName: 'Use Yarn 1.x'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'git config --global user.name "Azure Release"'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'git config --global user.email " ci@stampinup.com"'
+- task: Cache@2
+  displayName: 'Yarn Cache'
+  inputs:
+    key: 'yarn | "$(Agent.OS) | yarn.lock'
+    path: $(YARN_CACHE_FOLDER)
+    cacheHitVar: 'YARN_CACHE_HIT'
+  enabled: true
+  
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
+  displayName: 'Yarn Install'
+  inputs:
+    Arguments: install --frozen-lockfile
+
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
+  displayName: 'Yarn Publish'
+  inputs:
+    Arguments: release    
