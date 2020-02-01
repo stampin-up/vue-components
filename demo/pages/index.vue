@@ -1,15 +1,12 @@
 <template>
   <VContainer>
-    <SBtn />
-
-    <SLoadingOverlay />
     <VTabs
       v-model="tab"
       background-color="deep-purple accent-4"
-      class="elevation-2"
+      class="mt-12 elevation-2"
       dark
     >
-      <v-tabs-slider />
+      <VTabsSlider />
 
       <VTab>
         SBtn
@@ -18,8 +15,8 @@
         SLoadingOverlay
       </VTab>
 
-      <VTabItem>
-        <ButtonDemo />
+      <VTabItem class="backgroundLight">
+        <ButtonDemo class="px-4 py-8 backgroundLight" />
       </VTabItem>
       <VTabItem>
         <LoadingOverlayDemo />
@@ -42,4 +39,7 @@ export default class Homepage extends Vue {
 </script>
 
 <style>
+  .backgroundLight {
+    background-color: #ebe6fa !important;
+  }
 </style>
