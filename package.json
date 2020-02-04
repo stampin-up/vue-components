@@ -4,6 +4,7 @@
   "description": "Stampinup vue components",
   "license": "MIT",
   "repository": "stampin-up/vue-components",
+  "homepage": "https://stampin-up.github.io/vue-components/",
   "publishConfig": {
     "access": "public"
   },

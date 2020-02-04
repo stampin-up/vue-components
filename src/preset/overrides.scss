@@ -4,7 +4,7 @@
 
 @media #{map-get($display-breakpoints, 'lg-and-up')} {
   .container:not(.container--fluid) {
-    max-width: 1532px !important;
+    max-width: 1524px !important;
   }
 }
 @media #{map-get($display-breakpoints, 'md-and-down')} {
