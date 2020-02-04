@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.3.1 (2020-02-04)
+
+
+### Bug Fixes
+
+* set font family properly ([#5](https://github.com/stampin-up/vue-components/issues/5)) ([68f0a01](https://github.com/stampin-up/vue-components/commit/68f0a01250ae364a867ed3a10584e844c1ea4735))
+
 ## [1.3.0](https://github.com/stampin-up/vue-components/compare/v1.2.1...v1.3.0) (2020-01-21)
 
 
