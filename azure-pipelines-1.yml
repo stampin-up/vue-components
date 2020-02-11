@@ -8,7 +8,7 @@ variables:
 pool: 'Docker Build'
 
 stages:
-- stage: 'Configure git'
+- stage: 'Configure_git'
   jobs:
   - job: Git
     steps:
