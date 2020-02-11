@@ -9,6 +9,7 @@ trigger:
     - '*'
     exclude:
     - master
+    - bffoust
 
 variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
