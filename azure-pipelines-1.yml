@@ -1,10 +1,8 @@
-trigger:
-  - 'master'
-
 variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
 
-pool: 'Docker Build'
+pool:
+  name: 'Docker Build'
 
 steps:
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
@@ -17,6 +15,10 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'git config --global user.email "development@stampinup.com"'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'git config --global --add url."git@github.com:".insteadOf "https://github.com/"'
 - task: Cache@2
   displayName: 'Yarn Cache'
   inputs:
