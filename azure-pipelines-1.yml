@@ -13,11 +13,11 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'git config --global user.name "Azure Release"'
+    script: 'git config --global user.name "stampin-ci"'
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'git config --global user.email " ci@stampinup.com"'
+    script: 'git config --global user.email "development@stampinup.com"'
 - task: Cache@2
   displayName: 'Yarn Cache'
   inputs:
