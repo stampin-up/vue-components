@@ -29,7 +29,6 @@ stages:
       inputs:
         targetType: 'inline'
         script: 'git config --global --add url."git@github.com:".insteadOf "https://github.com/"'
-  jobs:
   - job: Install
     steps:
     - task: Cache@2
@@ -48,7 +47,6 @@ stages:
       inputs:
         targetType: 'inline'
         script: 'git switch master'
-  jobs:
   - job: Publish
     steps:
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
