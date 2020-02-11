@@ -1,21 +1,27 @@
+trigger: none
+
 variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
 
 pool:
-  name: 'Docker Build'
+  vmImage: ubuntu-16.04
 
 steps:
+- checkout: self
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
   displayName: 'Use Yarn 1.x'
 - task: Bash@3
+  displayName: 'git config --global user.name stampin-ci'
   inputs:
     targetType: 'inline'
     script: 'git config --global user.name "stampin-ci"'
 - task: Bash@3
+  displayName: 'git config --global user.email development@stampinup.com'
   inputs:
     targetType: 'inline'
     script: 'git config --global user.email "development@stampinup.com"'
 - task: Bash@3
+  displayName: 'git config --global --add url.git@github.com:.insteadOf https://github.com/'
   inputs:
     targetType: 'inline'
     script: 'git config --global --add url."git@github.com:".insteadOf "https://github.com/"'
