@@ -33,7 +33,7 @@ stages:
       displayName: 'save Key'
       inputs:
         targetType: 'inline'
-        script: 'git config --global -l && mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub'
+        script: 'mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub'
 
     - task: Bash@3
       displayName: 'check SSH-Agent'
@@ -51,7 +51,7 @@ stages:
       displayName: 'git config --global user.email development@stampinup.com'
       inputs:
         targetType: 'inline'
-        script: 'git config --global user.email "development@stampinup.com"'
+        script: 'git config --global user.email "development@stampinup.com" && git config --global -l'
 
 #    - task: Bash@3
 #      displayName: 'git config --global --add url.git@github.com:.insteadOf https://github.com/'
