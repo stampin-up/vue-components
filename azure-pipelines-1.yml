@@ -21,7 +21,7 @@ stages:
   jobs:
   - job: Git
     steps:
-    - checkout: none
+#    - checkout: none
 
     - task: Bash@3
       displayName: 'git checkout branch'
