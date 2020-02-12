@@ -39,13 +39,13 @@ stages:
       displayName: 'eval `ssh-agent`'
       inputs:
         targetType: 'inline'
-        script: 'eval `ssh-agent -s`  && ps auxw'
+        script: 'eval `ssh-agent -s`  && ps auxw && echo "$SSH_AUTH_SOCK"'
 
-    - task: Bash@3
-      displayName: 'echo SSH_AUTH_SOCK'
-      inputs:
-        targetType: 'inline'
-        script: 'echo "$SSH_AUTH_SOCK"'
+#    - task: Bash@3
+#      displayName: 'echo SSH_AUTH_SOCK'
+#      inputs:
+#        targetType: 'inline'
+#        script: 'echo "$SSH_AUTH_SOCK"'
 
     - task: Bash@3
       displayName: 'ssh-add ~/.ssh/id_rsa.pub'
