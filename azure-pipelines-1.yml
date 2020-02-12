@@ -28,15 +28,6 @@ stages:
         script: 'git checkout bffoust'
 
     - task: Bash@3
-      displayName: 'save Key'
-      inputs:
-        targetType: 'inline'
-        script: 'mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub && ssh -T stampin-ci@github.com'
-
-    - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
-      displayName: 'Use Yarn 1.x'
-
-    - task: Bash@3
       displayName: 'git config --global user.name stampin-ci'
       inputs:
         targetType: 'inline'
@@ -53,6 +44,15 @@ stages:
 #      inputs:
 #        targetType: 'inline'
 #        script: 'git config --global --add url."git@github.com:".insteadOf "https://github.com/"'
+
+    - task: Bash@3
+      displayName: 'save Key'
+      inputs:
+        targetType: 'inline'
+        script: 'git config --global -l && mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub && ssh -T stampin-ci@github.com'
+
+    - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
+      displayName: 'Use Yarn 1.x'
 
     - task: Cache@2
       displayName: 'Yarn Cache'
