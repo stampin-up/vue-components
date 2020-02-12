@@ -36,7 +36,7 @@ stages:
         script: 'mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub'
 
     - task: Bash@3
-      displayName: 'eval ssh-agent -s'
+      displayName: 'eval `ssh-agent`'
       inputs:
         targetType: 'inline'
         script: 'eval "ssh-agent -s"'
