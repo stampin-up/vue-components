@@ -31,7 +31,7 @@ stages:
       displayName: 'save Key'
       inputs:
         targetType: 'inline'
-        script: 'mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/stampin-ci_id_rsa.pub'
+        script: 'mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub && ssh -T git@github.com'
 
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
       displayName: 'Use Yarn 1.x'
@@ -48,11 +48,11 @@ stages:
         targetType: 'inline'
         script: 'git config --global user.email "development@stampinup.com"'
 
-    - task: Bash@3
-      displayName: 'git config --global --add url.git@github.com:.insteadOf https://github.com/'
-      inputs:
-        targetType: 'inline'
-        script: 'git config --global --add url."git@github.com:".insteadOf "https://github.com/"'
+#    - task: Bash@3
+#      displayName: 'git config --global --add url.git@github.com:.insteadOf https://github.com/'
+#      inputs:
+#        targetType: 'inline'
+#        script: 'git config --global --add url."git@github.com:".insteadOf "https://github.com/"'
 
     - task: Cache@2
       displayName: 'Yarn Cache'
