@@ -51,7 +51,7 @@ stages:
       displayName: 'ssh-add ~/.ssh/id_rsa.pub'
       inputs:
         targetType: 'inline'
-        script: 'ssh-add ~/.ssh/id_rsa.pub'
+        script: 'ps auxw && ssh-add ~/.ssh/id_rsa.pub'
 
     - task: Bash@3
       displayName: 'ssh -T stampin-ci@github.com'
