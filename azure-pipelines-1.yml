@@ -39,7 +39,7 @@ stages:
       displayName: 'eval `ssh-agent`'
       inputs:
         targetType: 'inline'
-        script: 'eval `ssh-agent` && ps auxw'
+        script: 'eval `ssh-agent -s`  && ps auxw'
 
     - task: Bash@3
       displayName: 'echo SSH_AUTH_SOCK'
