@@ -30,6 +30,12 @@ stages:
 #        script: 'git checkout bffoust'
 
     - task: Bash@3
+      displayName: 'check SSH-Agent'
+      inputs:
+        targetType: 'inline'
+        script: 'echo "$SSH_AUTH_SOCK" && ssh -v example.com && cat /etc/ssh_config'
+
+    - task: Bash@3
       displayName: 'git config --global user.name stampin-ci'
       inputs:
         targetType: 'inline'
