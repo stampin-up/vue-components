@@ -39,7 +39,7 @@ stages:
       displayName: 'eval `ssh-agent`'
       inputs:
         targetType: 'inline'
-        script: 'eval `ssh-agent`'
+        script: 'eval `ssh-agent` && ps auxw'
 
     - task: Bash@3
       displayName: 'echo SSH_AUTH_SOCK'
@@ -77,12 +77,12 @@ stages:
 #        targetType: 'inline'
 #        script: 'git config --global --add url."git@github.com:".insteadOf "https://github.com/"'
 
-    - checkout: self
-      clean: true
-      fetchDepth: 1
-      lfs: false
-      submodules: false
-      persistCredentials: true
+#    - checkout: self
+#      clean: true
+#      fetchDepth: 1
+#      lfs: false
+#      submodules: false
+#      persistCredentials: true
 
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
       displayName: 'Use Yarn 1.x'
