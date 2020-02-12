@@ -39,7 +39,7 @@ stages:
       displayName: 'check SSH-Agent'
       inputs:
         targetType: 'inline'
-        script: 'echo "$SSH_AUTH_SOCK" && cat /etc/ssh_config && ssh-add ~/.ssh/id_rsa.pub && ssh -T stampin-ci@github.com'
+        script: 'echo "$SSH_AUTH_SOCK" && ssh-add ~/.ssh/id_rsa.pub && ssh -T stampin-ci@github.com'
 
     - task: Bash@3
       displayName: 'git config --global user.name stampin-ci'
@@ -51,7 +51,7 @@ stages:
       displayName: 'git config --global user.email development@stampinup.com'
       inputs:
         targetType: 'inline'
-        script: 'git config --global user.email "development@stampinup.com" && git config --global -l'
+        script: 'git config --global user.email "development@stampinup.com" && git config --global -l && cat /etc/ssh_config'
 
 #    - task: Bash@3
 #      displayName: 'git config --global --add url.git@github.com:.insteadOf https://github.com/'
