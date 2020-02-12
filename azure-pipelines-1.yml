@@ -21,6 +21,18 @@ stages:
       submodules: false
       persistCredentials: true
 
+    - task: Bash@3
+      displayName: 'git checkout branch'
+      inputs:
+        targetType: 'inline'
+        script: 'git checkout bffoust'
+
+    - task: Bash@3
+      displayName: 'save Key'
+      inputs:
+        targetType: 'inline'
+        script: 'echo $PUBKEY >> .ssh/stampin-ci_id_rsa.pub'
+
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
       displayName: 'Use Yarn 1.x'
 
