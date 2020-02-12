@@ -30,10 +30,16 @@ stages:
 #        script: 'git checkout bffoust'
 
     - task: Bash@3
+      displayName: 'save Key'
+      inputs:
+        targetType: 'inline'
+        script: 'git config --global -l && mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub'
+
+    - task: Bash@3
       displayName: 'check SSH-Agent'
       inputs:
         targetType: 'inline'
-        script: 'echo "$SSH_AUTH_SOCK" && ssh -v example.com && cat /etc/ssh_config'
+        script: 'echo "$SSH_AUTH_SOCK" && cat /etc/ssh_config && ssh-add ~/.ssh/id_rsa.pub && ssh -T stampin-ci@github.com'
 
     - task: Bash@3
       displayName: 'git config --global user.name stampin-ci'
@@ -59,13 +65,6 @@ stages:
       lfs: false
       submodules: false
       persistCredentials: true
-
-
-    - task: Bash@3
-      displayName: 'save Key'
-      inputs:
-        targetType: 'inline'
-        script: 'git config --global -l && mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub && ssh -T stampin-ci@github.com'
 
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
       displayName: 'Use Yarn 1.x'
