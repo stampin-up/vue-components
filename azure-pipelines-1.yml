@@ -5,32 +5,43 @@ trigger: none
 variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
 
-pool: 'Docker Build'
+pool:
+  vmImage: 'Ubuntu-16.04'
 
 stages:
 - stage: 'Configure_git'
+  displayName: 'Configure git'
   jobs:
   - job: Git
     steps:
+    - checkout: self
+      clean: true
+      fetchDepth: 1
+      lfs: false
+      submodules: false
+      persistCredentials: true
+
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
       displayName: 'Use Yarn 1.x'
+
     - task: Bash@3
       displayName: 'git config --global user.name stampin-ci'
       inputs:
         targetType: 'inline'
         script: 'git config --global user.name "stampin-ci"'
+
     - task: Bash@3
       displayName: 'git config --global user.email development@stampinup.com'
       inputs:
         targetType: 'inline'
         script: 'git config --global user.email "development@stampinup.com"'
+
     - task: Bash@3
       displayName: 'git config --global --add url.git@github.com:.insteadOf https://github.com/'
       inputs:
         targetType: 'inline'
         script: 'git config --global --add url."git@github.com:".insteadOf "https://github.com/"'
-  - job: Install
-    steps:
+
     - task: Cache@2
       displayName: 'Yarn Cache'
       inputs:
@@ -38,17 +49,18 @@ stages:
         path: $(YARN_CACHE_FOLDER)
         cacheHitVar: 'YARN_CACHE_HIT'
       enabled: true
+  
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
       displayName: 'Yarn Install'
       inputs:
         Arguments: install --frozen-lockfile
+
     - task: Bash@3
       displayName: 'git switch master'
       inputs:
         targetType: 'inline'
         script: 'git switch master'
-  - job: Publish
-    steps:
+
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
       displayName: 'Yarn Publish'
       inputs:
