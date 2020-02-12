@@ -23,11 +23,11 @@ stages:
     steps:
 #    - checkout: none
 
-    - task: Bash@3
-      displayName: 'git checkout branch'
-      inputs:
-        targetType: 'inline'
-        script: 'git checkout bffoust'
+#    - task: Bash@3
+#      displayName: 'git checkout branch'
+#      inputs:
+#        targetType: 'inline'
+#        script: 'git checkout bffoust'
 
     - task: Bash@3
       displayName: 'git config --global user.name stampin-ci'
