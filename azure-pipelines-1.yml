@@ -31,7 +31,7 @@ stages:
       displayName: 'save Key'
       inputs:
         targetType: 'inline'
-        script: 'echo $PUBKEY >> .ssh/stampin-ci_id_rsa.pub'
+        script: 'echo $PUBKEY > ~/.ssh/stampin-ci_id_rsa.pub'
 
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
       displayName: 'Use Yarn 1.x'
