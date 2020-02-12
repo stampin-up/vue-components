@@ -1,5 +1,12 @@
 name: $(Date:yyyyMMdd)$(Rev:.r)
 
+resources:
+  repositories:
+  - repository: vue # The name used to reference this repository in the checkout step
+    type: github
+    endpoint: stampin-up
+    name: vue-components
+    
 trigger: none
 
 variables:
@@ -14,12 +21,7 @@ stages:
   jobs:
   - job: Git
     steps:
-    - checkout: self
-      clean: true
-      fetchDepth: 1
-      lfs: false
-      submodules: false
-      persistCredentials: true
+    - checkout: none
 
     - task: Bash@3
       displayName: 'git checkout branch'
@@ -44,6 +46,14 @@ stages:
 #      inputs:
 #        targetType: 'inline'
 #        script: 'git config --global --add url."git@github.com:".insteadOf "https://github.com/"'
+
+    - checkout: self
+      clean: true
+      fetchDepth: 1
+      lfs: false
+      submodules: false
+      persistCredentials: true
+
 
     - task: Bash@3
       displayName: 'save Key'
