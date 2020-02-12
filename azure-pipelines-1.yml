@@ -36,10 +36,28 @@ stages:
         script: 'mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub'
 
     - task: Bash@3
-      displayName: 'check SSH-Agent'
+      displayName: 'eval ssh-agent -s'
       inputs:
         targetType: 'inline'
-        script: 'echo "$SSH_AUTH_SOCK" && ssh-add ~/.ssh/id_rsa.pub && ssh -T stampin-ci@github.com'
+        script: 'eval "ssh-agent -s"'
+
+    - task: Bash@3
+      displayName: 'echo SSH_AUTH_SOCK'
+      inputs:
+        targetType: 'inline'
+        script: 'echo "$SSH_AUTH_SOCK"'
+
+    - task: Bash@3
+      displayName: 'ssh-add ~/.ssh/id_rsa.pub'
+      inputs:
+        targetType: 'inline'
+        script: 'ssh-add ~/.ssh/id_rsa.pub'
+
+    - task: Bash@3
+      displayName: 'ssh -T stampin-ci@github.com'
+      inputs:
+        targetType: 'inline'
+        script: 'ssh -T stampin-ci@github.com'
 
     - task: Bash@3
       displayName: 'git config --global user.name stampin-ci'
