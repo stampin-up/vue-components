@@ -1,11 +1,11 @@
 name: $(Date:yyyyMMdd)$(Rev:.r)
 
-resources:
-  repositories:
-  - repository: vue # The name used to reference this repository in the checkout step
-    type: github
-    endpoint: stampin-up
-    name: vue-components
+#resources:
+#  repositories:
+#  - repository: vue # The name used to reference this repository in the checkout step
+#    type: github
+#    endpoint: stampin-up
+#    name: vue-components
     
 trigger: none
 
