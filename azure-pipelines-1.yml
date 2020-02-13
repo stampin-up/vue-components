@@ -36,10 +36,10 @@ stages:
         script: 'mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub'
 
     - task: Bash@3
-      displayName: 'eval `ssh-agent`'
+      displayName: 'ssh-add'
       inputs:
         targetType: 'inline'
-        script: 'eval `ssh-agent -s`  && ps auxw && echo "$SSH_AUTH_SOCK"'
+        script: 'eval `ssh-agent -s` && echo "$SSH_AUTH_SOCK" && ssh-add ~/.ssh/id_rsa.pub'
 
 #    - task: Bash@3
 #      displayName: 'echo SSH_AUTH_SOCK'
@@ -47,11 +47,11 @@ stages:
 #        targetType: 'inline'
 #        script: 'echo "$SSH_AUTH_SOCK"'
 
-    - task: Bash@3
-      displayName: 'ssh-add ~/.ssh/id_rsa.pub'
-      inputs:
-        targetType: 'inline'
-        script: 'ps auxw && ssh-add ~/.ssh/id_rsa.pub'
+#    - task: Bash@3
+#      displayName: 'ssh-add ~/.ssh/id_rsa.pub'
+#      inputs:
+#        targetType: 'inline'
+#        script: 'ps auxw && ssh-add ~/.ssh/id_rsa.pub'
 
     - task: Bash@3
       displayName: 'ssh -T stampin-ci@github.com'
@@ -77,7 +77,7 @@ stages:
 #        targetType: 'inline'
 #        script: 'git config --global --add url."git@github.com:".insteadOf "https://github.com/"'
 
-#    - checkout: self
+    - checkout: self
 #      clean: true
 #      fetchDepth: 1
 #      lfs: false
@@ -110,3 +110,4 @@ stages:
       displayName: 'Yarn Publish'
       inputs:
         Arguments: release    
+    "release": "yarn lint && yarn test && standard-version && git push --follow-tags && npm publish"
