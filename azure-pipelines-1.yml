@@ -33,7 +33,7 @@ stages:
       displayName: 'save Key'
       inputs:
         targetType: 'inline'
-        script: 'mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub'
+        script: 'mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub && chmod 700 ~/.ssh/id_rsa.pub'
 
     - task: Bash@3
       displayName: 'ssh-add'
