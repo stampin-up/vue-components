@@ -110,4 +110,4 @@ stages:
       displayName: 'Yarn Publish'
       inputs:
         Arguments: release    
-    "release": "yarn lint && yarn test && standard-version && git push --follow-tags && npm publish"
+#    "release": "yarn lint && yarn test && standard-version && git push --follow-tags && npm publish"
