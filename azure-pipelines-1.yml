@@ -13,7 +13,7 @@ variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
 
 pool:
-  vmImage: 'Ubuntu-16.04'
+  name: 'Docker Build'
 
 stages:
 - stage: 'Configure_git'
@@ -21,68 +21,26 @@ stages:
   jobs:
   - job: Git
     steps:
-#    - checkout: none
+    - checkout: self
+      persistCredentials: true
+
+    - task: Bash@3
+      displayName: 'git checkout branch'
+      inputs:
+        targetType: 'inline'
+        script: 'git checkout bffoust'
 
 #    - task: Bash@3
-#      displayName: 'git checkout branch'
+#      displayName: 'ssh-add'
 #      inputs:
 #        targetType: 'inline'
-#        script: 'git checkout bffoust'
-
-    - task: Bash@3
-      displayName: 'save Key'
-      inputs:
-        targetType: 'inline'
-        script: 'mkdir ~/.ssh && echo $PUBKEY > ~/.ssh/id_rsa.pub && cat ~/.ssh/id_rsa.pub && chmod 700 ~/.ssh/id_rsa.pub'
-
-    - task: Bash@3
-      displayName: 'ssh-add'
-      inputs:
-        targetType: 'inline'
-        script: 'eval `ssh-agent -s` && echo "$SSH_AUTH_SOCK" && ssh-add ~/.ssh/id_rsa.pub'
-
-#    - task: Bash@3
-#      displayName: 'echo SSH_AUTH_SOCK'
-#      inputs:
-#        targetType: 'inline'
-#        script: 'echo "$SSH_AUTH_SOCK"'
-
-#    - task: Bash@3
-#      displayName: 'ssh-add ~/.ssh/id_rsa.pub'
-#      inputs:
-#        targetType: 'inline'
-#        script: 'ps auxw && ssh-add ~/.ssh/id_rsa.pub'
-
-    - task: Bash@3
-      displayName: 'ssh -T stampin-ci@github.com'
-      inputs:
-        targetType: 'inline'
-        script: 'ssh -T stampin-ci@github.com'
-
-    - task: Bash@3
-      displayName: 'git config --global user.name stampin-ci'
-      inputs:
-        targetType: 'inline'
-        script: 'git config --global user.name "stampin-ci"'
-
-    - task: Bash@3
-      displayName: 'git config --global user.email development@stampinup.com'
-      inputs:
-        targetType: 'inline'
-        script: 'git config --global user.email "development@stampinup.com" && git config --global -l && cat /etc/ssh_config'
+#        script: 'eval `ssh-agent -s` && echo "$SSH_AUTH_SOCK" && ssh-add'
 
 #    - task: Bash@3
 #      displayName: 'git config --global --add url.git@github.com:.insteadOf https://github.com/'
 #      inputs:
 #        targetType: 'inline'
 #        script: 'git config --global --add url."git@github.com:".insteadOf "https://github.com/"'
-
-    - checkout: self
-#      clean: true
-#      fetchDepth: 1
-#      lfs: false
-#      submodules: false
-#      persistCredentials: true
 
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
       displayName: 'Use Yarn 1.x'
