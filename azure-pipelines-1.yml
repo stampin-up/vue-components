@@ -24,11 +24,11 @@ stages:
     - checkout: self
       persistCredentials: true
 
-    - task: Bash@3
-      displayName: 'git checkout branch'
-      inputs:
-        targetType: 'inline'
-        script: 'git checkout bffoust'
+#    - task: Bash@3
+#      displayName: 'git checkout branch'
+#      inputs:
+#        targetType: 'inline'
+#        script: 'git checkout bffoust'
 
 #    - task: Bash@3
 #      displayName: 'ssh-add'
@@ -59,10 +59,10 @@ stages:
         Arguments: install --frozen-lockfile
 
     - task: Bash@3
-      displayName: 'git switch master'
+      displayName: 'git checkout master'
       inputs:
         targetType: 'inline'
-        script: 'git switch master'
+        script: 'git checkout master'
 
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
       displayName: 'Yarn Publish'
