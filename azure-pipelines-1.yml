@@ -24,24 +24,6 @@ stages:
     - checkout: self
       persistCredentials: true
 
-#    - task: Bash@3
-#      displayName: 'git checkout branch'
-#      inputs:
-#        targetType: 'inline'
-#        script: 'git checkout bffoust'
-
-#    - task: Bash@3
-#      displayName: 'ssh-add'
-#      inputs:
-#        targetType: 'inline'
-#        script: 'eval `ssh-agent -s` && echo "$SSH_AUTH_SOCK" && ssh-add'
-
-#    - task: Bash@3
-#      displayName: 'git config --global --add url.git@github.com:.insteadOf https://github.com/'
-#      inputs:
-#        targetType: 'inline'
-#        script: 'git config --global --add url."git@github.com:".insteadOf "https://github.com/"'
-
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
       displayName: 'Use Yarn 1.x'
 
@@ -63,9 +45,9 @@ stages:
       inputs:
         targetType: 'inline'
         script: 'git checkout master'
-
+# we need to login to the npm registry before we try to push.  example code npm-cli-login -u Username -p Password -e test@example.com -r https://your-private-registry-link
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
       displayName: 'Yarn Publish'
       inputs:
         Arguments: release    
-#    "release": "yarn lint && yarn test && standard-version && git push --follow-tags && npm publish"
+
