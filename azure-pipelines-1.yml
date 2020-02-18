@@ -44,11 +44,18 @@ stages:
       inputs:
         Arguments: install --frozen-lockfile
 
+    - task: Bash@3
+      displayName: 'git checkout branch'
+      inputs:
+        targetType: 'inline'
+        script: 'git checkout bffoust'
+
 #    - task: Bash@3
 #      displayName: 'git checkout master'
 #      inputs:
 #        targetType: 'inline'
 #        script: 'git checkout master'
+
 # we need to login to the npm registry before we try to push.  example code npm-cli-login -u Username -p Password -e test@example.com -r https://your-private-registry-link
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
       displayName: 'Yarn Publish'
