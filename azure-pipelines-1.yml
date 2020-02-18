@@ -28,6 +28,12 @@ stages:
       submodules: false
       persistCredentials: true
 
+    - task: Bash@3
+      displayName: 'git checkout branch'
+      inputs:
+        targetType: 'inline'
+        script: 'git checkout bffoust'
+
     - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
       displayName: 'Use Yarn 1.x'
 
@@ -43,12 +49,6 @@ stages:
       displayName: 'Yarn Install'
       inputs:
         Arguments: install --frozen-lockfile
-
-    - task: Bash@3
-      displayName: 'git checkout branch'
-      inputs:
-        targetType: 'inline'
-        script: 'git checkout bffoust'
 
 #    - task: Bash@3
 #      displayName: 'git checkout master'
