@@ -11,3 +11,9 @@
 .pointer:hover {
   cursor: pointer;
 }
+.background-secondary {
+  background-color: var(--v-backgroundPage-base);
+}
+.background-main {
+  background-color: white;
+}
