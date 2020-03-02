@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/stampin-up/vue-components/compare/v1.3.4...v1.4.0) (2020-03-02)
+
+
+### Features
+
+* add two global css helper classes ([#10](https://github.com/stampin-up/vue-components/issues/10)) ([ef5dcd7](https://github.com/stampin-up/vue-components/commit/ef5dcd7ffee133abd78a88ed791f5a415e4e560f))
+
 ### [1.3.6](https://github.com/stampin-up/vue-components/compare/v1.3.5...v1.3.6) (2020-02-28)
 
 ### [1.3.5](https://github.com/stampin-up/vue-components/compare/v1.3.4...v1.3.5) (2020-02-28)
