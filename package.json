@@ -15,7 +15,7 @@
     "ci": "yarn lint && yarn test",
     "demo:build": "nuxt-ts build demo",
     "demo:dev": "nuxt-ts dev demo",
-    "release": "yarn lint && yarn test && standard-version && git push --follow-tags && npm publish"
+    "release": "yarn lint && yarn test && standard-version"
   },
   "files": [
     "src"
