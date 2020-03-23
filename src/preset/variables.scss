@@ -7,3 +7,7 @@ $font-sizes: ();
 @for $i from 9 through 24 {
   $font-sizes: map-merge($font-sizes, ($i:$i * .07143rem));
 }
+$stepper-vertical-content-ltr-margin: -8px 0 -16px 0;
+$stepper-vertical-content-padding: 0 60px 16px 0;
+$stepper-vertical-padding-bottom: 0;
+$stepper-elevation: 0;
