@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.3](https://github.com/stampin-up/vue-components/compare/v1.4.2...v1.4.3) (2020-03-26)
+
+
+### Bug Fixes
+
+* styling of stepper ([#13](https://github.com/stampin-up/vue-components/issues/13)) ([8abfc13](https://github.com/stampin-up/vue-components/commit/8abfc1373376b43b9da4d3839d70c6cbc21a153a))
+
 ### [1.4.2](https://github.com/stampin-up/vue-components/compare/v1.4.1...v1.4.2) (2020-03-24)
 
 ### [1.4.1](https://github.com/stampin-up/vue-components/compare/v1.4.0...v1.4.1) (2020-03-23)
