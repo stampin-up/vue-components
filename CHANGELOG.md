@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.15](https://github.com/stampin-up/vue-components/compare/v1.4.14...v1.4.15) (2020-04-08)
+
 ### [1.4.14](https://github.com/stampin-up/vue-components/compare/v1.4.13...v1.4.14) (2020-04-06)
 
 ### [1.4.13](https://github.com/stampin-up/vue-components/compare/v1.4.12...v1.4.13) (2020-03-27)
