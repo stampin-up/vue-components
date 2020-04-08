@@ -1,37 +1,47 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
     "target": "es2018",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
-    "outDir": "dist",
-    "declaration": true,
-    "sourceMap": true,
+    "strict": true,
+    "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "skipLibCheck": true,
     "esModuleInterop": true,
-    "strict": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "stripInternal": true,
-    "experimentalDecorators": true,
-    "noUnusedLocals": true,
-    "typeRoots": [
-      "./shims"
-    ],
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "types": [
-      "@types/node",
-      "@types/jest"
-    ]
+      "webpack-env",
+      "jest",
+      "vuetify"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "outDir": ".tsout"
   },
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ],
   "include": [
-    "**/*.ts",
-    "**/*.vue"
+    ".storybook/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
