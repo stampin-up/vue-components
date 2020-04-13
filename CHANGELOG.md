@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/stampin-up/vue-components/compare/v1.4.17...v1.5.0) (2020-04-13)
+
+
+### Features
+
+* **tooltip:** adding tooltip component ([68ddda7](https://github.com/stampin-up/vue-components/commit/68ddda73cd9fb967b9675311cead80446c243a09))
+* implement storybook ([#17](https://github.com/stampin-up/vue-components/issues/17)) ([572961b](https://github.com/stampin-up/vue-components/commit/572961b0b69e6729e20222c9c45ec3c758ca721e))
+
 ### [1.4.17](https://github.com/stampin-up/vue-components/compare/v1.4.16...v1.4.17) (2020-04-08)
 
 ### [1.4.16](https://github.com/stampin-up/vue-components/compare/v1.4.15...v1.4.16) (2020-04-08)
