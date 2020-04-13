@@ -2,7 +2,13 @@ $body-font-family: proxima_nova;
 @import '~vuetify/src/styles/styles.sass';
 $btn-border-radius: 0;
 $card-border-radius: 0;
-$material-light: map-merge($material-light, (text: map-merge(map-get($material-light, 'text'), (primary: #333333))));
+$material-light: map-merge(
+    $material-light, (
+      text: map-merge(
+          map-get($material-light, 'text'), (primary: #333333, secondary: #333333)
+      )
+  )
+);
 $font-sizes: ();
 @for $i from 9 through 24 {
   $font-sizes: map-merge($font-sizes, ($i:$i * .07143rem));
