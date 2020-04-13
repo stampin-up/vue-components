@@ -38,7 +38,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import { mdiHelpCircleOutline } from '@mdi/js'
-import SBtn from '../../src/components/SBtn.vue'
+import SBtn from '../components/SBtn.vue'
 @Component({
   components: {
     SBtn
@@ -80,7 +80,7 @@ export default class TooltipComponent extends Vue {
     color: var(--v-primary-base);
     opacity: 1 !important;
     box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 4px ;
-    border: 1px solid #ccc;
+    border: 1px solid var(--v-border-base);
   }
   .callout:after {
     height: 20px;
@@ -94,13 +94,13 @@ export default class TooltipComponent extends Vue {
   .left:after {
     left: -11px;
     bottom: 40%;
-    border-left: 1px solid #bbb;
-    border-top: 1px solid #bbb;
+    border-left: 1px solid var(--v-border-base);
+    border-top: 1px solid var(--v-border-base);
   }
   .bottom:after {
     top: -10px;
     left: 50%;
-    border-right: 1px solid #bbb;
-    border-top: 1px solid #bbb;
+    border-right: 1px solid var(--v-border-base);
+    border-top: 1px solid var(--v-border-base);
   }
 </style>
