@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/stampin-up/vue-components/compare/v1.6.0...v1.7.0) (2020-04-14)
+
+
+### Features
+
+* simage component ([#19](https://github.com/stampin-up/vue-components/issues/19)) ([bdd6277](https://github.com/stampin-up/vue-components/commit/bdd62778ebff196ac782d072193ea98773daba3c))
+
 ## [1.6.0](https://github.com/stampin-up/vue-components/compare/v1.4.17...v1.6.0) (2020-04-14)
 
 
