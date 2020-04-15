@@ -16,12 +16,12 @@
     <template v-slot:activator="{ on }">
       <SBtn
         v-show="!text"
+        ref="tooltipBtn"
         :height="size"
         :width="size"
         icon
-        v-on="on"
-        ref="tooltipBtn"
         class="icon-btn"
+        v-on="on"
       >
         <VIcon :color="color" :size="size">
           {{ icons.mdiHelpCircleOutline }}
@@ -29,10 +29,10 @@
       </SBtn>
       <SBtn
         v-show="text"
-        link-medium
-        v-on="on"
         ref="tooltipLink"
+        link-medium
         class="link-btn"
+        v-on="on"
       >
         {{ text }}
       </SBtn>
@@ -51,9 +51,9 @@ import SBtn from '../components/SBtn.vue'
 })
 export default class TooltipComponent extends Vue {
   icons = { mdiHelpCircleOutline }
-  $refs!:  {
+  $refs!: {
     tooltipBtn: SBtn,
-    tooltipLink: SBtn 
+    tooltipLink: SBtn
   }
 
   @Prop({ type: String, default: null })
@@ -83,16 +83,15 @@ export default class TooltipComponent extends Vue {
   }
 
   async setTooltipOffset () {
-    const positionY = window.scrollY
     const button = this.$refs.tooltipBtn.$el as HTMLElement
     const link = this.$refs.tooltipLink.$el as HTMLElement
     const offset = this.text ? link.offsetTop : button.offsetTop
-    await this.$nextTick() 
+    await this.$nextTick()
 
     this.offsetTopButton = offset - window.scrollY
-    this.offsetLeftButton = this.text ? link.offsetLeft: button.offsetLeft
+    this.offsetLeftButton = this.text ? link.offsetLeft : button.offsetLeft
     this.bottomAligned = this.offsetTopButton <= this.halfWindowHeight
-  } 
+  }
 
   async onResize () {
     this.setViewableWindowSize()
