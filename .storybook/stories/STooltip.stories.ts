@@ -8,11 +8,12 @@ export const asDefault = () => ({
     STooltip
   },
   props: {
-    size: { default: text('size', '2rem' ) },
-    color: { default: text('color', '#888' ) },
-    callout: { default: boolean('callout', true ) },
-    icon: { default: boolean('icon', true )},
     text: { default: text('text', '') },
+    size: { default: text('size', '2rem') },
+    color: { default: text('color', '#888') },
+    callout: { default: boolean('callout', true) },
+    left: { default: boolean('left', false) },
+    right: { default: boolean('right', false) },
     info: { default: text('info', lipsum) }
   },
   template: `

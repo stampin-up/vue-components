@@ -9,7 +9,9 @@
     :bottom="bottomAligned"
     :open-on-hover="false"
     :content-class="tooltipStyle"
-    max-width="320px"
+    :nudge-left="right ? NUDGE_LEFT_OR_RIGHT : 0"
+    :nudge-right="left ? NUDGE_LEFT_OR_RIGHT : 0"
+    :max-width="DIALOG_MAX_WIDTH"
     open-delay="500"
     class="pa-3"
   >
@@ -49,7 +51,11 @@ import SBtn from '../components/SBtn.vue'
     SBtn
   }
 })
-export default class TooltipComponent extends Vue {
+export default class STooltip extends Vue {
+  DIALOG_MAX_WIDTH = 320
+  DIALOG_HALF_WIDTH = 160
+  NUDGE_LEFT_OR_RIGHT = 134
+
   icons = { mdiHelpCircleOutline }
   $refs!: {
     tooltipBtn: SBtn,
@@ -59,7 +65,7 @@ export default class TooltipComponent extends Vue {
   @Prop({ type: String, default: null })
   text!: string | null
 
-  @Prop({ type: String, default: '2rem' })
+  @Prop({ type: String, default: '1.5rem' })
   size!: string
 
   @Prop({ type: String, default: 'hover' })
@@ -67,6 +73,12 @@ export default class TooltipComponent extends Vue {
 
   @Prop({ type: Boolean, default: false })
   callout!: boolean
+
+  @Prop({ type: Boolean, default: false })
+  left!: boolean
+
+  @Prop({ type: Boolean, default: false })
+  right!: boolean
 
   offsetTopButton = 0
   offsetLeftButton = 0
@@ -78,18 +90,18 @@ export default class TooltipComponent extends Vue {
 
   setViewableWindowSize () {
     this.halfWindowHeight = window.innerHeight / 2
-    this.leftEdgeConstraint = 160
-    this.rightEdgeConstraint = window.innerWidth - 160
+    this.leftEdgeConstraint = this.DIALOG_HALF_WIDTH
+    this.rightEdgeConstraint = window.innerWidth - this.DIALOG_HALF_WIDTH
   }
 
   async setTooltipOffset () {
-    const button = this.$refs.tooltipBtn.$el as HTMLElement
-    const link = this.$refs.tooltipLink.$el as HTMLElement
-    const offset = this.text ? link.offsetTop : button.offsetTop
+    const button = this.$refs.tooltipBtn?.$el as HTMLElement
+    const link = this.$refs.tooltipLink?.$el as HTMLElement
+    const element = this.text ? link : button
     await this.$nextTick()
-
-    this.offsetTopButton = offset - window.scrollY
-    this.offsetLeftButton = this.text ? link.offsetLeft : button.offsetLeft
+    const { top, left } = this.getOffset(element)
+    this.offsetTopButton = top - window.scrollY
+    this.offsetLeftButton = left
     this.bottomAligned = this.offsetTopButton <= this.halfWindowHeight
   }
 
@@ -105,10 +117,9 @@ export default class TooltipComponent extends Vue {
   get tooltipStyle () {
     this.classList = this.callout ? 'callout' : 'tooltip'
     this.classList = this.offsetTopButton <= this.halfWindowHeight ? `${this.classList} bottom` : `${this.classList} top`
-
-    if (this.offsetLeftButton <= this.leftEdgeConstraint) {
+    if (this.left || this.offsetLeftButton <= this.leftEdgeConstraint) {
       this.classList = `${this.classList} left`
-    } else if (this.offsetLeftButton >= this.rightEdgeConstraint) {
+    } else if (this.right || this.offsetLeftButton >= this.rightEdgeConstraint) {
       this.classList = `${this.classList} right`
     } else {
       this.classList = `${this.classList} middle`
@@ -119,6 +130,17 @@ export default class TooltipComponent extends Vue {
   async mounted () {
     this.setViewableWindowSize()
     await this.setTooltipOffset()
+  }
+
+  getOffset (element: HTMLElement) {
+    let x = 0
+    let y = 0
+    while (element && !isNaN(element.offsetLeft) && !isNaN(element.offsetTop)) {
+      x += element.offsetLeft - element.scrollLeft
+      y += element.offsetTop - element.scrollTop
+      element = element.offsetParent as HTMLElement
+    }
+    return { top: y, left: x }
   }
 }
 </script>
@@ -144,11 +166,9 @@ export default class TooltipComponent extends Vue {
     -moz-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
   }
-
   .left:after { left: 16px; }
   .middle:after { left: 47%; }
   .right:after { right: 16px; }
-
   .top:after {
     bottom: -10px;
     border-left: 1px solid var(--v-border-base);
