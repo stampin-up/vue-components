@@ -8,16 +8,26 @@ export const asDefault = () => ({
     STooltip
   },
   props: {
-    size: { default: text('size', '2rem' ) },
-    color: { default: text('color', '#888' ) },
-    callout: { default: boolean('callout', true ) },
-    icon: { default: boolean('icon', true )},
-    text: { default: text('text', 'Tooltip') },
+    text: { default: text('text', '') },
+    size: { default: text('size', '2rem') },
+    color: { default: text('color', '#888') },
+    callout: { default: boolean('callout', true) },
+    left: { default: boolean('left', false) },
+    right: { default: boolean('right', false) },
     info: { default: text('info', lipsum) }
   },
   template: `
   <VContainer fluid>
-      <VRow style="min-height: 94vh; min-width: 100%;">
+      <VRow style="min-height: 1000px; min-width: 800px;">
+        <VCol cols=4>
+          <STooltip v-bind="$props"> {{ info }} </STooltip>
+        </VCol>
+        <VCol cols=4 class="text-center">
+          <STooltip v-bind="$props"> {{ info }} </STooltip>
+        </VCol>
+        <VCol cols=4 class="text-end">
+          <STooltip v-bind="$props"> {{ info }} </STooltip>
+        </VCol>
         <VCol cols=4>
           <STooltip v-bind="$props"> {{ info }} </STooltip>
         </VCol>
@@ -30,13 +40,13 @@ export const asDefault = () => ({
         <VCol cols=4 class="align-self-end">
           <STooltip v-bind="$props"> {{ info }} </STooltip>
         </VCol>
-        <VCol cols=4 class="text-center align-self-end" style="position:relative;">
+        <VCol cols=4 class="text-center align-self-end">
           <STooltip v-bind="$props"> {{ info }} </STooltip>
         </VCol>
         <VCol cols=4 class="text-end align-self-end">
           <STooltip v-bind="$props"> {{ info }} </STooltip>
         </VCol>
-      <VRow>
+      </VRow>
   </VContainer>
   `,
 })
