@@ -58,8 +58,8 @@ export default class STooltip extends Vue {
 
   icons = { mdiHelpCircleOutline }
   $refs!: {
-    tooltipBtn: Vue,
-    tooltipLink: Vue
+    tooltipBtn: SBtn,
+    tooltipLink: SBtn
   }
 
   @Prop({ type: String, default: null })
