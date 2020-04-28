@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.6](https://github.com/stampin-up/vue-components/compare/v1.7.5...v1.7.6) (2020-04-28)
+
+
+### Bug Fixes
+
+* simage with fix for image intesection in vuetify vdialogs ([#23](https://github.com/stampin-up/vue-components/issues/23)) ([7f7660e](https://github.com/stampin-up/vue-components/commit/7f7660e3e095dd48b42ca1eb695385fe89c16db2))
+
 ### [1.7.5](https://github.com/stampin-up/vue-components/compare/v1.7.4...v1.7.5) (2020-04-20)
 
 ### [1.7.4](https://github.com/stampin-up/vue-components/compare/v1.7.3...v1.7.4) (2020-04-15)
