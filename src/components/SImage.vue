@@ -16,11 +16,9 @@
 <script lang="ts">
 // adapted from https://github.com/alexjoverm/v-lazy-image/blob/master/src/index.js
 import { Component, Vue, Prop } from 'nuxt-property-decorator'
-import VLazyImage from 'v-lazy-image'
 
 @Component({
   components: {
-    VLazyImage
   },
   inheritAttrs: false
 })
