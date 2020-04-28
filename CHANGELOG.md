@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.1](https://github.com/stampin-up/vue-components/compare/v1.8.0...v1.8.1) (2020-04-28)
+
+
+### Bug Fixes
+
+* not used deps ([#24](https://github.com/stampin-up/vue-components/issues/24)) ([e2f6ac6](https://github.com/stampin-up/vue-components/commit/e2f6ac6b960bd3a6fc9b2ac762fba8bf99151d15))
+
 ## [1.8.0](https://github.com/stampin-up/vue-components/compare/v1.7.6...v1.8.0) (2020-04-28)
 
 
