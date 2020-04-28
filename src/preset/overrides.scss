@@ -111,6 +111,9 @@
         font-size:  map-get($font-sizes, 18);
       }
     }
+    &.emphasize .v-icon {
+      color: var(--v-secondary-base) !important;
+    }
   }
 }
 
@@ -174,6 +177,14 @@
     .v-text-field__details {
       margin-bottom: 20px;
       padding: 0px;
+    }
+  }
+  &.emphasize:not(.error--text) {
+    .v-input__slot {
+      border-color: var(--v-secondary-base) !important;
+    }
+    .v-icon {
+      color: var(--v-secondary-base) !important;
     }
   }
 }
