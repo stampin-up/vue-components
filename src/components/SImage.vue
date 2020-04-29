@@ -9,6 +9,7 @@
     :class="{
       'v-lazy-image-loaded': loaded
     }"
+    v-on="$listeners"
     @load="load"
   >
 </template>
