@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.3](https://github.com/stampin-up/vue-components/compare/v1.8.2...v1.8.3) (2020-04-29)
+
+
+### Bug Fixes
+
+* always render image ([#26](https://github.com/stampin-up/vue-components/issues/26)) ([c2208e6](https://github.com/stampin-up/vue-components/commit/c2208e6bba2c291f8c2257b70498dc26f5592e26))
+
 ### [1.8.2](https://github.com/stampin-up/vue-components/compare/v1.8.1...v1.8.2) (2020-04-29)
 
 
