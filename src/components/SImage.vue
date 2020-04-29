@@ -23,7 +23,7 @@ import { Component, Vue, Prop } from 'nuxt-property-decorator'
   inheritAttrs: false
 })
 export default class SBtn extends Vue {
-  @Prop({ required: false, default: 'https://via.placeholder.com/360', type: String }) placeholder!: string
+  @Prop({ required: false, default: 'https://res.cloudinary.com/stampin-up/image/upload/w_360,f_auto/v1588185111/loading_image.png', type: String }) placeholder!: string
   @Prop({ required: false, type: String }) src?: string
   @Prop({ required: false, type: String }) srcset?: string
 
@@ -80,7 +80,7 @@ export default class SBtn extends Vue {
 <style lang="scss" scoped>
 .lazy-image {
   display: block;
-  width: auto;
+  width: 100%;
   max-width: 100%;
 }
 </style>
