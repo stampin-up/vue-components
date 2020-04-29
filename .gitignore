@@ -19,5 +19,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
-demo/.nuxt/
 src/.storybook/
