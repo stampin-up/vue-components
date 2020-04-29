@@ -1,6 +1,5 @@
 <template>
   <img
-    v-if="src"
     :src="srcImage"
     :srcset="srcsetImage"
     :src-placeholder="placeholder"
