@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.2](https://github.com/stampin-up/vue-components/compare/v1.8.1...v1.8.2) (2020-04-29)
+
+
+### Bug Fixes
+
+* add listeners to image component ([#25](https://github.com/stampin-up/vue-components/issues/25)) ([9d82b20](https://github.com/stampin-up/vue-components/commit/9d82b20fdecf46889cc962bd2b5dc438eff73b8f))
+
 ### [1.8.1](https://github.com/stampin-up/vue-components/compare/v1.8.0...v1.8.1) (2020-04-28)
 
 
