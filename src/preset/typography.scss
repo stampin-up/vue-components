@@ -159,16 +159,12 @@ hr {
   text-decoration: line-through !important;
 }
 
-.text-capitalize {
-  text-transform: capitalize !important;
-}
-
 .font-weight-bold.active-bolder {
   &:hover, &:focus {
     font-weight: 900 !important;
   }
 }
-
+ 
 .details, .reward-details {
   font-size: .7857rem;
   text-transform: uppercase;
