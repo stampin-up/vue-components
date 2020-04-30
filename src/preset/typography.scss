@@ -44,7 +44,7 @@
   font-size: 14px;
 }
 
-h1 {
+h1, .display-h1 {
   font-size: 4rem; /* 56px */
   font-weight: 300; // light
   text-transform: uppercase;
@@ -52,40 +52,42 @@ h1 {
   line-height: 1;
 }
 
-h2 {
-  font-size: 2.857rem;
-  font-weight: 400;
+h2, .display-h2 {
+  font-size: 2.857rem; /* 40px */
+  font-weight: 400; // regular
   margin: 0;
   text-transform: uppercase;
-  line-height: 2.857rem;
+  line-height: 1;
 }
 
-h3 {
-  font-size: map-get($font-sizes, 23);
+h3, h4, .display-h3 {
+  font-size: 1.643rem; /* 23px */
   font-weight: 700; // semi-bold
   text-transform: uppercase;
-}
-
-h4 {
-  font-size: map-get($font-sizes, 23);
-  font-weight: 900;
-  text-transform: uppercase;
+  line-height: 1;
 }
 
 h5 {
   font-size: map-get($font-sizes, 20);
-  font-weight: 900;
+  font-weight: 900; // bold
   text-transform: uppercase;
+  line-height: 1;
 }
 
 h6 {
   font-size: map-get($font-sizes, 18);
   font-weight: 400;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 p {
   font-size: 1.143rem;
+  line-height: normal;
+}
+
+a {
+  color: #00b3a8 !important;
 }
 
 hr {
@@ -95,17 +97,20 @@ hr {
 @media only screen and (min-width: 600px) and (max-width: 959px) {
   h1 { font-size: 3.429rem; }
   h2 { font-size: 2.286rem; }
-  h3 { font-size: 1.714rem; }
-  h4 { font-size: map-get($font-sizes, 21); }
-  h5 { font-size: map-get($font-sizes, 19); }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.5rem; }
+  h5 { font-size: 1.286rem; }
+  h6 { font-size: 1.143rem; }
 }
 
 @media only screen and (max-width: 599px) {
-  h1 { font-size: 2.286rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: map-get($font-sizes, 21); }
-  h4 { font-size: map-get($font-sizes, 21); }
-  h5 { font-size: map-get($font-sizes, 19); }
+  h1 { font-size: 2.857rem; }
+  h2 { font-size: 1.714rem; }
+  h3 { font-size: 1.357rem; }
+  h4 { font-size: 1.357rem; }
+  h5 { font-size: 1.143rem; }
+  h6 { font-size: 1rem; font-weight: 700;}
+  p { font-size: 1rem; }
 }
 
 .subheader {
@@ -113,7 +118,20 @@ hr {
 }
 
 .fine-print {
-  font-size: map-get($font-sizes, 12);
+  font-size: .8571rem;
+}
+
+.footer-link {
+  color: var(--v-primary-base)!important;
+  font-size: 1rem; 
+  display: block;
+  justify-content: start;
+}
+
+.footer-link--legal {
+  color: var(--v-hover-base)!important;
+  font-size: .8571rem; 
+  text-transform: uppercase;
 }
 
 .suggestion {
@@ -141,10 +159,20 @@ hr {
   text-decoration: line-through !important;
 }
 
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
 .font-weight-bold.active-bolder {
   &:hover, &:focus {
     font-weight: 900 !important;
   }
+}
+
+.details, .reward-details {
+  font-size: .7857rem;
+  text-transform: uppercase;
+  color: var(--v-greyedOut-base);
 }
 
 // default letter spacing 0px
