@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.7](https://github.com/stampin-up/vue-components/compare/v1.8.6...v1.8.7) (2020-05-04)
+
+
+### Bug Fixes
+
+* deleted anchor tag style ([#30](https://github.com/stampin-up/vue-components/issues/30)) ([2f338e4](https://github.com/stampin-up/vue-components/commit/2f338e42fb912713ce231270e671fbe53a8bb8eb))
+
 ### [1.8.6](https://github.com/stampin-up/vue-components/compare/v1.8.5...v1.8.6) (2020-05-04)
 
 ### [1.8.5](https://github.com/stampin-up/vue-components/compare/v1.8.4...v1.8.5) (2020-04-30)
