@@ -248,3 +248,11 @@ input:-webkit-autofill:active  {
   box-shadow: 0 0 0 30px white inset !important;
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
+
+// checkbox
+.v-input.v-input--checkbox .v-input--selection-controls__input .v-icon {
+    color: var(--v-greyedOut-base);
+    svg {
+      height: 16px;
+    }
+}
