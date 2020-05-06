@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.8](https://github.com/stampin-up/vue-components/compare/v1.8.7...v1.8.8) (2020-05-06)
+
+
+### Bug Fixes
+
+* chexkbox color and size ([#31](https://github.com/stampin-up/vue-components/issues/31)) ([4b0e706](https://github.com/stampin-up/vue-components/commit/4b0e7064b8f2ef4e58a63090e0dad97c0589b58d))
+
 ### [1.8.7](https://github.com/stampin-up/vue-components/compare/v1.8.6...v1.8.7) (2020-05-04)
 
 
