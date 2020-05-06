@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.9](https://github.com/stampin-up/vue-components/compare/v1.8.8...v1.8.9) (2020-05-06)
+
+
+### Bug Fixes
+
+* checkbox label multiline rules ([#32](https://github.com/stampin-up/vue-components/issues/32)) ([19133f5](https://github.com/stampin-up/vue-components/commit/19133f5129ef9517bfbee9a40807ab65b339d404))
+
 ### [1.8.8](https://github.com/stampin-up/vue-components/compare/v1.8.7...v1.8.8) (2020-05-06)
 
 
