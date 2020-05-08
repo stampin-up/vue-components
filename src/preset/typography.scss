@@ -67,15 +67,15 @@ h3, .display-h3 {
   line-height: 1;
 }
 
-h4, h5 {
+h4 {
   font-size: 1.429rem; /* 20px */
   font-weight: 900; // bold
   text-transform: uppercase;
   line-height: 1;
 }
 
-h6 {
-  font-size: map-get($font-sizes, 18);
+h5 {
+  font-size: 1.286rem; /* 18px */
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1;
@@ -95,8 +95,7 @@ hr {
   h2 { font-size: 2.286rem; }
   h3 { font-size: 1.5rem; }
   h4 { font-size: 1.286rem; }
-  h5 { font-size: 1.286rem; }
-  h6 { font-size: 1.143rem; }
+  h5 { font-size: 1.143rem; }
 }
 
 @media only screen and (max-width: 599px) {
@@ -104,8 +103,7 @@ hr {
   h2 { font-size: 1.714rem; }
   h3 { font-size: 1.357rem; }
   h4 { font-size: 1.143rem; }
-  h5 { font-size: 1.143rem; }
-  h6 { font-size: 1rem; font-weight: 700;}
+  h5 { font-size: 1rem; font-weight: 700;}
   p { font-size: 1rem; }
 }
 
