@@ -60,29 +60,29 @@ h2, .display-h2 {
   line-height: 1;
 }
 
-h3, h4, .display-h3 {
+h3, .display-h3 {
   font-size: 1.643rem; /* 23px */
   font-weight: 700; // semi-bold
   text-transform: uppercase;
   line-height: 1;
 }
 
-h5 {
-  font-size: map-get($font-sizes, 20);
+h4 {
+  font-size: 1.429rem; /* 20px */
   font-weight: 900; // bold
   text-transform: uppercase;
   line-height: 1;
 }
 
-h6 {
-  font-size: map-get($font-sizes, 18);
+h5 {
+  font-size: 1.286rem; /* 18px */
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1;
 }
 
 p {
-  font-size: 1.143rem;
+  font-size: 1.143rem; /* 16px */
   line-height: normal;
 }
 
@@ -94,18 +94,16 @@ hr {
   h1 { font-size: 3.429rem; }
   h2 { font-size: 2.286rem; }
   h3 { font-size: 1.5rem; }
-  h4 { font-size: 1.5rem; }
-  h5 { font-size: 1.286rem; }
-  h6 { font-size: 1.143rem; }
+  h4 { font-size: 1.286rem; }
+  h5 { font-size: 1.143rem; }
 }
 
 @media only screen and (max-width: 599px) {
   h1 { font-size: 2.857rem; }
   h2 { font-size: 1.714rem; }
   h3 { font-size: 1.357rem; }
-  h4 { font-size: 1.357rem; }
-  h5 { font-size: 1.143rem; }
-  h6 { font-size: 1rem; font-weight: 700;}
+  h4 { font-size: 1.143rem; }
+  h5 { font-size: 1rem; font-weight: 700;}
   p { font-size: 1rem; }
 }
 
