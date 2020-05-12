@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.11](https://github.com/stampin-up/vue-components/compare/v1.8.10...v1.8.11) (2020-05-12)
+
+
+### Bug Fixes
+
+* make link nuxt ([#34](https://github.com/stampin-up/vue-components/issues/34)) ([a6ca5d1](https://github.com/stampin-up/vue-components/commit/a6ca5d1976a70cfd48d214ea535db8f8fe98e79e))
+
 ### [1.8.10](https://github.com/stampin-up/vue-components/compare/v1.8.9...v1.8.10) (2020-05-10)
 
 ### [1.8.9](https://github.com/stampin-up/vue-components/compare/v1.8.8...v1.8.9) (2020-05-06)
