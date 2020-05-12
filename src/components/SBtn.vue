@@ -9,6 +9,8 @@
       'link': isText,
     }"
     :text="isText"
+    :nuxt="isLink"
+    :to="to"
     v-on="$listeners"
   >
     <slot />
@@ -26,6 +28,11 @@ export default class SBtn extends Vue {
   @Prop({ required: false, default: false, type: Boolean }) linkSmall!: boolean
   @Prop({ required: false, default: false, type: Boolean }) linkMedium!: boolean
   @Prop({ required: false, default: false, type: Boolean }) linkLarge!: boolean
+  @Prop({ required: false, type: [String, Object] }) to?: string | object
+
+  get isLink () {
+    return !!this.to
+  }
 
   get isText () {
     return this.linkSmall || this.linkLarge || this.linkMedium || this.$attrs.text
