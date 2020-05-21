@@ -121,12 +121,12 @@ export default class STooltip extends Vue {
   get tooltipStyle () {
     const position: CalloutPosition= (<any>CalloutPosition)[this.position]
     this.classList = this.callout ? 'callout' : 'tooltip'
-    this.classList = this.offsetTopButton <= this.halfWindowHeight ? `${this.classList} bottom` : `${this.classList} top`
-    if (position === CalloutPosition.Middle) {
+    this.classList = (this.offsetTopButton <= this.halfWindowHeight) ? `${this.classList} bottom` : `${this.classList} top`
+    if (position === CalloutPosition.MIDDLE) {
       this.classList = `${this.classList} middle`
-    } else if (position === CalloutPosition.Left || this.offsetLeftButton <= this.leftEdgeConstraint) {
+    } else if (position === CalloutPosition.LEFT || this.offsetLeftButton <= this.leftEdgeConstraint) {
       this.classList = `${this.classList} left`
-    } else if (position ===CalloutPosition.Right || this.offsetLeftButton >= this.rightEdgeConstraint) {
+    } else if (position ===CalloutPosition.RIGHT || this.offsetLeftButton >= this.rightEdgeConstraint) {
       this.classList = `${this.classList} right`
     } else {
       this.classList = `${this.classList} middle`
