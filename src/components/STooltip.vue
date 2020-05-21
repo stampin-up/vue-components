@@ -50,7 +50,7 @@ import SBtn from '../components/SBtn.vue'
 enum CalloutPosition {
   LEFT,
   MIDDLE,
-  RIGHT 
+  RIGHT
 }
 
 @Component({
@@ -82,7 +82,7 @@ export default class STooltip extends Vue {
   callout!: boolean
 
   @Prop({ type: String, default: '' })
-  position!: string 
+  position!: string
 
   offsetTopButton = 0
   offsetLeftButton = 0
@@ -119,7 +119,7 @@ export default class STooltip extends Vue {
   }
 
   get tooltipStyle () {
-    const position: CalloutPosition= (<any>CalloutPosition)[this.position]
+    const position: CalloutPosition = CalloutPosition[this.position as keyof typeof CalloutPosition]
     this.classList = this.callout ? 'callout' : 'tooltip'
     this.classList = (this.offsetTopButton <= this.halfWindowHeight) ? `${this.classList} bottom` : `${this.classList} top`
     if (position === CalloutPosition.MIDDLE) {
