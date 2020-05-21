@@ -126,7 +126,7 @@ export default class STooltip extends Vue {
       this.classList = `${this.classList} middle`
     } else if (position === CalloutPosition.LEFT || this.offsetLeftButton <= this.leftEdgeConstraint) {
       this.classList = `${this.classList} left`
-    } else if (position ===CalloutPosition.RIGHT || this.offsetLeftButton >= this.rightEdgeConstraint) {
+    } else if (position === CalloutPosition.RIGHT || this.offsetLeftButton >= this.rightEdgeConstraint) {
       this.classList = `${this.classList} right`
     } else {
       this.classList = `${this.classList} middle`
