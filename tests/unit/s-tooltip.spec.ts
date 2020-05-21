@@ -45,9 +45,19 @@ describe('STooltip', () => {
       expect(component.vm.tooltipStyle).toEqual('callout bottom left')
     })
 
+    it('tooltipStyle getter should return "callout bottom middle" if callout is true and prop', () => {
+      component.setProps({
+        position: 'middle'
+      })
+
+      // button position
+      vm.offsetLeftButton = 100
+      expect(component.vm.tooltipStyle).toEqual('callout bottom middle')
+    })
+
     it('tooltipStyle getter should return "callout bottom left" if callout is true and prop left is set', () => {
       component.setProps({
-        left: true
+        position: 'left'
       })
 
       // button position
@@ -63,12 +73,22 @@ describe('STooltip', () => {
 
     it('tooltipStyle getter should return "callout bottom right" if callout is true and prop right is set', () => {
       component.setProps({
-        right: true
+        position: 'right'
       })
 
       // button position
       vm.offsetLeftButton = 400
       expect(component.vm.tooltipStyle).toEqual('callout bottom right')
+    })
+
+    it('tooltipStyle getter should return "callout bottom middle" if callout is true and close to right edge', () => {
+      component.setProps({
+        position: 'middle'
+      })
+
+      // window properties
+      vm.offsetLeftButton = 700
+      expect(component.vm.tooltipStyle).toEqual('callout bottom middle')
     })
 
     it('tooltipStyle getter should return "callout bottom right" if callout is true and close to right edge', () => {
@@ -93,9 +113,19 @@ describe('STooltip', () => {
       expect(component.vm.tooltipStyle).toEqual('callout top left')
     })
 
+    it('tooltipStyle getter should return "callout top middle" if callout is true and prop', () => {
+      component.setProps({
+        position: 'middle'
+      })
+
+      // button position
+      vm.offsetLeftButton = 100
+      expect(component.vm.tooltipStyle).toEqual('callout top middle')
+    })
+
     it('tooltipStyle getter should return "callout top left" if callout is true and left prop is set', () => {
       component.setProps({
-        left: true
+        position: 'left'
       })
 
       // button position
@@ -111,12 +141,22 @@ describe('STooltip', () => {
 
     it('tooltipStyle getter should return "callout top right" if callout is true and right prop is set', () => {
       component.setProps({
-        right: true
+        position: 'right'
       })
 
       // button position
       vm.offsetLeftButton = 400
       expect(component.vm.tooltipStyle).toEqual('callout top right')
+    })
+
+    it('tooltipStyle getter should return "callout top middle" if callout is true and close to right edge', () => {
+      component.setProps({
+        position: 'middle'
+      })
+
+      // window properties
+      vm.offsetLeftButton = 700
+      expect(component.vm.tooltipStyle).toEqual('callout top middle')
     })
 
     it('tooltipStyle getter should return "callout top right" if callout is true and close to right edge', () => {

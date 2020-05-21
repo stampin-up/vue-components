@@ -9,8 +9,8 @@
     :bottom="bottomAligned"
     :open-on-hover="false"
     :content-class="tooltipStyle"
-    :nudge-left="right ? NUDGE_LEFT_OR_RIGHT : 0"
-    :nudge-right="left ? NUDGE_LEFT_OR_RIGHT : 0"
+    :nudge-left="position === 'right' ? NUDGE_LEFT_OR_RIGHT : 0"
+    :nudge-right="position === 'left' ? NUDGE_LEFT_OR_RIGHT : 0"
     :max-width="DIALOG_MAX_WIDTH"
     open-delay="500"
     class="pa-3"
@@ -46,6 +46,13 @@
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import { mdiHelpCircleOutline } from '@mdi/js'
 import SBtn from '../components/SBtn.vue'
+
+enum CalloutPosition {
+  LEFT,
+  MIDDLE,
+  RIGHT
+}
+
 @Component({
   components: {
     SBtn
@@ -74,11 +81,8 @@ export default class STooltip extends Vue {
   @Prop({ type: Boolean, default: false })
   callout!: boolean
 
-  @Prop({ type: Boolean, default: false })
-  left!: boolean
-
-  @Prop({ type: Boolean, default: false })
-  right!: boolean
+  @Prop({ type: String, default: '' })
+  position!: string
 
   offsetTopButton = 0
   offsetLeftButton = 0
@@ -115,11 +119,14 @@ export default class STooltip extends Vue {
   }
 
   get tooltipStyle () {
+    const position: CalloutPosition = CalloutPosition[this.position.toUpperCase() as keyof typeof CalloutPosition]
     this.classList = this.callout ? 'callout' : 'tooltip'
-    this.classList = this.offsetTopButton <= this.halfWindowHeight ? `${this.classList} bottom` : `${this.classList} top`
-    if (this.left || this.offsetLeftButton <= this.leftEdgeConstraint) {
+    this.classList = (this.offsetTopButton <= this.halfWindowHeight) ? `${this.classList} bottom` : `${this.classList} top`
+    if (position === CalloutPosition.MIDDLE) {
+      this.classList = `${this.classList} middle`
+    } else if (position === CalloutPosition.LEFT || this.offsetLeftButton <= this.leftEdgeConstraint) {
       this.classList = `${this.classList} left`
-    } else if (this.right || this.offsetLeftButton >= this.rightEdgeConstraint) {
+    } else if (position === CalloutPosition.RIGHT || this.offsetLeftButton >= this.rightEdgeConstraint) {
       this.classList = `${this.classList} right`
     } else {
       this.classList = `${this.classList} middle`
@@ -128,6 +135,9 @@ export default class STooltip extends Vue {
   }
 
   async mounted () {
+    if (this.position && !Object.values(CalloutPosition).includes(this.position.toUpperCase())) {
+      throw new Error('Tooltip position must be one of the following: undefined | left | middle | right')
+    }
     this.setViewableWindowSize()
     await this.setTooltipOffset()
   }
