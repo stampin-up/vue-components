@@ -119,7 +119,7 @@ export default class STooltip extends Vue {
   }
 
   get tooltipStyle () {
-    const position: CalloutPosition = CalloutPosition[this.position as keyof typeof CalloutPosition]
+    const position: CalloutPosition = CalloutPosition[this.position.toUpperCase() as keyof typeof CalloutPosition]
     this.classList = this.callout ? 'callout' : 'tooltip'
     this.classList = (this.offsetTopButton <= this.halfWindowHeight) ? `${this.classList} bottom` : `${this.classList} top`
     if (position === CalloutPosition.MIDDLE) {
