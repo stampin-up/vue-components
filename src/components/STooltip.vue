@@ -78,6 +78,9 @@ export default class STooltip extends Vue {
   left!: boolean
 
   @Prop({ type: Boolean, default: false })
+  middle!: boolean
+
+  @Prop({ type: Boolean, default: false })
   right!: boolean
 
   offsetTopButton = 0
@@ -117,7 +120,9 @@ export default class STooltip extends Vue {
   get tooltipStyle () {
     this.classList = this.callout ? 'callout' : 'tooltip'
     this.classList = this.offsetTopButton <= this.halfWindowHeight ? `${this.classList} bottom` : `${this.classList} top`
-    if (this.left || this.offsetLeftButton <= this.leftEdgeConstraint) {
+    if (this.middle) {
+      this.classList = `${this.classList} middle`
+    } else if (this.left || this.offsetLeftButton <= this.leftEdgeConstraint) {
       this.classList = `${this.classList} left`
     } else if (this.right || this.offsetLeftButton >= this.rightEdgeConstraint) {
       this.classList = `${this.classList} right`
