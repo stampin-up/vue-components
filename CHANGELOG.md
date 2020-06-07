@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.13](https://github.com/stampin-up/vue-components/compare/v1.8.12...v1.8.13) (2020-06-07)
+
+
+### Bug Fixes
+
+* checkbox ripple alignment ([#36](https://github.com/stampin-up/vue-components/issues/36)) ([1e28a5f](https://github.com/stampin-up/vue-components/commit/1e28a5f93c0a2d5f25287fbd7d7eaf895b982b6f))
+
 ### [1.8.12](https://github.com/stampin-up/vue-components/compare/v1.8.11...v1.8.12) (2020-05-21)
 
 ### [1.8.11](https://github.com/stampin-up/vue-components/compare/v1.8.10...v1.8.11) (2020-05-12)
