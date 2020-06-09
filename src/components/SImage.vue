@@ -22,7 +22,7 @@ import { Component, Vue, Prop } from 'nuxt-property-decorator'
   },
   inheritAttrs: false
 })
-export default class SBtn extends Vue {
+export default class SImage extends Vue {
   @Prop({ required: false, default: 'https://res.cloudinary.com/stampin-up/image/upload/w_360,f_auto/v1588185111/loading_image.png', type: String }) placeholder!: string
   @Prop({ required: false, type: String }) src?: string
   @Prop({ required: false, type: String }) srcset?: string
