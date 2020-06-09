@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/stampin-up/vue-components/compare/v1.8.13...v1.9.0) (2020-06-09)
+
+
+### Features
+
+* **background pane:** added component ([#37](https://github.com/stampin-up/vue-components/issues/37)) ([6c674f0](https://github.com/stampin-up/vue-components/commit/6c674f0b717664b27c9a0260137a1d17bf80a656))
+
 ### [1.8.13](https://github.com/stampin-up/vue-components/compare/v1.8.12...v1.8.13) (2020-06-07)
 
 
