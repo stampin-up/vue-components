@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.1](https://github.com/stampin-up/vue-components/compare/v1.9.0...v1.9.1) (2020-06-16)
+
+
+### Bug Fixes
+
+* dont show loading bar till its visible ([#39](https://github.com/stampin-up/vue-components/issues/39)) ([0f24f40](https://github.com/stampin-up/vue-components/commit/0f24f40d79e9096bf9dae80e6f7fa18d71a06a0d))
+
 ## [1.9.0](https://github.com/stampin-up/vue-components/compare/v1.8.13...v1.9.0) (2020-06-09)
 
 
