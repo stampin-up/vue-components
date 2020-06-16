@@ -14,7 +14,8 @@ describe('SDialog', () => {
   beforeEach(() => {
     localVue = createLocalVue()
     component = shallowMount(SDialog, {
-      localVue
+      localVue,
+      propsData: { showDialog: true }
     })
   })
 

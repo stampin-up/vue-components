@@ -1,10 +1,15 @@
 <template>
   <VDialog
+    v-model="innerValue"
     v-bind="$attrs"
-    :value="showDialog"
     :width="width"
+    scrollable
+    @click:outside="close"
   >
-    <VCard v-click-outside="close" class="text-center pa-2" data-testid="confirm-dialog">
+    <template v-slot:activator="slotData">
+      <slot name="activator" v-bind="slotData" />
+    </template>
+    <VCard class="text-center pa-2" max-height="700" data-testid="confirm-dialog">
       <VRow no-gutters>
         <VCol cols="12" class="text-right">
           <SBtn
@@ -34,14 +39,12 @@
       >
         {{ text }}
       </VCardText>
-      <VCardActions class="py-0">
+      <slot :class="{'pb-2' : !cancelText }" />
+      <VCardActions v-if="cancelText">
         <VRow no-gutters>
           <VCol cols="12">
-            <slot />
-          </VCol>
-          <VCol v-if="cancelText" cols="12">
             <SBtn
-              class="my-3"
+              class="mb-3"
               link-small
               data-testid="confirm-dialog-btn-cancel"
               @click="close"
@@ -56,7 +59,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'nuxt-property-decorator'
+import { Component, Vue, Prop, Watch } from 'nuxt-property-decorator'
 import { mdiClose } from '@mdi/js'
 import SBtn from '../components/SBtn.vue'
 
@@ -73,7 +76,23 @@ export default class SDialog extends Vue {
   @Prop({ required: false, type: String }) text!: string
   @Prop({ required: false, type: String }) cancelText!: string
   @Prop({ required: false, default: 325, type: Number }) width!: number
-  @Prop({ required: false, default: false, type: Boolean }) showDialog!: boolean
+  @Prop({ required: true, type: Boolean }) showDialog!: boolean
+
+  innerValue: boolean | null | undefined = null
+
+  @Watch('innerValue')
+  public onInnerChange (val: this['innerValue']) {
+    this.$emit('update:show-dialog', val)
+  }
+
+  @Watch('showDialog')
+  public onOuterChange (newVal: this['showDialog']) {
+    this.innerValue = newVal
+  }
+
+  created () {
+    this.innerValue = this.showDialog
+  }
 
   close () {
     this.$emit('update:show-dialog', false)
