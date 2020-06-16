@@ -39,7 +39,7 @@
       >
         {{ text }}
       </VCardText>
-      <slot :class="{'pb-2' : !cancelText }" />
+      <slot />
       <VCardActions v-if="cancelText">
         <VRow no-gutters>
           <VCol cols="12">
