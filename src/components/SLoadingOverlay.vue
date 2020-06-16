@@ -2,6 +2,7 @@
   <!--To use add class add-processing to content you wish to fill -->
   <VLayout
     :class="{'overlay': loading}"
+    v-show="loading"
     class="loading-overlay"
   >
     <VProgressCircular
