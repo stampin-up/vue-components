@@ -62,6 +62,8 @@ export default class SImage extends Vue {
         }
       }, this.intersectionOptions)
       this.observer.observe(this.$el)
+    } else {
+      this.intersected = true
     }
   }
 
