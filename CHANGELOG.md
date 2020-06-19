@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.1](https://github.com/stampin-up/vue-components/compare/v1.10.0...v1.10.1) (2020-06-19)
+
+
+### Bug Fixes
+
+* show image if no intersection observer ([#40](https://github.com/stampin-up/vue-components/issues/40)) ([7ea6838](https://github.com/stampin-up/vue-components/commit/7ea68383b1e255f1050aa730dc36943bb978950c))
+
 ## [1.10.0](https://github.com/stampin-up/vue-components/compare/v1.9.1...v1.10.0) (2020-06-16)
 
 
