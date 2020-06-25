@@ -9,7 +9,7 @@
     <template v-slot:activator="slotData">
       <slot name="activator" v-bind="slotData" />
     </template>
-    <VCard class="text-center pa-2" max-height="700" data-testid="confirm-dialog">
+    <VCard class="text-center pa-2" :max-height="cardMaxHeight" data-testid="confirm-dialog">
       <VRow no-gutters>
         <VCol cols="12" class="text-right">
           <SBtn
@@ -72,11 +72,12 @@ import SBtn from '../components/SBtn.vue'
 export default class SDialog extends Vue {
   icons = { mdiClose }
 
-  @Prop({ required: false, type: String }) title!: string
-  @Prop({ required: false, type: String }) text!: string
-  @Prop({ required: false, type: String }) cancelText!: string
+  @Prop({ required: false, type: String }) title?: string
+  @Prop({ required: false, type: String }) text?: string
+  @Prop({ required: false, type: String }) cancelText?: string
   @Prop({ required: false, default: 325, type: Number }) width!: number
   @Prop({ required: true, type: Boolean }) showDialog!: boolean
+  @Prop({ required: false, type: String }) cardMaxHeight?: string
 
   innerValue: boolean | null | undefined = null
 
