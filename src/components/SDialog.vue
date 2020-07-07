@@ -79,7 +79,7 @@ export default class SDialog extends Vue {
   @Prop({ required: true, type: Boolean }) showDialog!: boolean
   @Prop({ required: false, type: String }) cardMaxHeight?: string
 
-  innerValue: boolean | null | undefined = null
+  innerValue: boolean = false
 
   @Watch('innerValue')
   public onInnerChange (val: this['innerValue']) {
