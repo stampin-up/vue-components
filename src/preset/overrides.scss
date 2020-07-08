@@ -217,9 +217,9 @@
   }
 }
 
-.v-content.site-content {
+.v-main.site-content {
   padding-bottom: 40px;
-  > .v-content__wrap {
+  > .v-main__wrap {
     .container.container--fluid { padding: 0; }
   }
 }
