@@ -4,6 +4,7 @@
     v-bind="$attrs"
     :width="width"
     scrollable
+    v-on="$listeners"
     @click:outside="close"
   >
     <template v-slot:activator="slotData">
