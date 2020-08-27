@@ -10,7 +10,14 @@
     <template v-slot:activator="slotData">
       <slot name="activator" v-bind="slotData" />
     </template>
-    <VCard class="text-center pa-2" :max-height="cardMaxHeight" data-testid="confirm-dialog">
+    <VCard
+      class="text-center pa-2"
+      role="dialog"
+      :aria-labelledby="`sDialogTitle${id}`"
+      :aria-describedby="`sDialogText${id}`"
+      :max-height="cardMaxHeight"
+      data-testid="confirm-dialog"
+    >
       <VRow no-gutters>
         <VCol cols="12" class="text-right">
           <SBtn
@@ -28,7 +35,7 @@
       >
         <VRow no-gutters>
           <VCol cols="12" class="px-4 py-2">
-            <h4>
+            <h4 :id="`sDialogTitle${id}`">
               {{ title }}
             </h4>
           </VCol>
@@ -36,6 +43,7 @@
       </VCardTitle>
       <VCardText
         v-if="text"
+        :id="`sDialogText${id}`"
         class="text--primary font14 py-2"
       >
         {{ text }}
@@ -64,6 +72,9 @@ import { Component, Vue, Prop, Watch } from 'nuxt-property-decorator'
 import { mdiClose } from '@mdi/js'
 import SBtn from '../components/SBtn.vue'
 
+// used for unique IDs for every dialog
+let id = 0
+
 @Component({
   components: {
     SBtn
@@ -81,6 +92,7 @@ export default class SDialog extends Vue {
   @Prop({ required: false, type: String }) cardMaxHeight?: string
 
   innerValue: boolean = false
+  id = ++id
 
   @Watch('innerValue')
   public onInnerChange (val: this['innerValue']) {
