@@ -16,6 +16,9 @@
           <SBtn
             color="primary"
             text
+            :class="{
+              'sticky-close': stickyClose
+            }"
             @click="close"
           >
             <VIcon>{{ icons.mdiClose }}</VIcon>
@@ -78,6 +81,7 @@ export default class SDialog extends Vue {
   @Prop({ required: false, type: String }) cancelText?: string
   @Prop({ required: false, default: 325, type: Number }) width!: number
   @Prop({ required: true, type: Boolean }) showDialog!: boolean
+  @Prop({ required: false, type: Boolean }) stickyClose!: boolean
   @Prop({ required: false, type: String }) cardMaxHeight?: string
 
   innerValue: boolean = false
@@ -105,5 +109,9 @@ export default class SDialog extends Vue {
 </script>
 
 <style lang="scss" scoped>
-
+.sticky-close {
+  position: fixed;
+  z-index: 10;
+  margin-left: -20px;
+}
 </style>
