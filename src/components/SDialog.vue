@@ -11,7 +11,7 @@
       <slot name="activator" v-bind="slotData" />
     </template>
     <VCard class="text-center pa-2" :max-height="cardMaxHeight" data-testid="confirm-dialog">
-      <VRow no-gutters>
+      <VRow no-gutters :style="fixed">
         <VCol cols="12" class="text-right">
           <SBtn
             color="primary"
@@ -76,9 +76,10 @@ export default class SDialog extends Vue {
   @Prop({ required: false, type: String }) title?: string
   @Prop({ required: false, type: String }) text?: string
   @Prop({ required: false, type: String }) cancelText?: string
-  @Prop({ required: false, default: 325, type: Number }) width!: number
+  @Prop({ required: false, default: 325 }) width!: number | string
   @Prop({ required: true, type: Boolean }) showDialog!: boolean
   @Prop({ required: false, type: String }) cardMaxHeight?: string
+  @Prop({ required: true, type: Boolean }) fixedExit!: boolean
 
   innerValue: boolean = false
 
@@ -90,6 +91,10 @@ export default class SDialog extends Vue {
   @Watch('showDialog')
   public onOuterChange (newVal: this['showDialog']) {
     this.innerValue = newVal
+  }
+
+  get fixed () {
+    return this.fixedExit ? { width: `calc(${this.width}px - 16px`, position: 'fixed' } : ''
   }
 
   created () {
