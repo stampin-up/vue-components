@@ -115,29 +115,3 @@ export default class SDialog extends Vue {
   margin-left: -20px;
 }
 </style>
-
-
-  @Watch('showDialog')
-  public onOuterChange (newVal: this['showDialog']) {
-    this.innerValue = newVal
-  }
-
-  get fixed () {
-    return this.fixedExit ? { width: `calc(${this.width}px - 16px`, position: 'fixed' } : ''
-  }
-
-  created () {
-    this.innerValue = this.showDialog
-  }
-
-  close () {
-    this.$emit('update:show-dialog', false)
-    this.$emit('close')
-  }
-}
-
-</script>
-
-<style lang="scss" scoped>
-
-</style>
