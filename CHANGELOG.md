@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/stampin-up/vue-components/compare/v1.10.7...v1.11.0) (2020-09-10)
+
+
+### Features
+
+* sticky close dialog ([#52](https://github.com/stampin-up/vue-components/issues/52)) ([b20dae4](https://github.com/stampin-up/vue-components/commit/b20dae4787f899fc072d1b9f2031ce164dee2317))
+
 ### [1.10.7](https://github.com/stampin-up/vue-components/compare/v1.10.6...v1.10.7) (2020-09-09)
 
 ### [1.10.6](https://github.com/stampin-up/vue-components/compare/v1.10.5...v1.10.6) (2020-09-09)
