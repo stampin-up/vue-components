@@ -11,11 +11,14 @@
       <slot name="activator" v-bind="slotData" />
     </template>
     <VCard class="text-center pa-2" :max-height="cardMaxHeight" data-testid="confirm-dialog">
-      <VRow no-gutters :style="fixed">
+      <VRow no-gutters>
         <VCol cols="12" class="text-right">
           <SBtn
             color="primary"
             text
+            :class="{
+              'sticky-close': stickyClose
+            }"
             @click="close"
           >
             <VIcon>{{ icons.mdiClose }}</VIcon>
@@ -76,10 +79,10 @@ export default class SDialog extends Vue {
   @Prop({ required: false, type: String }) title?: string
   @Prop({ required: false, type: String }) text?: string
   @Prop({ required: false, type: String }) cancelText?: string
-  @Prop({ required: false, default: 325 }) width!: number | string
+  @Prop({ required: false, default: 325, type: Number }) width!: number
   @Prop({ required: true, type: Boolean }) showDialog!: boolean
+  @Prop({ required: false, type: Boolean }) stickyClose!: boolean
   @Prop({ required: false, type: String }) cardMaxHeight?: string
-  @Prop({ required: false, type: Boolean }) fixedExit?: boolean
 
   innerValue: boolean = false
 
@@ -87,6 +90,32 @@ export default class SDialog extends Vue {
   public onInnerChange (val: this['innerValue']) {
     this.$emit('update:show-dialog', val)
   }
+
+  @Watch('showDialog')
+  public onOuterChange (newVal: this['showDialog']) {
+    this.innerValue = newVal
+  }
+
+  created () {
+    this.innerValue = this.showDialog
+  }
+
+  close () {
+    this.$emit('update:show-dialog', false)
+    this.$emit('close')
+  }
+}
+
+</script>
+
+<style lang="scss" scoped>
+.sticky-close {
+  position: fixed;
+  z-index: 10;
+  margin-left: -20px;
+}
+</style>
+
 
   @Watch('showDialog')
   public onOuterChange (newVal: this['showDialog']) {
