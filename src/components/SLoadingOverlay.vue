@@ -1,6 +1,6 @@
 <template>
   <!--To use add class add-processing to content you wish to fill -->
-  <VLayout
+  <VRow
     v-show="loading"
     :class="{'overlay': loading}"
     class="loading-overlay"
@@ -12,7 +12,7 @@
       :class="{'d-none': !loading}"
       indeterminate
     />
-  </VLayout>
+  </VRow>
 </template>
 
 <script lang="ts">
