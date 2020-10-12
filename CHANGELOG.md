@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.1](https://github.com/stampin-up/vue-components/compare/v1.11.0...v1.11.1) (2020-10-12)
+
+
+### Bug Fixes
+
+* vlayout -> vrow ([#54](https://github.com/stampin-up/vue-components/issues/54)) ([2d95c9b](https://github.com/stampin-up/vue-components/commit/2d95c9b8dd45ddc06710093c1327541ca51f0673))
+
 ## [1.11.0](https://github.com/stampin-up/vue-components/compare/v1.10.7...v1.11.0) (2020-09-10)
 
 
