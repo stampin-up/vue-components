@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.2](https://github.com/stampin-up/vue-components/compare/v1.11.1...v1.11.2) (2020-10-22)
+
+
+### Bug Fixes
+
+* add test id for close dialog ([#55](https://github.com/stampin-up/vue-components/issues/55)) ([09205a3](https://github.com/stampin-up/vue-components/commit/09205a3310b7cb7750c39fc5d693f60f8613dc03))
+
 ### [1.11.1](https://github.com/stampin-up/vue-components/compare/v1.11.0...v1.11.1) (2020-10-12)
 
 
