@@ -19,6 +19,7 @@
             :class="{
               'sticky-close': stickyClose
             }"
+            data-testid="close-dialog"
             @click="close"
           >
             <VIcon>{{ icons.mdiClose }}</VIcon>
