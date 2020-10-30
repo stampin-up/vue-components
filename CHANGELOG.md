@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.3](https://github.com/stampin-up/vue-components/compare/v1.11.2...v1.11.3) (2020-10-30)
+
+
+### Bug Fixes
+
+* **overlay:** no gutters on overlay ([#57](https://github.com/stampin-up/vue-components/issues/57)) ([0c20c54](https://github.com/stampin-up/vue-components/commit/0c20c54c2eb7e9a7d5fa0bae14c7b336fa894d5a))
+
 ### [1.11.2](https://github.com/stampin-up/vue-components/compare/v1.11.1...v1.11.2) (2020-10-22)
 
 
