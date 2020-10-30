@@ -79,7 +79,7 @@ export default class SDialog extends Vue {
   @Prop({ required: false, default: 325 }) width!: number | string
   @Prop({ required: true, type: Boolean }) showDialog!: boolean
   @Prop({ required: false, type: String }) cardMaxHeight?: string
-  @Prop({ required: false, type: Boolean }) fixedExit?: boolean
+  @Prop({ required: true, type: Boolean }) fixedExit!: boolean
 
   innerValue: boolean = false
 
