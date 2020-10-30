@@ -2,6 +2,7 @@
   <!--To use add class add-processing to content you wish to fill -->
   <VRow
     v-show="loading"
+    no-gutters
     :class="{'overlay': loading}"
     class="loading-overlay"
   >
