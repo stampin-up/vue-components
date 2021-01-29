@@ -71,7 +71,7 @@
     "vue-property-decorator": "^8.4.1",
     "vue-storybook": "^1.2.0",
     "vue-template-compiler": "^2.6.11",
-    "vuetify": "^2.2.21",
+    "vuetify": "^2.4.3",
     "vuetify-loader": "^1.4.3"
   }
 }
