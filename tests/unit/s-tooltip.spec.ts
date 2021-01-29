@@ -1,8 +1,10 @@
 // @ts-nocheck
 import { shallowMount, createLocalVue } from '@vue/test-utils'
-import { Vue } from 'vue/types.vue'
+import { Vue } from 'vue/types/vue'
+import Vuetify from 'vuetify'
 import STooltip from '~/components/STooltip.vue'
 
+const vuetify = new Vuetify()
 let localVue: typeof Vue
 
 describe('STooltip', () => {
@@ -13,6 +15,7 @@ describe('STooltip', () => {
     localVue = createLocalVue()
     component = shallowMount(STooltip, {
       localVue,
+      vuetify,
       propsData: { text: 'tooltip' },
       stubs: {
         VTooltip:
