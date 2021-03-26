@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.6](https://github.com/stampin-up/vue-components/compare/v1.11.5...v1.11.6) (2021-03-26)
+
+
+### Bug Fixes
+
+* **fonts:** fix for Flash of invisible text (foit) ([#61](https://github.com/stampin-up/vue-components/issues/61)) ([fa8a4bd](https://github.com/stampin-up/vue-components/commit/fa8a4bd6d103936644bc7eb168ff25baf3454958))
+
 ### [1.11.5](https://github.com/stampin-up/vue-components/compare/v1.11.4...v1.11.5) (2021-02-12)
 
 ### [1.11.4](https://github.com/stampin-up/vue-components/compare/v1.11.3...v1.11.4) (2021-01-29)
