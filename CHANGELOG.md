@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/stampin-up/vue-components/compare/v1.11.6...v1.12.0) (2021-04-22)
+
+
+### Features
+
+* minify inline css ([#63](https://github.com/stampin-up/vue-components/issues/63)) ([7218798](https://github.com/stampin-up/vue-components/commit/7218798f79fd08d882232308c4969eafa0c51a0d))
+
 ### [1.11.6](https://github.com/stampin-up/vue-components/compare/v1.11.5...v1.11.6) (2021-03-26)
 
 
