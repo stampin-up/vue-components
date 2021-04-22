@@ -1,3 +1,4 @@
+import minifyTheme from 'minify-css-string'
 import './overrides.scss'
 
 export const preset = {
@@ -21,7 +22,8 @@ export const preset = {
     options: {
       cspNonce: undefined,
       customProperties: true,
-      minifyTheme: undefined,
+      minifyTheme,
+      variations: false,
       themeCache: undefined
     },
     themes: {
