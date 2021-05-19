@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/stampin-up/vue-components/compare/v1.12.0...v1.13.0) (2021-05-19)
+
+
+### Features
+
+* aria labels for dialog close and tooltip help icons ([#66](https://github.com/stampin-up/vue-components/issues/66)) ([16a50e4](https://github.com/stampin-up/vue-components/commit/16a50e46140986b515834eb0bbfcc40f5c7a3bb5))
+
 ## [1.12.0](https://github.com/stampin-up/vue-components/compare/v1.11.6...v1.12.0) (2021-04-22)
 
 
