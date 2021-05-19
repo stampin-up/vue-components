@@ -25,7 +25,7 @@
         class="icon-btn"
         v-on="on"
       >
-        <VIcon :color="color" :size="size" :aria-label="$t('tooltip.aria-label')">
+        <VIcon :color="color" :size="size" :aria-label="ariaHelp">
           {{ icons.mdiHelpCircleOutline }}
         </VIcon>
       </SBtn>
@@ -83,6 +83,9 @@ export default class STooltip extends Vue {
 
   @Prop({ type: String, default: '' })
   position!: string
+
+  @Prop({ type: String, default: 'More Information' })
+  ariaHelp!: string
 
   offsetTopButton = 0
   offsetLeftButton = 0
