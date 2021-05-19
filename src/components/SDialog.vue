@@ -22,7 +22,7 @@
             data-testid="close-dialog"
             @click="close"
           >
-            <VIcon>{{ icons.mdiClose }}</VIcon>
+            <VIcon :aria-label="ariaClose">{{ icons.mdiClose }}</VIcon>
           </SBtn>
         </VCol>
       </VRow>
@@ -84,6 +84,7 @@ export default class SDialog extends Vue {
   @Prop({ required: true, type: Boolean }) showDialog!: boolean
   @Prop({ required: false, type: Boolean }) stickyClose!: boolean
   @Prop({ required: false, type: String }) cardMaxHeight?: string
+  @Prop({ required: false, type: String, default: 'Close' }) ariaClose!: string
 
   innerValue: boolean = false
 
