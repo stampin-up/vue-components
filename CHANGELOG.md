@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.1](https://github.com/stampin-up/vue-components/compare/v1.13.0...v1.13.1) (2021-05-19)
+
+
+### Bug Fixes
+
+* (accessibility) move aria label to button ([#67](https://github.com/stampin-up/vue-components/issues/67)) ([0231ea8](https://github.com/stampin-up/vue-components/commit/0231ea883541d16761b767196894d8719fdb0e18))
+
 ## [1.13.0](https://github.com/stampin-up/vue-components/compare/v1.12.0...v1.13.0) (2021-05-19)
 
 
