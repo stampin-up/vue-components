@@ -22,7 +22,7 @@
             data-testid="close-dialog"
             @click="close"
           >
-            <VIcon>{{ icons.mdiClose }}</VIcon>
+            <VIcon :aria-label="$t('dialog.close.aria-label')">{{ icons.mdiClose }}</VIcon>
           </SBtn>
         </VCol>
       </VRow>

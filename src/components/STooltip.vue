@@ -25,7 +25,7 @@
         class="icon-btn"
         v-on="on"
       >
-        <VIcon :color="color" :size="size">
+        <VIcon :color="color" :size="size" :aria-label="$t('tooltip.aria-label')">
           {{ icons.mdiHelpCircleOutline }}
         </VIcon>
       </SBtn>
