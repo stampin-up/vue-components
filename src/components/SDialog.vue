@@ -20,9 +20,10 @@
               'sticky-close': stickyClose
             }"
             data-testid="close-dialog"
+            :aria-label="ariaClose"
             @click="close"
           >
-            <VIcon :aria-label="ariaClose">{{ icons.mdiClose }}</VIcon>
+            <VIcon>{{ icons.mdiClose }}</VIcon>
           </SBtn>
         </VCol>
       </VRow>
