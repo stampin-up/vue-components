@@ -88,15 +88,15 @@ export default class SBtn extends Vue {
 
 @media #{map-get($display-breakpoints, 'md-and-up')}  {
   .action-button {
-    font-size: 1.5rem !important;
-    height: 56px !important;
+    font-size: map-get($font-sizes, 18) !important;
+    height: 50px !important;
   }
 }
 
 @media #{map-get($display-breakpoints, 'sm-and-down')}  {
   .action-button {
-    font-size: 1.286rem !important;
-    height: 46px !important;
+    font-size:  map-get($font-sizes, 16) !important;
+    height: 42px !important;
   }
 }
 
