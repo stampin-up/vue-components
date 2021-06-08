@@ -63,7 +63,7 @@ describe('SLoadingOverlay', () => {
 
   it('should add frame class if xborders is false', async () => {
     component.setProps({
-      xborders: false
+      xBorders: false
     })
     await localVue.nextTick()
 

@@ -9,7 +9,7 @@ describe('SDialog', () => {
   const title = 'Header'
   const text = 'Lorem ipsum'
   const cancelText = 'cancel'
-  const width = '325'
+  const width = 325
 
   beforeEach(() => {
     localVue = createLocalVue()
@@ -58,6 +58,6 @@ describe('SDialog', () => {
     })
     await localVue.nextTick()
 
-    expect(component.find('vdialog-stub').attributes().width).toEqual(width)
+    expect(component.find('vdialog-stub').attributes().width).toEqual(`${width}`)
   })
 })
