@@ -5,8 +5,8 @@ object-assign
 */
 
 /*!
- * Vue.js v2.6.11
- * (c) 2014-2019 Evan You
+ * Vue.js v2.6.14
+ * (c) 2014-2021 Evan You
  * Released under the MIT License.
  */
 
@@ -35,18 +35,32 @@ object-assign
  */
 
 /*!
- * is-plain-object <https://github.com/jonschlinkert/is-plain-object>
+ * isobject <https://github.com/jonschlinkert/isobject>
  *
  * Copyright (c) 2014-2017, Jon Schlinkert.
  * Released under the MIT License.
  */
 
 /*!
- * isobject <https://github.com/jonschlinkert/isobject>
- *
- * Copyright (c) 2014-2017, Jon Schlinkert.
- * Released under the MIT License.
+ * vuex v3.6.2
+ * (c) 2021 Evan You
+ * @license MIT
  */
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
 
 /*! ../../../directives/resize */
 
@@ -62,7 +76,11 @@ object-assign
 
 /*! ../../../util/colorUtils */
 
+/*! ../../../util/dateTimeUtils */
+
 /*! ../../../util/helpers */
+
+/*! ../../../util/mergeData */
 
 /*! ../../../util/mixins */
 
@@ -132,6 +150,8 @@ object-assign
 
 /*! ../../mixins/menuable */
 
+/*! ../../mixins/mobile */
+
 /*! ../../mixins/overlayable */
 
 /*! ../../mixins/picker */
@@ -147,6 +167,8 @@ object-assign
 /*! ../../mixins/returnable */
 
 /*! ../../mixins/rippleable */
+
+/*! ../../mixins/roundable */
 
 /*! ../../mixins/routable */
 
@@ -172,6 +194,8 @@ object-assign
 
 /*! ../../presets/default */
 
+/*! ../../services/goto/easing-patterns */
+
 /*! ../../styles/components/_selection-controls.sass */
 
 /*! ../../styles/main.sass */
@@ -186,7 +210,11 @@ object-assign
 
 /*! ../../util/console */
 
+/*! ../../util/dateTimeUtils */
+
 /*! ../../util/dedupeModelListeners */
+
+/*! ../../util/dom */
 
 /*! ../../util/helpers */
 
@@ -250,6 +278,8 @@ object-assign
 
 /*! ../VList */
 
+/*! ../VMain/VMain */
+
 /*! ../VMenu */
 
 /*! ../VMessages */
@@ -300,6 +330,10 @@ object-assign
 
 /*! ../delayable */
 
+/*! ../detachable */
+
+/*! ../framework */
+
 /*! ../modes */
 
 /*! ../positionable */
@@ -317,6 +351,8 @@ object-assign
 /*! ../toggleable */
 
 /*! ../transitions */
+
+/*! ../util */
 
 /*! ../util/events */
 
@@ -355,6 +391,8 @@ object-assign
 /*! ./VAppBar.sass */
 
 /*! ./VAppBarNavIcon */
+
+/*! ./VAppBarTitle */
 
 /*! ./VAutocomplete */
 
@@ -397,6 +435,10 @@ object-assign
 /*! ./VBtnToggle.sass */
 
 /*! ./VCalendar */
+
+/*! ./VCalendarCategory */
+
+/*! ./VCalendarCategory.sass */
 
 /*! ./VCalendarDaily */
 
@@ -457,8 +499,6 @@ object-assign
 /*! ./VContainer */
 
 /*! ./VContent */
-
-/*! ./VContent.sass */
 
 /*! ./VCounter */
 
@@ -589,6 +629,10 @@ object-assign
 /*! ./VListItemGroup.sass */
 
 /*! ./VListItemIcon */
+
+/*! ./VMain */
+
+/*! ./VMain.sass */
 
 /*! ./VMenu */
 
@@ -772,6 +816,10 @@ object-assign
 
 /*! ./VTreeviewNode */
 
+/*! ./VVirtualScroll */
+
+/*! ./VVirtualScroll.sass */
+
 /*! ./VVirtualTable */
 
 /*! ./VVirtualTable.sass */
@@ -790,6 +838,10 @@ object-assign
 
 /*! ./ar */
 
+/*! ./az */
+
+/*! ./bg */
+
 /*! ./breakpoint */
 
 /*! ./ca */
@@ -797,6 +849,8 @@ object-assign
 /*! ./calendar-base */
 
 /*! ./calendar-with-events.sass */
+
+/*! ./ckb */
 
 /*! ./click-outside */
 
@@ -830,6 +884,8 @@ object-assign
 
 /*! ./et */
 
+/*! ./eventHelpers */
+
 /*! ./expand-transition */
 
 /*! ./fa */
@@ -837,6 +893,8 @@ object-assign
 /*! ./fa-svg */
 
 /*! ./fa4 */
+
+/*! ./fi */
 
 /*! ./fr */
 
@@ -922,13 +980,19 @@ object-assign
 
 /*! ./ru */
 
+/*! ./sanitizeDateString */
+
 /*! ./scroll */
 
 /*! ./services */
 
+/*! ./sk */
+
 /*! ./sl */
 
 /*! ./sr-Cyrl */
+
+/*! ./sr-Latn */
 
 /*! ./stack */
 
@@ -958,27 +1022,19 @@ object-assign
 
 /*! ./util/isDateAllowed */
 
+/*! ./util/parser */
+
 /*! ./util/props */
 
 /*! ./util/timestamp */
 
 /*! ./utils */
 
+/*! ./vi */
+
 /*! ./zh-Hans */
 
 /*! ./zh-Hant */
-
-/*! axe v3.5.3
- * Copyright (c) 2020 Deque Systems, Inc.
- *
- * Your use of this Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
- * This entire copyright notice must appear in every copy of this file you
- * distribute or in any file that contains substantial portions of this source
- * code.
- */
 
 /*! exports provided: Application */
 
@@ -1006,7 +1062,7 @@ object-assign
 
 /*! exports provided: Mutate, default */
 
-/*! exports provided: PARSE_REGEX, PARSE_TIME, DAYS_IN_MONTH, DAYS_IN_MONTH_LEAP, DAYS_IN_MONTH_MIN, DAYS_IN_MONTH_MAX, MONTH_MAX, MONTH_MIN, DAY_MIN, DAYS_IN_WEEK, MINUTES_IN_HOUR, HOURS_IN_DAY, FIRST_HOUR, getStartOfWeek, getEndOfWeek, getStartOfMonth, getEndOfMonth, parseTime, validateTimestamp, parseTimestamp, parseDate, getDayIdentifier, getTimeIdentifier, getTimestampIdentifier, updateRelative, updateMinutes, updateWeekday, updateFormatted, getWeekday, isLeapYear, daysInMonth, copyTimestamp, padNumber, getDate, getTime, nextMinutes, nextDay, prevDay, relativeDays, diffMinutes, findWeekday, getWeekdaySkips, createDayList, createIntervalList, createNativeLocaleFormatter */
+/*! exports provided: PARSE_REGEX, PARSE_TIME, DAYS_IN_MONTH, DAYS_IN_MONTH_LEAP, DAYS_IN_MONTH_MIN, DAYS_IN_MONTH_MAX, MONTH_MAX, MONTH_MIN, DAY_MIN, DAYS_IN_WEEK, MINUTES_IN_HOUR, MINUTE_MAX, MINUTES_IN_DAY, HOURS_IN_DAY, HOUR_MAX, FIRST_HOUR, OFFSET_YEAR, OFFSET_MONTH, OFFSET_HOUR, OFFSET_TIME, getStartOfWeek, getEndOfWeek, getStartOfMonth, getEndOfMonth, validateTime, parseTime, validateTimestamp, parseTimestamp, parseDate, getDayIdentifier, getTimeIdentifier, getTimestampIdentifier, updateRelative, isTimedless, updateHasTime, updateMinutes, updateWeekday, updateFormatted, getWeekday, daysInMonth, copyTimestamp, padNumber, getDate, getTime, nextMinutes, nextDay, prevDay, relativeDays, diffMinutes, findWeekday, getWeekdaySkips, timestampToDate, createDayList, createIntervalList, createNativeLocaleFormatter */
 
 /*! exports provided: Presets */
 
@@ -1028,11 +1084,11 @@ object-assign
 
 /*! exports provided: VAlert, default */
 
-/*! exports provided: VApp, VAppBar, VAppBarNavIcon, VAlert, VAutocomplete, VAvatar, VBadge, VBanner, VBottomNavigation, VBottomSheet, VBreadcrumbs, VBreadcrumbsItem, VBreadcrumbsDivider, VBtn, VBtnToggle, VCalendar, VCalendarDaily, VCalendarWeekly, VCalendarMonthly, VCard, VCardActions, VCardSubtitle, VCardText, VCardTitle, VCarousel, VCarouselItem, VCheckbox, VSimpleCheckbox, VChip, VChipGroup, VColorPicker, VColorPickerSwatches, VColorPickerCanvas, VContent, VCombobox, VCounter, VData, VDataIterator, VDataFooter, VDataTable, VEditDialog, VTableOverflow, VDataTableHeader, VSimpleTable, VVirtualTable, VDatePicker, VDatePickerTitle, VDatePickerHeader, VDatePickerDateTable, VDatePickerMonthTable, VDatePickerYears, VDialog, VDivider, VExpansionPanels, VExpansionPanel, VExpansionPanelHeader, VExpansionPanelContent, VFileInput, VFooter, VForm, VContainer, VCol, VRow, VSpacer, VLayout, VFlex, VHover, VIcon, VImg, VInput, VItem, VItemGroup, VLabel, VLazy, VListItemActionText, VListItemContent, VListItemTitle, VListItemSubtitle, VList, VListGroup, VListItem, VListItemAction, VListItemAvatar, VListItemIcon, VListItemGroup, VMenu, VMessages, VNavigationDrawer, VOverflowBtn, VOverlay, VPagination, VSheet, VParallax, VPicker, VProgressCircular, VProgressLinear, VRadioGroup, VRadio, VRangeSlider, VRating, VResponsive, VSelect, VSkeletonLoader, VSlider, VSlideGroup, VSlideItem, VSnackbar, VSparkline, VSpeedDial, VStepper, VStepperContent, VStepperStep, VStepperHeader, VStepperItems, VSubheader, VSwitch, VSystemBar, VTabs, VTab, VTabItem, VTabsItems, VTabsSlider, VTextarea, VTextField, VThemeProvider, VTimeline, VTimelineItem, VTimePicker, VTimePickerClock, VTimePickerTitle, VToolbar, VToolbarItems, VToolbarTitle, VTooltip, VTreeview, VTreeviewNode, VWindow, VWindowItem, VCarouselTransition, VCarouselReverseTransition, VTabTransition, VTabReverseTransition, VMenuTransition, VFabTransition, VDialogTransition, VDialogBottomTransition, VFadeTransition, VScaleTransition, VScrollXTransition, VScrollXReverseTransition, VScrollYTransition, VScrollYReverseTransition, VSlideXTransition, VSlideXReverseTransition, VSlideYTransition, VSlideYReverseTransition, VExpandTransition, VExpandXTransition */
+/*! exports provided: VApp, VAppBar, VAppBarNavIcon, VAppBarTitle, VAlert, VAutocomplete, VAvatar, VBadge, VBanner, VBottomNavigation, VBottomSheet, VBreadcrumbs, VBreadcrumbsItem, VBreadcrumbsDivider, VBtn, VBtnToggle, VCalendar, VCalendarCategory, VCalendarDaily, VCalendarWeekly, VCalendarMonthly, VCard, VCardActions, VCardSubtitle, VCardText, VCardTitle, VCarousel, VCarouselItem, VCheckbox, VSimpleCheckbox, VChip, VChipGroup, VColorPicker, VColorPickerSwatches, VColorPickerCanvas, VContent, VCombobox, VCounter, VData, VDataIterator, VDataFooter, VDataTable, VEditDialog, VTableOverflow, VDataTableHeader, VSimpleTable, VVirtualTable, VDatePicker, VDatePickerTitle, VDatePickerHeader, VDatePickerDateTable, VDatePickerMonthTable, VDatePickerYears, VDialog, VDivider, VExpansionPanels, VExpansionPanel, VExpansionPanelHeader, VExpansionPanelContent, VFileInput, VFooter, VForm, VContainer, VCol, VRow, VSpacer, VLayout, VFlex, VHover, VIcon, VImg, VInput, VItem, VItemGroup, VLabel, VLazy, VListItemActionText, VListItemContent, VListItemTitle, VListItemSubtitle, VList, VListGroup, VListItem, VListItemAction, VListItemAvatar, VListItemIcon, VListItemGroup, VMain, VMenu, VMessages, VNavigationDrawer, VOverflowBtn, VOverlay, VPagination, VSheet, VParallax, VPicker, VProgressCircular, VProgressLinear, VRadioGroup, VRadio, VRangeSlider, VRating, VResponsive, VSelect, VSkeletonLoader, VSlider, VSlideGroup, VSlideItem, VSnackbar, VSparkline, VSpeedDial, VStepper, VStepperContent, VStepperStep, VStepperHeader, VStepperItems, VSubheader, VSwitch, VSystemBar, VTabs, VTab, VTabItem, VTabsItems, VTabsSlider, VTextarea, VTextField, VThemeProvider, VTimeline, VTimelineItem, VTimePicker, VTimePickerClock, VTimePickerTitle, VToolbar, VToolbarItems, VToolbarTitle, VTooltip, VTreeview, VTreeviewNode, VVirtualScroll, VWindow, VWindowItem, VCarouselTransition, VCarouselReverseTransition, VTabTransition, VTabReverseTransition, VMenuTransition, VFabTransition, VDialogTransition, VDialogBottomTransition, VDialogTopTransition, VFadeTransition, VScaleTransition, VScrollXTransition, VScrollXReverseTransition, VScrollYTransition, VScrollYReverseTransition, VSlideXTransition, VSlideXReverseTransition, VSlideYTransition, VSlideYReverseTransition, VExpandTransition, VExpandXTransition */
 
 /*! exports provided: VApp, default */
 
-/*! exports provided: VAppBar, VAppBarNavIcon, default */
+/*! exports provided: VAppBar, VAppBarNavIcon, VAppBarTitle, default */
 
 /*! exports provided: VAutocomplete, default */
 
@@ -1052,13 +1108,13 @@ object-assign
 
 /*! exports provided: VBtnToggle, default */
 
-/*! exports provided: VCalendar, VCalendarDaily, VCalendarWeekly, VCalendarMonthly, default */
+/*! exports provided: VCalendar, VCalendarCategory, VCalendarDaily, VCalendarWeekly, VCalendarMonthly, default */
 
 /*! exports provided: VCard, VCardActions, VCardSubtitle, VCardText, VCardTitle, default */
 
 /*! exports provided: VCarousel, VCarouselItem, default */
 
-/*! exports provided: VCarouselTransition, VCarouselReverseTransition, VTabTransition, VTabReverseTransition, VMenuTransition, VFabTransition, VDialogTransition, VDialogBottomTransition, VFadeTransition, VScaleTransition, VScrollXTransition, VScrollXReverseTransition, VScrollYTransition, VScrollYReverseTransition, VSlideXTransition, VSlideXReverseTransition, VSlideYTransition, VSlideYReverseTransition, VExpandTransition, VExpandXTransition, default */
+/*! exports provided: VCarouselTransition, VCarouselReverseTransition, VTabTransition, VTabReverseTransition, VMenuTransition, VFabTransition, VDialogTransition, VDialogBottomTransition, VDialogTopTransition, VFadeTransition, VScaleTransition, VScrollXTransition, VScrollXReverseTransition, VScrollYTransition, VScrollYReverseTransition, VSlideXTransition, VSlideXReverseTransition, VSlideYTransition, VSlideYReverseTransition, VExpandTransition, VExpandXTransition, default */
 
 /*! exports provided: VCheckbox, VSimpleCheckbox, default */
 
@@ -1111,6 +1167,8 @@ object-assign
 /*! exports provided: VLazy, default */
 
 /*! exports provided: VListItemActionText, VListItemContent, VListItemTitle, VListItemSubtitle, VList, VListGroup, VListItem, VListItemAction, VListItemAvatar, VListItemIcon, VListItemGroup, default */
+
+/*! exports provided: VMain, default */
 
 /*! exports provided: VMenu, default */
 
@@ -1184,13 +1242,15 @@ object-assign
 
 /*! exports provided: VTreeviewNodeProps, default */
 
+/*! exports provided: VVirtualScroll, default */
+
 /*! exports provided: VWindow, VWindowItem, default */
 
-/*! exports provided: af, ar, ca, cs, de, el, en, es, et, fa, fr, hr, hu, he, id, it, ja, ko, lv, lt, nl, no, pl, pt, ro, ru, sl, srCyrl, sv, th, tr, uk, zhHans, zhHant */
+/*! exports provided: af, ar, bg, ca, ckb, cs, de, el, en, es, et, fa, fi, fr, hr, hu, he, id, it, ja, ko, lv, lt, nl, no, pl, pt, ro, ru, sk, sl, srCyrl, srLatn, sv, th, tr, az, uk, vi, zhHans, zhHant */
+
+/*! exports provided: attachedRoot */
 
 /*! exports provided: checkCollinear, getDistance, moveTo */
-
-/*! exports provided: colorToInt, intToHex, colorToHex, HSVAtoRGBA, RGBAtoHSVA, HSVAtoHSLA, HSLAtoHSVA, RGBAtoCSS, RGBtoCSS, RGBAtoHex, HexToRGBA, HexToHSVA, HSVAtoHex, parseHex, RGBtoInt, contrastRatio */
 
 /*! exports provided: column */
 
@@ -1198,15 +1258,21 @@ object-assign
 
 /*! exports provided: convertToComponentDeclarations, default */
 
-/*! exports provided: createNativeLocaleFormatter, monthChange, pad */
+/*! exports provided: createItemTypeListeners, createItemTypeNativeListeners, createNativeLocaleFormatter, monthChange, sanitizeDateString, pad */
 
-/*! exports provided: createSimpleFunctional, directiveConfig, addOnceEventListener, passiveSupported, addPassiveEventListener, getNestedValue, deepEqual, getObjectValueByPath, getPropertyFromItem, createRange, getZIndex, escapeHTML, filterObjectOnKeys, convertToUnit, kebabCase, isObject, keyCodes, remapInternalIcon, keys, camelize, arrayDiff, upperFirst, groupItems, wrapInArray, sortItems, defaultFilter, searchItems, getSlotType, debounce, getPrefixedScopedSlots, getSlot, clamp, padEnd, chunk, humanReadableFileSize, camelizeObjectKeys, mergeDeep */
+/*! exports provided: createItemTypeNativeListeners, createItemTypeListeners */
+
+/*! exports provided: createSimpleFunctional, directiveConfig, addOnceEventListener, passiveSupported, addPassiveEventListener, getNestedValue, deepEqual, getObjectValueByPath, getPropertyFromItem, createRange, getZIndex, escapeHTML, filterObjectOnKeys, convertToUnit, kebabCase, isObject, keyCodes, remapInternalIcon, keys, camelize, arrayDiff, upperFirst, groupItems, wrapInArray, sortItems, defaultFilter, searchItems, getSlotType, debounce, throttle, getPrefixedScopedSlots, getSlot, clamp, padEnd, chunk, humanReadableFileSize, camelizeObjectKeys, mergeDeep, fillArray */
 
 /*! exports provided: createSimpleTransition, createJavascriptTransition */
 
 /*! exports provided: default */
 
 /*! exports provided: default, Goto */
+
+/*! exports provided: default, functionalThemeClasses */
+
+/*! exports provided: default, mergeStyles, mergeClasses, mergeListeners */
 
 /*! exports provided: default, validateNumber, validateWeekdays */
 
@@ -1220,8 +1286,6 @@ object-assign
 
 /*! exports provided: fromXYZ, toXYZ */
 
-/*! exports provided: functionalThemeClasses, default */
-
 /*! exports provided: genPath */
 
 /*! exports provided: genPoints, genBars */
@@ -1234,17 +1298,25 @@ object-assign
 
 /*! exports provided: install */
 
+/*! exports provided: isCssColor, colorToInt, classToHex, intToHex, colorToHex, HSVAtoRGBA, RGBAtoHSVA, HSVAtoHSLA, HSLAtoHSVA, RGBAtoCSS, RGBtoCSS, RGBAtoHex, HexToRGBA, HexToHSVA, HSVAtoHex, parseHex, parseGradient, RGBtoInt, contrastRatio */
+
 /*! exports provided: linear, easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic, easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint, easeOutQuint, easeInOutQuint */
 
 /*! exports provided: modes, default */
 
 /*! exports provided: parse, genStyles, genVariations, lighten, darken */
 
-/*! exports provided: parseEvent, isEventOn, isEventStart, isEventOverlapping */
+/*! exports provided: parseEvent, isEventOn, isEventHiddenOn, isEventStart, isEventOverlapping */
+
+/*! exports provided: parsedCategoryText, getParsedCategories */
 
 /*! exports provided: preset */
 
+/*! exports provided: prevent, default */
+
 /*! exports provided: stack */
+
+/*! exports provided: weekNumber, isLeapYear */
 
 /*! no static exports found */
 
@@ -1258,6 +1330,10 @@ object-assign
   !*** ./src/install.ts ***!
   \************************/
 
+/*!*************************!*\
+  !*** ./src/util/dom.ts ***!
+  \*************************/
+
 /*!**************************!*\
   !*** ./src/framework.ts ***!
   \**************************/
@@ -1268,6 +1344,14 @@ object-assign
 
 /*!**************************!*\
   !*** ./src/locale/ar.ts ***!
+  \**************************/
+
+/*!**************************!*\
+  !*** ./src/locale/az.ts ***!
+  \**************************/
+
+/*!**************************!*\
+  !*** ./src/locale/bg.ts ***!
   \**************************/
 
 /*!**************************!*\
@@ -1300,6 +1384,10 @@ object-assign
 
 /*!**************************!*\
   !*** ./src/locale/fa.ts ***!
+  \**************************/
+
+/*!**************************!*\
+  !*** ./src/locale/fi.ts ***!
   \**************************/
 
 /*!**************************!*\
@@ -1367,6 +1455,10 @@ object-assign
   \**************************/
 
 /*!**************************!*\
+  !*** ./src/locale/sk.ts ***!
+  \**************************/
+
+/*!**************************!*\
   !*** ./src/locale/sl.ts ***!
   \**************************/
 
@@ -1385,6 +1477,14 @@ object-assign
 /*!**************************!*\
   !*** ./src/locale/uk.ts ***!
   \**************************/
+
+/*!**************************!*\
+  !*** ./src/locale/vi.ts ***!
+  \**************************/
+
+/*!***************************!*\
+  !*** ./src/locale/ckb.ts ***!
+  \***************************/
 
 /*!****************************!*\
   !*** ./src/util/colors.ts ***!
@@ -1412,6 +1512,10 @@ object-assign
 
 /*!*******************************!*\
   !*** ./src/locale/sr-Cyrl.ts ***!
+  \*******************************/
+
+/*!*******************************!*\
+  !*** ./src/locale/sr-Latn.ts ***!
   \*******************************/
 
 /*!*******************************!*\
@@ -1445,6 +1549,14 @@ object-assign
 /*!***********************************!*\
   !*** ./src/services/goto/util.ts ***!
   \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/util/dateTimeUtils.ts ***!
+  \***********************************/
+
+/*!************************************!*\
+  !*** ./src/mixins/mobile/index.ts ***!
+  \************************************/
 
 /*!************************************!*\
   !*** ./src/mixins/picker/index.ts ***!
@@ -1611,6 +1723,14 @@ object-assign
   \***************************************/
 
 /*!***************************************!*\
+  !*** ./src/components/VMain/VMain.ts ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./src/components/VMain/index.ts ***!
+  \***************************************/
+
+/*!***************************************!*\
   !*** ./src/components/VMenu/VMenu.ts ***!
   \***************************************/
 
@@ -1652,6 +1772,10 @@ object-assign
 
 /*!***************************************!*\
   !*** ./src/mixins/proxyable/index.ts ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./src/mixins/roundable/index.ts ***!
   \***************************************/
 
 /*!***************************************!*\
@@ -1820,6 +1944,10 @@ object-assign
 
 /*!*****************************************!*\
   !*** ./src/components/VList/VList.sass ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/components/VMain/VMain.sass ***!
   \*****************************************/
 
 /*!*****************************************!*\
@@ -2331,10 +2459,6 @@ object-assign
   \***********************************************/
 
 /*!***********************************************!*\
-  !*** ./src/components/VContent/VContent.sass ***!
-  \***********************************************/
-
-/*!***********************************************!*\
   !*** ./src/components/VCounter/VCounter.sass ***!
   \***********************************************/
 
@@ -2411,6 +2535,10 @@ object-assign
   \***********************************************/
 
 /*!************************************************!*\
+  !*** ./src/components/VAppBar/VAppBarTitle.ts ***!
+  \************************************************/
+
+/*!************************************************!*\
   !*** ./src/components/VCalendar/util/props.ts ***!
   \************************************************/
 
@@ -2434,6 +2562,10 @@ object-assign
   !*** ./src/components/VThemeProvider/index.ts ***!
   \************************************************/
 
+/*!************************************************!*\
+  !*** ./src/components/VVirtualScroll/index.ts ***!
+  \************************************************/
+
 /*!*************************************************!*\
   !*** ./src/components/VBtnToggle/VBtnToggle.ts ***!
   \*************************************************/
@@ -2448,6 +2580,10 @@ object-assign
 
 /*!*************************************************!*\
   !*** ./src/components/VCalendar/util/events.ts ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/components/VCalendar/util/parser.ts ***!
   \*************************************************/
 
 /*!*************************************************!*\
@@ -2787,6 +2923,10 @@ object-assign
   \*******************************************************/
 
 /*!*******************************************************!*\
+  !*** ./src/components/VCalendar/VCalendarCategory.ts ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
   !*** ./src/components/VCalendar/VCalendarWeekly.sass ***!
   \*******************************************************/
 
@@ -2855,6 +2995,10 @@ object-assign
   \*********************************************************/
 
 /*!*********************************************************!*\
+  !*** ./src/components/VCalendar/VCalendarCategory.sass ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
   !*** ./src/components/VColorPicker/VColorPickerEdit.ts ***!
   \*********************************************************/
 
@@ -2867,7 +3011,15 @@ object-assign
   \*********************************************************/
 
 /*!*********************************************************!*\
+  !*** ./src/components/VDatePicker/util/eventHelpers.ts ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
   !*** ./src/components/VThemeProvider/VThemeProvider.ts ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./src/components/VVirtualScroll/VVirtualScroll.ts ***!
   \*********************************************************/
 
 /*!*********************************************************!*\
@@ -2928,6 +3080,10 @@ object-assign
 
 /*!***********************************************************!*\
   !*** ./src/components/VSkeletonLoader/VSkeletonLoader.ts ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./src/components/VVirtualScroll/VVirtualScroll.sass ***!
   \***********************************************************/
 
 /*!************************************************************!*\
@@ -2991,6 +3147,10 @@ object-assign
   \***************************************************************/
 
 /*!***************************************************************!*\
+  !*** ./src/components/VDatePicker/util/sanitizeDateString.ts ***!
+  \***************************************************************/
+
+/*!***************************************************************!*\
   !*** ./src/components/VNavigationDrawer/VNavigationDrawer.ts ***!
   \***************************************************************/
 
@@ -3043,16 +3203,10 @@ object-assign
   \******************************************************************************/
 
 /**
-  * vue-class-component v7.2.3
+  * vue-class-component v7.2.6
   * (c) 2015-present Evan You
   * @license MIT
   */
-
-/**
- * vuex v3.1.3
- * (c) 2020 Evan You
- * @license MIT
- */
 
 /** @license React v0.19.1
  * scheduler.production.min.js
@@ -3063,7 +3217,7 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license React v16.13.1
+/** @license React v16.14.0
  * react-dom.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -3072,7 +3226,7 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license React v16.13.1
+/** @license React v16.14.0
  * react.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -3080,3 +3234,7 @@ object-assign
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
+//! stable.js 0.1.8, https://github.com/Two-Screen/stable
+
+//! © 2018 Angry Bytes and contributors. MIT licensed.

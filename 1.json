@@ -1,0 +1,2210 @@
+{
+  "layout": "default",
+  "data": [
+    {}
+  ],
+  "error": null,
+  "state": {
+    "categories": [
+      {
+        "name": "SHOP PRODUCTS",
+        "groups": [
+          {
+            "name": "Featured Products",
+            "slug": "/shop-products/featured-products",
+            "categories": [
+              {
+                "name": "Bundled Savings",
+                "slug": "/shop-products/featured-products/bundled-savings",
+                "children": [
+                  {
+                    "name": "Ink Bundles",
+                    "slug": "/shop-products/featured-products/bundled-savings/ink-bundles",
+                    "children": []
+                  },
+                  {
+                    "name": "Stamp Block Bundles",
+                    "slug": "/shop-products/featured-products/bundled-savings/stamp-block-bundles",
+                    "children": []
+                  },
+                  {
+                    "name": "Stamp & Die Bundles",
+                    "slug": "/shop-products/featured-products/bundled-savings/stamp-die-bundles",
+                    "children": []
+                  },
+                  {
+                    "name": "Stamp & Punch Bundles",
+                    "slug": "/shop-products/featured-products/bundled-savings/stamp-punch-bundles",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Ink & Colouring",
+                "slug": "/shop-products/featured-products/ink-coloring",
+                "children": [
+                  {
+                    "name": "Markers & More",
+                    "slug": "/shop-products/featured-products/ink-coloring/markers-more",
+                    "children": [
+                      {
+                        "name": "Alcohol Markers",
+                        "slug": "/shop-products/featured-products/ink-coloring/markers-more/alcohol-markers",
+                        "children": []
+                      },
+                      {
+                        "name": "Chalk Markers",
+                        "slug": "/shop-products/featured-products/ink-coloring/markers-more/chalk-markers",
+                        "children": []
+                      },
+                      {
+                        "name": "Glitter Brushes",
+                        "slug": "/shop-products/featured-products/ink-coloring/markers-more/glitter-brushes",
+                        "children": []
+                      },
+                      {
+                        "name": "Journaling Pens",
+                        "slug": "/shop-products/featured-products/ink-coloring/markers-more/journaling-pens",
+                        "children": []
+                      },
+                      {
+                        "name": "Markers",
+                        "slug": "/shop-products/featured-products/ink-coloring/markers-more/markers",
+                        "children": []
+                      },
+                      {
+                        "name": "Watercolour Pencils",
+                        "slug": "/shop-products/featured-products/ink-coloring/markers-more/watercolor-pencils",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Glitter & More",
+                    "slug": "/shop-products/featured-products/ink-coloring/glitter-more",
+                    "children": []
+                  },
+                  {
+                    "name": "Colouring Tools",
+                    "slug": "/shop-products/featured-products/ink-coloring/coloring-tools",
+                    "children": []
+                  },
+                  {
+                    "name": "Ink",
+                    "slug": "/shop-products/featured-products/ink-coloring/ink",
+                    "children": [
+                      {
+                        "name": "Ink Pads",
+                        "slug": "/shop-products/featured-products/ink-coloring/ink/ink-pads",
+                        "children": []
+                      },
+                      {
+                        "name": "Ink Refills",
+                        "slug": "/shop-products/featured-products/ink-coloring/ink/ink-refills",
+                        "children": []
+                      },
+                      {
+                        "name": "Ink Spots",
+                        "slug": "/shop-products/featured-products/ink-coloring/ink/ink-spots",
+                        "children": []
+                      },
+                      {
+                        "name": "Uninked Pads",
+                        "slug": "/shop-products/featured-products/ink-coloring/ink/uninked-pads",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Paper & Packaging",
+                "slug": "/shop-products/featured-products/paper-packaging",
+                "children": [
+                  {
+                    "name": "Cardstock",
+                    "slug": "/shop-products/featured-products/paper-packaging/cardstock",
+                    "children": [
+                      {
+                        "name": "Individual Colour Packs",
+                        "slug": "/shop-products/featured-products/paper-packaging/cardstock/individual-color-packs",
+                        "children": []
+                      },
+                      {
+                        "name": "Multicolour Packs",
+                        "slug": "/shop-products/featured-products/paper-packaging/cardstock/multicolor-packs",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Cards & Envelopes",
+                    "slug": "/shop-products/featured-products/paper-packaging/cards-envelopes",
+                    "children": [
+                      {
+                        "name": "Card Fronts",
+                        "slug": "/shop-products/featured-products/paper-packaging/cards-envelopes/card-fronts",
+                        "children": []
+                      },
+                      {
+                        "name": "Envelopes",
+                        "slug": "/shop-products/featured-products/paper-packaging/cards-envelopes/envelopes",
+                        "children": []
+                      },
+                      {
+                        "name": "Note Cards & Envelopes",
+                        "slug": "/shop-products/featured-products/paper-packaging/cards-envelopes/note-cards-envelopes",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Packaging",
+                    "slug": "/shop-products/featured-products/paper-packaging/packaging",
+                    "children": [
+                      {
+                        "name": "Bags",
+                        "slug": "/shop-products/featured-products/paper-packaging/packaging/bags",
+                        "children": []
+                      },
+                      {
+                        "name": "Boxes",
+                        "slug": "/shop-products/featured-products/paper-packaging/packaging/boxes",
+                        "children": []
+                      },
+                      {
+                        "name": "Containers",
+                        "slug": "/shop-products/featured-products/paper-packaging/packaging/containers",
+                        "children": []
+                      },
+                      {
+                        "name": "Tags",
+                        "slug": "/shop-products/featured-products/paper-packaging/packaging/tags",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Patterned Paper",
+                    "slug": "/shop-products/featured-products/paper-packaging/patterned-paper",
+                    "children": []
+                  },
+                  {
+                    "name": "Specialty Paper",
+                    "slug": "/shop-products/featured-products/paper-packaging/specialty-paper",
+                    "children": [
+                      {
+                        "name": "Clear / Frosted",
+                        "slug": "/shop-products/featured-products/paper-packaging/specialty-paper/clear-frosted",
+                        "children": []
+                      },
+                      {
+                        "name": "Laser-Cut",
+                        "slug": "/shop-products/featured-products/paper-packaging/specialty-paper/laser-cut",
+                        "children": []
+                      },
+                      {
+                        "name": "Metallic & Glitter",
+                        "slug": "/shop-products/featured-products/paper-packaging/specialty-paper/metallics-glitter",
+                        "children": []
+                      },
+                      {
+                        "name": "Textured",
+                        "slug": "/shop-products/featured-products/paper-packaging/specialty-paper/textured",
+                        "children": []
+                      },
+                      {
+                        "name": "Watercolour",
+                        "slug": "/shop-products/featured-products/paper-packaging/specialty-paper/watercolor",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Stamps",
+                "slug": "/shop-products/featured-products/stamps",
+                "children": [
+                  {
+                    "name": "Stamps-All",
+                    "slug": "/shop-products/featured-products/stamps/stamps-all",
+                    "children": [
+                      {
+                        "name": "Alphabet",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/alphabet",
+                        "children": []
+                      },
+                      {
+                        "name": "Basic Shapes",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/basic-shapes",
+                        "children": []
+                      },
+                      {
+                        "name": "Border",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/border",
+                        "children": []
+                      },
+                      {
+                        "name": "Elegant",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/elegant",
+                        "children": []
+                      },
+                      {
+                        "name": "Floral",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/floral",
+                        "children": []
+                      },
+                      {
+                        "name": "Labels & Tags",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/labels-tags",
+                        "children": []
+                      },
+                      {
+                        "name": "Line Art",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/line-art",
+                        "children": []
+                      },
+                      {
+                        "name": "Masculine",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/masculine",
+                        "children": []
+                      },
+                      {
+                        "name": "Modern",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/modern",
+                        "children": []
+                      },
+                      {
+                        "name": "Packaging",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/packaging",
+                        "children": []
+                      },
+                      {
+                        "name": "Plants & Animals",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/plants-animals",
+                        "children": []
+                      },
+                      {
+                        "name": "Playful",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/playful",
+                        "children": []
+                      },
+                      {
+                        "name": "Realistic",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/realistic",
+                        "children": []
+                      },
+                      {
+                        "name": "Rustic / Vintage",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/rustic-vintage",
+                        "children": []
+                      },
+                      {
+                        "name": "Watercolour",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/watercolor",
+                        "children": []
+                      },
+                      {
+                        "name": "Bold",
+                        "slug": "/shop-products/featured-products/stamps/stamps-all/bold",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Stamps-Occasion",
+                    "slug": "/shop-products/featured-products/stamps/stamps-occasion",
+                    "children": [
+                      {
+                        "name": "All Occasion",
+                        "slug": "/shop-products/featured-products/stamps/stamps-occasion/all-occasion",
+                        "children": []
+                      },
+                      {
+                        "name": "Anniversary",
+                        "slug": "/shop-products/featured-products/stamps/stamps-occasion/anniversary",
+                        "children": []
+                      },
+                      {
+                        "name": "Babies & Kids",
+                        "slug": "/shop-products/featured-products/stamps/stamps-occasion/babies-kids",
+                        "children": []
+                      },
+                      {
+                        "name": "Birthday",
+                        "slug": "/shop-products/featured-products/stamps/stamps-occasion/birthday",
+                        "children": []
+                      },
+                      {
+                        "name": "Encouragement",
+                        "slug": "/shop-products/featured-products/stamps/stamps-occasion/encouragement",
+                        "children": []
+                      },
+                      {
+                        "name": "Get Well",
+                        "slug": "/shop-products/featured-products/stamps/stamps-occasion/get-well",
+                        "children": []
+                      },
+                      {
+                        "name": "Just Because",
+                        "slug": "/shop-products/featured-products/stamps/stamps-occasion/just-because",
+                        "children": []
+                      },
+                      {
+                        "name": "Love",
+                        "slug": "/shop-products/featured-products/stamps/stamps-occasion/love",
+                        "children": []
+                      },
+                      {
+                        "name": "Religious",
+                        "slug": "/shop-products/featured-products/stamps/stamps-occasion/religious",
+                        "children": []
+                      },
+                      {
+                        "name": "Sympathy",
+                        "slug": "/shop-products/featured-products/stamps/stamps-occasion/sympathy",
+                        "children": []
+                      },
+                      {
+                        "name": "Thank You",
+                        "slug": "/shop-products/featured-products/stamps/stamps-occasion/thank-you",
+                        "children": []
+                      },
+                      {
+                        "name": "Wedding",
+                        "slug": "/shop-products/featured-products/stamps/stamps-occasion/wedding",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Stamps-Season",
+                    "slug": "/shop-products/featured-products/stamps/stamps-season",
+                    "children": [
+                      {
+                        "name": "Autumn / Fall",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/autumn-fall",
+                        "children": []
+                      },
+                      {
+                        "name": "Christmas",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/christmas",
+                        "children": []
+                      },
+                      {
+                        "name": "Easter",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/easter",
+                        "children": []
+                      },
+                      {
+                        "name": "Father's Day",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/fathers-day",
+                        "children": []
+                      },
+                      {
+                        "name": "Halloween",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/halloween",
+                        "children": []
+                      },
+                      {
+                        "name": "Hanukkah",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/hanukkah",
+                        "children": []
+                      },
+                      {
+                        "name": "Mother's Day",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/mothers-day",
+                        "children": []
+                      },
+                      {
+                        "name": "New Year's",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/new-years",
+                        "children": []
+                      },
+                      {
+                        "name": "Spring",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/spring",
+                        "children": []
+                      },
+                      {
+                        "name": "St. Patrick's Day ",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/st-patricks-day",
+                        "children": []
+                      },
+                      {
+                        "name": "Summer",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/summer",
+                        "children": []
+                      },
+                      {
+                        "name": "Thanksgiving",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/thanksgiving",
+                        "children": []
+                      },
+                      {
+                        "name": "Valentine's Day",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/valentines-day",
+                        "children": []
+                      },
+                      {
+                        "name": "Winter",
+                        "slug": "/shop-products/featured-products/stamps/stamps-season/winter",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Stamp Tools",
+                    "slug": "/shop-products/featured-products/stamps/stamp-tools",
+                    "children": [
+                      {
+                        "name": "Stamp Blocks",
+                        "slug": "/shop-products/featured-products/stamps/stamp-tools/stamp-blocks",
+                        "children": []
+                      },
+                      {
+                        "name": "Stamp Cleaning",
+                        "slug": "/shop-products/featured-products/stamps/stamp-tools/stamp-cleaning",
+                        "children": []
+                      },
+                      {
+                        "name": "Stamp Placement",
+                        "slug": "/shop-products/featured-products/stamps/stamp-tools/stamp-placement",
+                        "children": []
+                      },
+                      {
+                        "name": "Stamp Storage",
+                        "slug": "/shop-products/featured-products/stamps/stamp-tools/stamp-storage",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Christmastime Is Here",
+                "slug": "/shop-products/featured-products/christmastime-is-here",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Other Products",
+            "slug": "/shop-products/other-products",
+            "categories": [
+              {
+                "name": "Adhesives",
+                "slug": "/shop-products/other-products/adhesives",
+                "children": [
+                  {
+                    "name": "Dimensional",
+                    "slug": "/shop-products/other-products/adhesives/dimensional",
+                    "children": []
+                  },
+                  {
+                    "name": "Glue",
+                    "slug": "/shop-products/other-products/adhesives/glue",
+                    "children": []
+                  },
+                  {
+                    "name": "Tape",
+                    "slug": "/shop-products/other-products/adhesives/tape",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Die Cutting",
+                "slug": "/shop-products/other-products/die-cutting",
+                "children": [
+                  {
+                    "name": "Dies-All",
+                    "slug": "/shop-products/other-products/die-cutting/dies-all",
+                    "children": [
+                      {
+                        "name": "3D",
+                        "slug": "/shop-products/other-products/die-cutting/dies-all/3d",
+                        "children": []
+                      },
+                      {
+                        "name": "Alphabet",
+                        "slug": "/shop-products/other-products/die-cutting/dies-all/alphabet",
+                        "children": []
+                      },
+                      {
+                        "name": "Plants & Animals",
+                        "slug": "/shop-products/other-products/die-cutting/dies-all/plants-animals",
+                        "children": []
+                      },
+                      {
+                        "name": "Basic Shapes",
+                        "slug": "/shop-products/other-products/die-cutting/dies-all/basic-shapes",
+                        "children": []
+                      },
+                      {
+                        "name": "Border",
+                        "slug": "/shop-products/other-products/die-cutting/dies-all/border",
+                        "children": []
+                      },
+                      {
+                        "name": "Embossing",
+                        "slug": "/shop-products/other-products/die-cutting/dies-all/emboss",
+                        "children": []
+                      },
+                      {
+                        "name": "Floral",
+                        "slug": "/shop-products/other-products/die-cutting/dies-all/floral",
+                        "children": []
+                      },
+                      {
+                        "name": "Labels & Tags",
+                        "slug": "/shop-products/other-products/die-cutting/dies-all/labels-tags",
+                        "children": []
+                      },
+                      {
+                        "name": "Interactive",
+                        "slug": "/shop-products/other-products/die-cutting/dies-all/interactive",
+                        "children": []
+                      },
+                      {
+                        "name": "Masculine",
+                        "slug": "/shop-products/other-products/die-cutting/dies-all/masculine",
+                        "children": []
+                      },
+                      {
+                        "name": "Packaging",
+                        "slug": "/shop-products/other-products/die-cutting/dies-all/packaging",
+                        "children": []
+                      },
+                      {
+                        "name": "Pop-Up",
+                        "slug": "/shop-products/other-products/die-cutting/dies-all/pop-up",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Dies-Occasion",
+                    "slug": "/shop-products/other-products/die-cutting/dies-occasion",
+                    "children": [
+                      {
+                        "name": "All Occasion",
+                        "slug": "/shop-products/other-products/die-cutting/dies-occasion/all-occasion",
+                        "children": []
+                      },
+                      {
+                        "name": "Anniversary",
+                        "slug": "/shop-products/other-products/die-cutting/dies-occasion/anniversary",
+                        "children": []
+                      },
+                      {
+                        "name": "Babies & Kids",
+                        "slug": "/shop-products/other-products/die-cutting/dies-occasion/babies-kids",
+                        "children": []
+                      },
+                      {
+                        "name": "Birthday",
+                        "slug": "/shop-products/other-products/die-cutting/dies-occasion/birthday",
+                        "children": []
+                      },
+                      {
+                        "name": "Encouragement",
+                        "slug": "/shop-products/other-products/die-cutting/dies-occasion/encouragement",
+                        "children": []
+                      },
+                      {
+                        "name": "Get Well",
+                        "slug": "/shop-products/other-products/die-cutting/dies-occasion/get-well",
+                        "children": []
+                      },
+                      {
+                        "name": "Just Because",
+                        "slug": "/shop-products/other-products/die-cutting/dies-occasion/just-because",
+                        "children": []
+                      },
+                      {
+                        "name": "Love",
+                        "slug": "/shop-products/other-products/die-cutting/dies-occasion/love",
+                        "children": []
+                      },
+                      {
+                        "name": "Religious",
+                        "slug": "/shop-products/other-products/die-cutting/dies-occasion/religious",
+                        "children": []
+                      },
+                      {
+                        "name": "Sympathy",
+                        "slug": "/shop-products/other-products/die-cutting/dies-occasion/sympathy",
+                        "children": []
+                      },
+                      {
+                        "name": "Thank You",
+                        "slug": "/shop-products/other-products/die-cutting/dies-occasion/thank-you",
+                        "children": []
+                      },
+                      {
+                        "name": "Wedding",
+                        "slug": "/shop-products/other-products/die-cutting/dies-occasion/wedding",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Dies-Season",
+                    "slug": "/shop-products/other-products/die-cutting/dies-season",
+                    "children": [
+                      {
+                        "name": "Autumn / Fall",
+                        "slug": "/shop-products/other-products/die-cutting/dies-season/autumn-fall",
+                        "children": []
+                      },
+                      {
+                        "name": "Christmas",
+                        "slug": "/shop-products/other-products/die-cutting/dies-season/christmas",
+                        "children": []
+                      },
+                      {
+                        "name": "Easter",
+                        "slug": "/shop-products/other-products/die-cutting/dies-season/easter",
+                        "children": []
+                      },
+                      {
+                        "name": "Father's Day",
+                        "slug": "/shop-products/other-products/die-cutting/dies-season/fathers-day",
+                        "children": []
+                      },
+                      {
+                        "name": "Halloween",
+                        "slug": "/shop-products/other-products/die-cutting/dies-season/halloween",
+                        "children": []
+                      },
+                      {
+                        "name": "Mother's Day",
+                        "slug": "/shop-products/other-products/die-cutting/dies-season/mothers-day",
+                        "children": []
+                      },
+                      {
+                        "name": "New Year's",
+                        "slug": "/shop-products/other-products/die-cutting/dies-season/new-years",
+                        "children": []
+                      },
+                      {
+                        "name": "Spring",
+                        "slug": "/shop-products/other-products/die-cutting/dies-season/spring",
+                        "children": []
+                      },
+                      {
+                        "name": "Summer",
+                        "slug": "/shop-products/other-products/die-cutting/dies-season/summer",
+                        "children": []
+                      },
+                      {
+                        "name": "Thanksgiving",
+                        "slug": "/shop-products/other-products/die-cutting/dies-season/thanksgiving",
+                        "children": []
+                      },
+                      {
+                        "name": "Valentine's Day",
+                        "slug": "/shop-products/other-products/die-cutting/dies-season/valentines-day",
+                        "children": []
+                      },
+                      {
+                        "name": "Winter",
+                        "slug": "/shop-products/other-products/die-cutting/dies-season/winter",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Embossing Folders",
+                    "slug": "/shop-products/other-products/die-cutting/embossing-folders",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Embellishments & Ribbon",
+                "slug": "/shop-products/other-products/embellishments-ribbon",
+                "children": [
+                  {
+                    "name": "Embellishments",
+                    "slug": "/shop-products/other-products/embellishments-ribbon/embellishments",
+                    "children": [
+                      {
+                        "name": "3D Elements",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/embellishments/3d-elements",
+                        "children": []
+                      },
+                      {
+                        "name": "Adhesive-Backed & Stickers",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/embellishments/adhesive-backed-stickers",
+                        "children": []
+                      },
+                      {
+                        "name": "Brads",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/embellishments/brads",
+                        "children": []
+                      },
+                      {
+                        "name": "Buttons",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/embellishments/buttons",
+                        "children": []
+                      },
+                      {
+                        "name": "Clips",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/embellishments/clips",
+                        "children": []
+                      },
+                      {
+                        "name": "Cork",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/embellishments/cork",
+                        "children": []
+                      },
+                      {
+                        "name": "Felt",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/embellishments/felt",
+                        "children": []
+                      },
+                      {
+                        "name": "Jewels",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/embellishments/jewels",
+                        "children": []
+                      },
+                      {
+                        "name": "Laser-Cut",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/embellishments/laser-cut",
+                        "children": []
+                      },
+                      {
+                        "name": "Sequins",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/embellishments/sequins",
+                        "children": []
+                      },
+                      {
+                        "name": "Shaker Card Supplies",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/embellishments/shaker-card-supplies",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Ribbon & Trim",
+                    "slug": "/shop-products/other-products/embellishments-ribbon/ribbon-trim",
+                    "children": [
+                      {
+                        "name": "Cords, Thread & Twine",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/ribbon-trim/cords-thread-twine",
+                        "children": []
+                      },
+                      {
+                        "name": "Combo Packs",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/ribbon-trim/combo-packs",
+                        "children": []
+                      },
+                      {
+                        "name": "Grosgrain",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/ribbon-trim/grosgrain",
+                        "children": []
+                      },
+                      {
+                        "name": "Lace",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/ribbon-trim/lace",
+                        "children": []
+                      },
+                      {
+                        "name": "Metallic",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/ribbon-trim/metallic",
+                        "children": []
+                      },
+                      {
+                        "name": "Natural",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/ribbon-trim/natural",
+                        "children": []
+                      },
+                      {
+                        "name": "Patterned",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/ribbon-trim/patterned",
+                        "children": []
+                      },
+                      {
+                        "name": "Satin",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/ribbon-trim/satin",
+                        "children": []
+                      },
+                      {
+                        "name": "Sheer",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/ribbon-trim/sheer",
+                        "children": []
+                      },
+                      {
+                        "name": "Specialty",
+                        "slug": "/shop-products/other-products/embellishments-ribbon/ribbon-trim/specialty",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Washi Tape",
+                    "slug": "/shop-products/other-products/embellishments-ribbon/washi-tape",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Embossing",
+                "slug": "/shop-products/other-products/embossing",
+                "children": [
+                  {
+                    "name": "Dry Embossing",
+                    "slug": "/shop-products/other-products/embossing/dry-embossing",
+                    "children": []
+                  },
+                  {
+                    "name": "Heat Embossing",
+                    "slug": "/shop-products/other-products/embossing/heat-embossing",
+                    "children": []
+                  },
+                  {
+                    "name": "Paste Embossing",
+                    "slug": "/shop-products/other-products/embossing/paste-embossing",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Kits",
+                "slug": "/shop-products/other-products/kits",
+                "children": [
+                  {
+                    "name": "All-Inclusive Project Kits",
+                    "slug": "/shop-products/other-products/kits/all-inclusive-project-kits",
+                    "children": []
+                  },
+                  {
+                    "name": "Semi-Inclusive Project Kits",
+                    "slug": "/shop-products/other-products/kits/semi-inclusive-project-kits",
+                    "children": []
+                  },
+                  {
+                    "name": "Product Assortments",
+                    "slug": "/shop-products/other-products/kits/product-assortments",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Punches",
+                "slug": "/shop-products/other-products/punches",
+                "children": [
+                  {
+                    "name": "Basic Shape Punches",
+                    "slug": "/shop-products/other-products/punches/basic-shape-punches",
+                    "children": []
+                  },
+                  {
+                    "name": "Builder Punches",
+                    "slug": "/shop-products/other-products/punches/builder-punches",
+                    "children": []
+                  },
+                  {
+                    "name": "Label & Tag Punches",
+                    "slug": "/shop-products/other-products/punches/label-tag-punches",
+                    "children": []
+                  },
+                  {
+                    "name": "Plant & Animal Punches",
+                    "slug": "/shop-products/other-products/punches/plant-animal-punches",
+                    "children": []
+                  },
+                  {
+                    "name": "Punch Packs",
+                    "slug": "/shop-products/other-products/punches/punch-packs",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Scrapbooking",
+                "slug": "/shop-products/other-products/scrapbooking",
+                "children": [
+                  {
+                    "name": "Albums & Supplies",
+                    "slug": "/shop-products/other-products/scrapbooking/albums-supplies",
+                    "children": []
+                  },
+                  {
+                    "name": "Pocket Scrapbooking",
+                    "slug": "/shop-products/other-products/scrapbooking/pocket-scrapbooking",
+                    "children": []
+                  },
+                  {
+                    "name": "Scrapbook Paper",
+                    "slug": "/shop-products/other-products/scrapbooking/scrapbook-paper",
+                    "children": [
+                      {
+                        "name": "Cardstock",
+                        "slug": "/shop-products/other-products/scrapbooking/scrapbook-paper/cardstock",
+                        "children": []
+                      },
+                      {
+                        "name": "Patterned Paper",
+                        "slug": "/shop-products/other-products/scrapbooking/scrapbook-paper/patterned-paper",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tools & Storage",
+                "slug": "/shop-products/other-products/tools-storage",
+                "children": [
+                  {
+                    "name": "Colouring Tools",
+                    "slug": "/shop-products/other-products/tools-storage/coloring-tools",
+                    "children": []
+                  },
+                  {
+                    "name": "Cutting & Scoring Tools",
+                    "slug": "/shop-products/other-products/tools-storage/cutting-scoring",
+                    "children": [
+                      {
+                        "name": "Paper Cutting",
+                        "slug": "/shop-products/other-products/tools-storage/cutting-scoring/paper-cutting",
+                        "children": []
+                      },
+                      {
+                        "name": "Scoring",
+                        "slug": "/shop-products/other-products/tools-storage/cutting-scoring/scoring",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Embossing Tools",
+                    "slug": "/shop-products/other-products/tools-storage/embossing-tools",
+                    "children": []
+                  },
+                  {
+                    "name": "Multipurpose Tools ",
+                    "slug": "/shop-products/other-products/tools-storage/multipurpose-tools",
+                    "children": []
+                  },
+                  {
+                    "name": "Stamp Tools",
+                    "slug": "/shop-products/other-products/tools-storage/stamp-tools",
+                    "children": [
+                      {
+                        "name": "Stamp Cleaning",
+                        "slug": "/shop-products/other-products/tools-storage/stamp-tools/stamp-cleaning",
+                        "children": []
+                      },
+                      {
+                        "name": "Stamp Grid Paper",
+                        "slug": "/shop-products/other-products/tools-storage/stamp-tools/stamp-grid-paper",
+                        "children": []
+                      },
+                      {
+                        "name": "Stamp Placement",
+                        "slug": "/shop-products/other-products/tools-storage/stamp-tools/stamp-placement",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Storage",
+                    "slug": "/shop-products/other-products/tools-storage/storage",
+                    "children": [
+                      {
+                        "name": "Colour Storage",
+                        "slug": "/shop-products/other-products/tools-storage/storage/color-storage",
+                        "children": []
+                      },
+                      {
+                        "name": "Stamp Storage",
+                        "slug": "/shop-products/other-products/tools-storage/storage/stamp-storage",
+                        "children": []
+                      },
+                      {
+                        "name": "Albums & Sleeves",
+                        "slug": "/shop-products/other-products/tools-storage/storage/albums-sleeves",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Shop By",
+            "slug": "/shop-products/shop-by",
+            "categories": [
+              {
+                "name": "Getting Started",
+                "slug": "/shop-products/shop-by/getting-started",
+                "children": [
+                  {
+                    "name": "Magnolia Lane Cards",
+                    "slug": "/shop-products/shop-by/getting-started/magnolia-lane-cards",
+                    "children": []
+                  },
+                  {
+                    "name": "Celebrate With Cake Cards",
+                    "slug": "/shop-products/shop-by/getting-started/celebrate-with-cake-cards",
+                    "children": []
+                  },
+                  {
+                    "name": "Hoot Hoot Hooray Cards",
+                    "slug": "/shop-products/shop-by/getting-started/hoot-hoot-hooray-cards",
+                    "children": []
+                  },
+                  {
+                    "name": "Looking Up Card Kit",
+                    "slug": "/shop-products/shop-by/getting-started/looking-up-card-kit",
+                    "children": []
+                  },
+                  {
+                    "name": "Delightful Day Tags",
+                    "slug": "/shop-products/shop-by/getting-started/delightful-day-tags",
+                    "children": []
+                  },
+                  {
+                    "name": "Crafting Basics",
+                    "slug": "/shop-products/shop-by/getting-started/crafting-basics",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Product Suites",
+                "slug": "/shop-products/shop-by/product-suites",
+                "children": [
+                  {
+                    "name": "Toile Tidings",
+                    "slug": "/shop-products/shop-by/product-suites/toile-tidings",
+                    "children": []
+                  },
+                  {
+                    "name": "Wrapped In Plaid",
+                    "slug": "/shop-products/shop-by/product-suites/wrapped-in-plaid",
+                    "children": []
+                  },
+                  {
+                    "name": "Let It Snow",
+                    "slug": "/shop-products/shop-by/product-suites/let-it-snow",
+                    "children": []
+                  },
+                  {
+                    "name": "Night Before Christmas",
+                    "slug": "/shop-products/shop-by/product-suites/night-before-christmas",
+                    "children": []
+                  },
+                  {
+                    "name": "Brightly Gleaming",
+                    "slug": "/shop-products/shop-by/product-suites/brightly-gleaming",
+                    "children": []
+                  },
+                  {
+                    "name": "Feels Like Frost",
+                    "slug": "/shop-products/shop-by/product-suites/feels-like-frost",
+                    "children": []
+                  },
+                  {
+                    "name": "Come To Gather",
+                    "slug": "/shop-products/shop-by/product-suites/come-to-gather",
+                    "children": []
+                  },
+                  {
+                    "name": "Monster Bash",
+                    "slug": "/shop-products/shop-by/product-suites/monster-bash",
+                    "children": []
+                  },
+                  {
+                    "name": "Magnolia Lane",
+                    "slug": "/shop-products/shop-by/product-suites/magnolia-lane",
+                    "children": []
+                  },
+                  {
+                    "name": "Woven Threads",
+                    "slug": "/shop-products/shop-by/product-suites/woven-threads",
+                    "children": []
+                  },
+                  {
+                    "name": "Noble Peacock",
+                    "slug": "/shop-products/shop-by/product-suites/noble-peacock",
+                    "children": []
+                  },
+                  {
+                    "name": "Garden Lane",
+                    "slug": "/shop-products/shop-by/product-suites/garden-lane",
+                    "children": []
+                  },
+                  {
+                    "name": "Follow Your Art",
+                    "slug": "/shop-products/shop-by/product-suites/follow-your-art",
+                    "children": []
+                  },
+                  {
+                    "name": "Come Sail Away",
+                    "slug": "/shop-products/shop-by/product-suites/come-sail-away",
+                    "children": []
+                  },
+                  {
+                    "name": "Bird Ballad",
+                    "slug": "/shop-products/shop-by/product-suites/bird-ballad",
+                    "children": []
+                  },
+                  {
+                    "name": "Pressed Petals",
+                    "slug": "/shop-products/shop-by/product-suites/pressed-petals",
+                    "children": []
+                  },
+                  {
+                    "name": "Perennial Essence",
+                    "slug": "/shop-products/shop-by/product-suites/perennial-essence",
+                    "children": []
+                  },
+                  {
+                    "name": "See A Silhouette",
+                    "slug": "/shop-products/shop-by/product-suites/see-a-silhouette",
+                    "children": []
+                  },
+                  {
+                    "name": "Mosaic Mood",
+                    "slug": "/shop-products/shop-by/product-suites/mosaic-mood",
+                    "children": []
+                  },
+                  {
+                    "name": "Dinoroar",
+                    "slug": "/shop-products/shop-by/product-suites/dinoroar",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "WHAT'S NEW",
+        "groups": [
+          {
+            "name": "New Arrivals",
+            "slug": "/whats-new/new-arrivals",
+            "categories": []
+          },
+          {
+            "name": "Giving Back",
+            "slug": "/whats-new/giving-back",
+            "categories": []
+          },
+          {
+            "name": "Christmastime Is Here",
+            "slug": "/whats-new/christmastime-is-here",
+            "categories": []
+          }
+        ]
+      },
+      {
+        "name": "SALES & SPECIALS",
+        "groups": [
+          {
+            "name": "Bundled Savings ",
+            "slug": "/sales-specials/bundled-savings",
+            "categories": [
+              {
+                "name": "Ink Bundles",
+                "slug": "/sales-specials/bundled-savings/ink-bundles",
+                "children": []
+              },
+              {
+                "name": "Stamp Block Bundles",
+                "slug": "/sales-specials/bundled-savings/stamp-block-bundles",
+                "children": []
+              },
+              {
+                "name": "Stamp & Die Bundles",
+                "slug": "/sales-specials/bundled-savings/stamp-die-bundles",
+                "children": []
+              },
+              {
+                "name": "Stamp & Punch Bundles",
+                "slug": "/sales-specials/bundled-savings/stamp-punch-bundles",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Clearance",
+            "slug": "/sales-specials/clearance",
+            "categories": []
+          }
+        ]
+      },
+      {
+        "name": "KITS - SUBSCRIPTION",
+        "groups": []
+      }
+    ],
+    "categoryContentHTML": null,
+    "authMenu": false,
+    "wishlist": {
+      "lists": [],
+      "items": [],
+      "listsWithItem": []
+    },
+    "checkout": {
+      "invoice": null,
+      "shippingMethods": [],
+      "confirmationInvoice": null
+    },
+    "content": {
+      "pageData": {
+        "homepage": {
+          "route": "~/homepage",
+          "title": "Homepage",
+          "head": "",
+          "content": "{\"slides\":[{\"image\":\"<div data-id=\\\"0420da2c-b940-4f9e-9df4-88fc712a302d\\\" data-hidden-xs-only=\\\"False\\\" data-hidden-sm-only=\\\"False\\\" data-hidden-md-and-up=\\\"False\\\" class=\\\"slide--image\\\"><a href=\\\"/categories/whats-new/coordination-product-release\\\"><picture class=\\\"is-showing\\\"><source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/x_1070,y_0,w_825,h_825,c_crop/w_599,h_599,c_scale/v1571774165/prod/images/default-source/web-content-images/home-page-images/020120_smain_oop_q1.jpg?sfvrsn=8620030a_2\\\" media=\\\"(max-width:599px)\\\"> <source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/x_812,y_97,w_1288,h_644,c_crop/v1571774165/prod/images/default-source/web-content-images/home-page-images/020120_smain_oop_q1.jpg?sfvrsn=8620030a_2\\\" media=\\\"(max-width:1251px)\\\"> <source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/x_827,y_99,w_1276,h_638,c_crop/v1571774165/prod/images/default-source/web-content-images/home-page-images/020120_smain_oop_q1.jpg?sfvrsn=8620030a_2\\\" media=\\\"(max-width:1263px)\\\"> <source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/w_2100,h_825,c_fill,g_east/v1571774165/prod/images/default-source/web-content-images/home-page-images/020120_smain_oop_q1.jpg?sfvrsn=8620030a_2\\\" media=\\\"(max-width:5000px)\\\"> <source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/w_2100,h_650,g_south_east,c_fill/v1571774165/prod/images/default-source/web-content-images/home-page-images/020120_smain_oop_q1.jpg?sfvrsn=8620030a_2\\\" media=\\\"(max-width:8000px)\\\"> <img src=\\\"https://res.cloudinary.com/stampin-up/image/upload/v1571774165/prod/images/default-source/web-content-images/home-page-images/020120_smain_oop_q1.jpg?sfvrsn=8620030a_2\\\"></source></source></source></source></source></picture></a></div>\",\"content\":\"<div class=\\\"slide--content slide--content-0420da2c-b940-4f9e-9df4-88fc712a302d\\\"><h1>Coordination Product Release</h1> <p class=\\\"lead\\\"> Get these exclusive limited-time products while supplies last! </p> <button type=\\\"button\\\" class=\\\"hidden-xs-only action-button black-button v-btn v-btn--contained theme--light v-size--default\\\"><span class=\\\"v-btn__content\\\"><a href=\\\"/categories/whats-new/coordination-product-release\\\" role=\\\"button\\\" class=\\\"button-main\\\">ORDER NOW</a></span></button> <button type=\\\"button\\\" class=\\\"hidden-sm-and-up mt-n6 v-btn v-btn--flat v-btn--text theme--light v-size--default\\\"><span class=\\\"v-btn__content\\\"><a href=\\\"/categories/whats-new/coordination-product-release\\\" role=\\\"button\\\" class=\\\"button-secondary\\\">ORDER NOW</a> <i class=\\\"material-icons\\\">play_arrow</i></span></button></div>\"},{\"image\":\"<div data-id=\\\"a9cc34de-8e2b-47b8-9183-7a79a5747229\\\" data-hidden-xs-only=\\\"False\\\" data-hidden-sm-only=\\\"False\\\" data-hidden-md-and-up=\\\"False\\\" class=\\\"slide--image\\\"><a href=\\\"\\\"><picture class=\\\"is-showing\\\"><source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/x_1070,y_0,w_825,h_825,c_crop/w_599,h_599,c_scale/v1571774165/prod/images/default-source/web-content-images/home-page-images/010320_smain_20percentoff_uk.png?sfvrsn=a763647c_6\\\" media=\\\"(max-width:599px)\\\"> <source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/x_812,y_97,w_1288,h_644,c_crop/v1571774165/prod/images/default-source/web-content-images/home-page-images/010320_smain_20percentoff_uk.png?sfvrsn=a763647c_6\\\" media=\\\"(max-width:1251px)\\\"> <source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/x_827,y_99,w_1276,h_638,c_crop/v1571774165/prod/images/default-source/web-content-images/home-page-images/010320_smain_20percentoff_uk.png?sfvrsn=a763647c_6\\\" media=\\\"(max-width:1263px)\\\"> <source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/w_2100,h_825,c_fill,g_east/v1571774165/prod/images/default-source/web-content-images/home-page-images/010320_smain_20percentoff_uk.png?sfvrsn=a763647c_6\\\" media=\\\"(max-width:5000px)\\\"> <source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/w_2100,h_650,g_south_east,c_fill/v1571774165/prod/images/default-source/web-content-images/home-page-images/010320_smain_20percentoff_uk.png?sfvrsn=a763647c_6\\\" media=\\\"(max-width:8000px)\\\"> <img src=\\\"https://res.cloudinary.com/stampin-up/image/upload/v1571774165/prod/images/default-source/web-content-images/home-page-images/010320_smain_20percentoff_uk.png?sfvrsn=a763647c_6\\\"></source></source></source></source></source></picture></a></div>\",\"content\":\"<div class=\\\"slide--content slide--content-a9cc34de-8e2b-47b8-9183-7a79a5747229\\\"><h1>GET 20% OFF</h1> <p class=\\\"lead\\\"> Shop the beta and get 20% off your entire order. (No Sale-A-Bration offers here.) Start saving! </p></div>\"}],\"heroContainer\":\"<div id=\\\"main_C093_Col05\\\" data-sf-element=\\\"Hero Secondary\\\" data-placeholder-label=\\\"Hero Secondary\\\" class=\\\"sf_colsIn hero hero-container\\\"><div><div class=\\\"sf-Long-text\\\"><div class=\\\"card-banner-secondary-hero\\\"><div class=\\\"layout wrap fill-height pa-0\\\"><div class=\\\"flex xs12 pa-0 fade\\\"><a href=\\\"https://www.stampinup.com/en-gb\\\"><picture class=\\\"is-showing\\\"><source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/x_340,y_70,h_400,c_crop/v1571774165/prod/images/default-source/web-content-images/home-page-images/010320_st_sab_uk.jpg?sfvrsn=e19bda96_2\\\" media=\\\"(max-width:599px)\\\"><source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/x_420,y_110,h_350,c_crop/v1571774165/prod/images/default-source/web-content-images/home-page-images/010320_st_sab_uk.jpg?sfvrsn=e19bda96_2\\\" media=\\\"(max-width:699px)\\\"><source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/x_920,y_110,w_959,h_350,c_crop/v1571774165/prod/images/default-source/web-content-images/home-page-images/010320_st_sab_uk.jpg?sfvrsn=e19bda96_2\\\" media=\\\"(max-width:959px)\\\"><source srcset=\\\"https://res.cloudinary.com/stampin-up/image/upload/w_2100,h_600,g_east,c_fill/v1571774165/prod/images/default-source/web-content-images/home-page-images/010320_st_sab_uk.jpg?sfvrsn=e19bda96_2\\\" media=\\\"(max-width:5000px)\\\"><img src=\\\"https://res.cloudinary.com/stampin-up/image/upload/v1571774165/prod/images/default-source/web-content-images/home-page-images/010320_st_sab_uk.jpg?sfvrsn=e19bda96_2\\\"></source></source></source></source></picture></a></div><div class=\\\"flex xs12 content hidden-sm-and-down\\\"><div class=\\\"container pa-0 white--text\\\"><h2>SALE-A-BRATION</h2><p class=\\\"lead\\\">Looking for Sale-A-Bration offers?<br>Visit stampinup.com and earn free products. </p><button type=\\\"button\\\" class=\\\"action-button v-btn v-btn--contained theme--light v-size--default\\\"><span class=\\\"v-btn__content\\\"><a href=\\\"https://www.stampinup.com/en-gb\\\" role=\\\"button\\\" class=\\\"button-main\\\">Shop Now</a></span></button></div></div></div><div class=\\\"flex xs12 content hidden-md-and-up\\\"><div class=\\\"container pa-0\\\"><h2>SALE-A-BRATION</h2><p class=\\\"lead\\\">Looking for Sale-A-Bration offers? Visit stampinup.com and earn free products. </p><button type=\\\"button\\\" class=\\\"action-button v-btn v-btn--contained theme--light v-size--default\\\"><span class=\\\"v-btn__content\\\"><a href=\\\"https://www.stampinup.com/en-gb\\\" role=\\\"button\\\" class=\\\"button-main\\\">Shop Now</a></span></button></div></div></div></div></div></div>\",\"otherContent\":\"<div class=\\\"container category other-content\\\"><div id=\\\"main_C093_Col01\\\" data-sf-element=\\\"Area 1\\\" data-placeholder-label=\\\"Area 1\\\" class=\\\"sf_colsIn area1\\\"><div class=\\\"card-banner-vertical tall\\\"><div class=\\\"layout wrap fill-height\\\"><div class=\\\"flex xs12 pa-0 fade\\\"><a href=\\\"/products/country-club-designer-series-paper\\\"><img src=\\\"https://res.cloudinary.com/stampin-up/image/upload/w_722/e_gradient_fade,y_-0.5/v1571774165/prod/images/default-source/web-content-images/home-page-images/03-20_s1_country-club-dsp.png?sfvrsn=b4b81510_2\\\"></a></div> <div class=\\\"flex xs12 content\\\"><h2>Country Club Designer Series Paper</h2> <p class=\\\"lead\\\"> Hit a hole in one with this clubhouse-themed Designer Series Paper! </p> <button type=\\\"button\\\" class=\\\"v-btn v-btn--flat v-btn--text theme--light v-size--default\\\"><span class=\\\"v-btn__content\\\"><a href=\\\"/products/country-club-designer-series-paper\\\" role=\\\"button\\\" class=\\\"button-secondary\\\">Buy Now</a><i class=\\\"material-icons\\\">play_arrow</i></span></button></div></div></div></div> <div id=\\\"main_C093_Col02\\\" data-sf-element=\\\"Area 2\\\" data-placeholder-label=\\\"Area 2\\\" class=\\\"sf_colsIn area2\\\"><div class=\\\"card-banner-vertical tall\\\"><div class=\\\"layout wrap fill-height\\\"><div class=\\\"flex xs12 pa-0 fade\\\"><a href=\\\"/products/seriously-the-best-project-kit\\\"><img src=\\\"https://res.cloudinary.com/stampin-up/image/upload/w_722/e_gradient_fade,y_-0.5/v1571774165/prod/images/default-source/web-content-images/home-page-images/03-20_s2_seriously-the-best.png?sfvrsn=5d26e378_2\\\"></a></div> <div class=\\\"flex xs12 content\\\"><h2>Seriously the best Project Kit</h2> <p class=\\\"lead\\\"> This project kit is seriously the best. Seriously. </p> <button type=\\\"button\\\" class=\\\"v-btn v-btn--flat v-btn--text theme--light v-size--default\\\"><span class=\\\"v-btn__content\\\"><a href=\\\"/products/seriously-the-best-project-kit\\\" role=\\\"button\\\" class=\\\"button-secondary\\\">Get Yours</a><i class=\\\"material-icons\\\">play_arrow</i></span></button></div></div></div></div> <div id=\\\"main_C093_Col03\\\" data-sf-element=\\\"Area 3\\\" data-placeholder-label=\\\"Area 3\\\" class=\\\"sf_colsIn area3\\\"><div class=\\\"card-banner-horizontal\\\"><div class=\\\"layout wrap fill-height\\\"><div class=\\\"flex xs12 sm6 pa-0\\\"><a href=\\\"/community/join-stampin-up\\\"><img src=\\\"https://stampinupcdndev.blob.core.windows.net/product-images/images/default-source/homepage-images/homepage_join.jpg?sfvrsn=db483bba_2\\\"></a></div> <div class=\\\"flex xs12 sm6 content\\\"><h3>JOIN STAMPIN' UP!</h3> <p class=\\\"lead\\\"> Teach others how to craft, and love your job as a demonstrator! </p> <button type=\\\"button\\\" class=\\\"v-btn v-btn--flat v-btn--text theme--light v-size--default\\\"><span class=\\\"v-btn__content\\\"><a href=\\\"/community/join-stampin-up\\\" role=\\\"button\\\" class=\\\"button-secondary\\\">LEARN MORE</a><i class=\\\"material-icons\\\">play_arrow</i></span></button></div></div></div></div> <div id=\\\"main_C093_Col04\\\" data-sf-element=\\\"Area 4\\\" data-placeholder-label=\\\"Area 4\\\" class=\\\"sf_colsIn area4\\\"><div class=\\\"card-banner-horizontal\\\"><div class=\\\"layout wrap fill-height\\\"><div class=\\\"flex xs12 sm6 pa-0\\\"><a href=\\\"/community/host-a-party\\\"><img src=\\\"https://res.cloudinary.com/stampin-up/image/upload/v1571774165/prod/images/default-source/web-content-images/home-page-images/010220_s4_host_uk.jpg?sfvrsn=405dc858_2\\\"></a></div> <div class=\\\"flex xs12 sm6 content\\\"><h3>HOST A PARTY</h3> <p class=\\\"lead\\\"> Invite friends over to craft! Your demonstrator does the rest. </p> <button type=\\\"button\\\" class=\\\"v-btn v-btn--flat v-btn--text theme--light v-size--default\\\"><span class=\\\"v-btn__content\\\"><a href=\\\"/community/host-a-party\\\" role=\\\"button\\\" class=\\\"button-secondary\\\">LEARN MORE</a><i class=\\\"material-icons\\\">play_arrow</i></span></button></div></div></div></div></div>\"}",
+          "contentSections": [],
+          "keywords": "",
+          "description": ""
+        }
+      }
+    },
+    "features": {
+      "enabledFeatures": [
+        "filterColorCollections",
+        "filterColorSwatch",
+        "filterPrice",
+        "newsletter",
+        "wishlist"
+      ]
+    },
+    "cart": {
+      "cart": {
+        "createdDate": "2020-03-12T15:49:14.995Z",
+        "id": "",
+        "items": [],
+        "culture": "",
+        "email": "",
+        "itemsSubTotal": 0,
+        "promotionalItems": [],
+        "purchasableItems": [],
+        "subTotal": "",
+        "totalProducts": 0,
+        "demonstrator": null,
+        "hostCode": "",
+        "couponCodes": [],
+        "couponTotal": 0,
+        "isFromDbws": false
+      },
+      "cartSummary": {
+        "total": 0,
+        "formattedTotal": "",
+        "subTotal": 0,
+        "formattedSubTotal": "",
+        "shipping": 0,
+        "formattedShipping": "$0.00",
+        "rewardsEarned": 0,
+        "formattedRewardsEarned": "",
+        "rewardsRedeemed": 0,
+        "formattedRewardsRedeemed": "",
+        "rewardsRemaining": 0,
+        "formattedRewardsRemaining": "",
+        "rewardsOverage": 0,
+        "formattedRewardsOverage": "",
+        "rewardsHalfPriceItemsEarned": 0,
+        "rewardsHalfPriceItemsRedeemed": 0,
+        "rewardsHalfPriceItemsRemaining": 0,
+        "rewardsHalfPriceItemsTotal": 0,
+        "formattedRewardsHalfPriceItemsTotal": "",
+        "rewardsTotal": 0,
+        "formattedRewardsTotal": "",
+        "neededToEarnStampinRewards": 0,
+        "formattedNeededToEarnStampinRewards": "",
+        "neededToEarnHalfPrice": 0,
+        "formattedNeededToEarnHalfPrice": "",
+        "couponDiscount": 0,
+        "formattedCouponDiscount": "",
+        "apiError": {
+          "errors": []
+        }
+      },
+      "plugins": {}
+    },
+    "locale": {
+      "localeCookieName": "locale",
+      "localeSource": "CookieOrUserSettings",
+      "culture": "en-gb",
+      "regions": [
+        {
+          "name": "North America",
+          "phoneNumberFormat": "(###) ### - ####",
+          "postalCodeFormat": "XXXXX XXXX",
+          "postalCodeRules": "required|su_postalcode|max:8|min:5",
+          "addressFields": [
+            "city",
+            "region"
+          ],
+          "countries": [
+            {
+              "name": "United States",
+              "culture": "en-us",
+              "countryCode": "US",
+              "rewardPolicy": {
+                "fullMin": 150,
+                "halfMin": 450
+              },
+              "displayCode": "US",
+              "addressLines": 3,
+              "icon": "flag-us",
+              "active": true,
+              "currency": "USD",
+              "taxable": true,
+              "states": []
+            },
+            {
+              "name": "Canada English",
+              "culture": "en-ca",
+              "countryCode": "CA",
+              "rewardPolicy": {
+                "fullMin": 200,
+                "halfMin": 550
+              },
+              "displayCode": "CA",
+              "addressLines": 3,
+              "icon": "flag-ca",
+              "active": true,
+              "currency": "CAD",
+              "taxable": false,
+              "states": []
+            }
+          ]
+        },
+        {
+          "name": "Europe",
+          "phoneNumberFormat": "+FFFFFFFFFFFFFFF",
+          "addressFields": [
+            "city",
+            "state"
+          ],
+          "countries": [
+            {
+              "name": "United Kingdom",
+              "culture": "en-gb",
+              "postalCodeRules": "required|max:8|min:6",
+              "countryCode": "GB",
+              "rewardPolicy": {
+                "fullMin": 150,
+                "halfMin": 400
+              },
+              "addressFields": [
+                "city",
+                "county"
+              ],
+              "displayCode": "UK",
+              "addressLines": 3,
+              "icon": "flag-gb",
+              "active": true,
+              "currency": "GBP",
+              "taxable": false,
+              "states": [
+                {
+                  "code": "ABERDEEN",
+                  "name": "ABERDEEN"
+                },
+                {
+                  "code": "ABERDEENSHIRE",
+                  "name": "ABERDEENSHIRE"
+                },
+                {
+                  "code": "ANGLESEY",
+                  "name": "ANGLESEY"
+                },
+                {
+                  "code": "ANGUS",
+                  "name": "ANGUS"
+                },
+                {
+                  "code": "ANTRIM",
+                  "name": "ANTRIM"
+                },
+                {
+                  "code": "ARGYLL",
+                  "name": "ARGYLL"
+                },
+                {
+                  "code": "ARGYLLSHIRE",
+                  "name": "ARGYLLSHIRE"
+                },
+                {
+                  "code": "ARMAGH",
+                  "name": "ARMAGH"
+                },
+                {
+                  "code": "AVON",
+                  "name": "AVON"
+                },
+                {
+                  "code": "AYRSHIRE",
+                  "name": "AYRSHIRE"
+                },
+                {
+                  "code": "BANFFSHIRE",
+                  "name": "BANFFSHIRE"
+                },
+                {
+                  "code": "BEDFORDSHIRE",
+                  "name": "BEDFORDSHIRE"
+                },
+                {
+                  "code": "BELFAST",
+                  "name": "BELFAST"
+                },
+                {
+                  "code": "BERKSHIRE",
+                  "name": "BERKSHIRE"
+                },
+                {
+                  "code": "BERWICKSHIRE",
+                  "name": "BERWICKSHIRE"
+                },
+                {
+                  "code": "BRECKNOCKSHIRE",
+                  "name": "BRECKNOCKSHIRE"
+                },
+                {
+                  "code": "BRISTOL",
+                  "name": "BRISTOL"
+                },
+                {
+                  "code": "BUCKINGHAMSHIRE",
+                  "name": "BUCKINGHAMSHIRE"
+                },
+                {
+                  "code": "BUTE",
+                  "name": "BUTE"
+                },
+                {
+                  "code": "BUTESHIRE",
+                  "name": "BUTESHIRE"
+                },
+                {
+                  "code": "MORAY",
+                  "name": "MORAY"
+                },
+                {
+                  "code": "CAERNARFONSHIRE",
+                  "name": "CAERNARFONSHIRE"
+                },
+                {
+                  "code": "CARMARTHENSHIRE",
+                  "name": "CARMARTHENSHIRE"
+                },
+                {
+                  "code": "CAMBRIDGESHIRE",
+                  "name": "CAMBRIDGESHIRE"
+                },
+                {
+                  "code": "CARDIGANSHIRE",
+                  "name": "CARDIGANSHIRE"
+                },
+                {
+                  "code": "CEREDIGION",
+                  "name": "CEREDIGION"
+                },
+                {
+                  "code": "CHESHIRE",
+                  "name": "CHESHIRE"
+                },
+                {
+                  "code": "CLACKMANNANSHIRE",
+                  "name": "CLACKMANNANSHIRE"
+                },
+                {
+                  "code": "CORNWALL",
+                  "name": "CORNWALL"
+                },
+                {
+                  "code": "CROMARTYSHIRE",
+                  "name": "CROMARTYSHIRE"
+                },
+                {
+                  "code": "CUMBRIA",
+                  "name": "CUMBRIA"
+                },
+                {
+                  "code": "CUMBERLAND",
+                  "name": "CUMBERLAND"
+                },
+                {
+                  "code": "DENBIGHSHIRE",
+                  "name": "DENBIGHSHIRE"
+                },
+                {
+                  "code": "DERBYSHIRE",
+                  "name": "DERBYSHIRE"
+                },
+                {
+                  "code": "DERRY",
+                  "name": "DERRY"
+                },
+                {
+                  "code": "DEVON",
+                  "name": "DEVON"
+                },
+                {
+                  "code": "DORSET",
+                  "name": "DORSET"
+                },
+                {
+                  "code": "DOWN",
+                  "name": "DOWN"
+                },
+                {
+                  "code": "DUMFRIESSHIRE",
+                  "name": "DUMFRIESSHIRE"
+                },
+                {
+                  "code": "DUNBARTONSHIRE",
+                  "name": "DUNBARTONSHIRE"
+                },
+                {
+                  "code": "DUNDEE",
+                  "name": "DUNDEE"
+                },
+                {
+                  "code": "DURHAM",
+                  "name": "DURHAM"
+                },
+                {
+                  "code": "EAST LOTHIAN",
+                  "name": "EAST LOTHIAN"
+                },
+                {
+                  "code": "EAST SUSSEX",
+                  "name": "EAST SUSSEX"
+                },
+                {
+                  "code": "EDINBURGH",
+                  "name": "EDINBURGH"
+                },
+                {
+                  "code": "ESSEX",
+                  "name": "ESSEX"
+                },
+                {
+                  "code": "FERMANAGH",
+                  "name": "FERMANAGH"
+                },
+                {
+                  "code": "FIFE",
+                  "name": "FIFE"
+                },
+                {
+                  "code": "FLINTSHIRE",
+                  "name": "FLINTSHIRE"
+                },
+                {
+                  "code": "GLAMORGAN",
+                  "name": "GLAMORGAN"
+                },
+                {
+                  "code": "GLASGOW",
+                  "name": "GLASGOW"
+                },
+                {
+                  "code": "GLOUCESTERSHIRE",
+                  "name": "GLOUCESTERSHIRE"
+                },
+                {
+                  "code": "GREATER LONDON",
+                  "name": "GREATER LONDON"
+                },
+                {
+                  "code": "GREATER MANCHESTER",
+                  "name": "GREATER MANCHESTER"
+                },
+                {
+                  "code": "GWYNEDD",
+                  "name": "GWYNEDD"
+                },
+                {
+                  "code": "HAMPSHIRE",
+                  "name": "HAMPSHIRE"
+                },
+                {
+                  "code": "HEREFORDSHIRE",
+                  "name": "HEREFORDSHIRE"
+                },
+                {
+                  "code": "HERTFORDSHIRE",
+                  "name": "HERTFORDSHIRE"
+                },
+                {
+                  "code": "HUNTINGDONSHIRE",
+                  "name": "HUNTINGDONSHIRE"
+                },
+                {
+                  "code": "INVERNESS-SHIRE",
+                  "name": "INVERNESS-SHIRE"
+                },
+                {
+                  "code": "ISLE OF ANGLESEY",
+                  "name": "ISLE OF ANGLESEY"
+                },
+                {
+                  "code": "ISLE OF WIGHT",
+                  "name": "ISLE OF WIGHT"
+                },
+                {
+                  "code": "KENT",
+                  "name": "KENT"
+                },
+                {
+                  "code": "KINCARDINESHIRE",
+                  "name": "KINCARDINESHIRE"
+                },
+                {
+                  "code": "KIRKCUDBRIGHTSHIRE",
+                  "name": "KIRKCUDBRIGHTSHIRE"
+                },
+                {
+                  "code": "KINROSS-SHIRE",
+                  "name": "KINROSS-SHIRE"
+                },
+                {
+                  "code": "LANARKSHIRE",
+                  "name": "LANARKSHIRE"
+                },
+                {
+                  "code": "LANCASHIRE",
+                  "name": "LANCASHIRE"
+                },
+                {
+                  "code": "LEICESTERSHIRE",
+                  "name": "LEICESTERSHIRE"
+                },
+                {
+                  "code": "LINCOLNSHIRE",
+                  "name": "LINCOLNSHIRE"
+                },
+                {
+                  "code": "LONDON",
+                  "name": "LONDON"
+                },
+                {
+                  "code": "LONDONDERRY",
+                  "name": "LONDONDERRY"
+                },
+                {
+                  "code": "MERIONETH",
+                  "name": "MERIONETH"
+                },
+                {
+                  "code": "MERSEYSIDE",
+                  "name": "MERSEYSIDE"
+                },
+                {
+                  "code": "MID GLAMORGAN",
+                  "name": "MID GLAMORGAN"
+                },
+                {
+                  "code": "MIDDLESEX",
+                  "name": "MIDDLESEX"
+                },
+                {
+                  "code": "MIDLOTHIAN",
+                  "name": "MIDLOTHIAN"
+                },
+                {
+                  "code": "MONMOUTHSHIRE",
+                  "name": "MONMOUTHSHIRE"
+                },
+                {
+                  "code": "MONTGOMERYSHIRE",
+                  "name": "MONTGOMERYSHIRE"
+                },
+                {
+                  "code": "MORAY",
+                  "name": "MORAY"
+                },
+                {
+                  "code": "MORAYSHIRE",
+                  "name": "MORAYSHIRE"
+                },
+                {
+                  "code": "NAIRNSHIRE",
+                  "name": "NAIRNSHIRE"
+                },
+                {
+                  "code": "NORFOLK",
+                  "name": "NORFOLK"
+                },
+                {
+                  "code": "NORTHAMPTONSHIRE",
+                  "name": "NORTHAMPTONSHIRE"
+                },
+                {
+                  "code": "NORTHUMBERLAND",
+                  "name": "NORTHUMBERLAND"
+                },
+                {
+                  "code": "NORTH YORKSHIRE",
+                  "name": "NORTH YORKSHIRE"
+                },
+                {
+                  "code": "NOTTINGHAMSHIRE",
+                  "name": "NOTTINGHAMSHIRE"
+                },
+                {
+                  "code": "ORKNEY",
+                  "name": "ORKNEY"
+                },
+                {
+                  "code": "OXFORDSHIRE",
+                  "name": "OXFORDSHIRE"
+                },
+                {
+                  "code": "PEEBLESSHIRE",
+                  "name": "PEEBLESSHIRE"
+                },
+                {
+                  "code": "PEMBROKESHIRE",
+                  "name": "PEMBROKESHIRE"
+                },
+                {
+                  "code": "PERTHSHIRE",
+                  "name": "PERTHSHIRE"
+                },
+                {
+                  "code": "POWYS",
+                  "name": "POWYS"
+                },
+                {
+                  "code": "RADNOSHIRE",
+                  "name": "RADNOSHIRE"
+                },
+                {
+                  "code": "RENFREWSHIRE",
+                  "name": "RENFREWSHIRE"
+                },
+                {
+                  "code": "ROSS-SHIRE",
+                  "name": "ROSS-SHIRE"
+                },
+                {
+                  "code": "ROSS AND CROMARTY",
+                  "name": "ROSS AND CROMARTY"
+                },
+                {
+                  "code": "ROXBURGHSHIRE",
+                  "name": "ROXBURGHSHIRE"
+                },
+                {
+                  "code": "RUTLAND",
+                  "name": "RUTLAND"
+                },
+                {
+                  "code": "SELKIRKSHIRE",
+                  "name": "SELKIRKSHIRE"
+                },
+                {
+                  "code": "SHETLAND",
+                  "name": "SHETLAND"
+                },
+                {
+                  "code": "SHROPSHIRE",
+                  "name": "SHROPSHIRE"
+                },
+                {
+                  "code": "SOMERSET",
+                  "name": "SOMERSET"
+                },
+                {
+                  "code": "SOUTH YORKSHIRE",
+                  "name": "SOUTH YORKSHIRE"
+                },
+                {
+                  "code": "STAFFORDSHIRE",
+                  "name": "STAFFORDSHIRE"
+                },
+                {
+                  "code": "STIRLINGSHIRE",
+                  "name": "STIRLINGSHIRE"
+                },
+                {
+                  "code": "SOUTH GLAMORGAN",
+                  "name": "SOUTH GLAMORGAN"
+                },
+                {
+                  "code": "SUTHERLAND",
+                  "name": "SUTHERLAND"
+                },
+                {
+                  "code": "SUFFOLK",
+                  "name": "SUFFOLK"
+                },
+                {
+                  "code": "SURREY",
+                  "name": "SURREY"
+                },
+                {
+                  "code": "TYNE AND WEAR",
+                  "name": "TYNE AND WEAR"
+                },
+                {
+                  "code": "TYRONE",
+                  "name": "TYRONE"
+                },
+                {
+                  "code": "WARWICKSHIRE",
+                  "name": "WARWICKSHIRE"
+                },
+                {
+                  "code": "WEST GLAMORGAN",
+                  "name": "WEST GLAMORGAN"
+                },
+                {
+                  "code": "WEST LOTHIAN",
+                  "name": "WEST LOTHIAN"
+                },
+                {
+                  "code": "WEST MIDLANDS",
+                  "name": "WEST MIDLANDS"
+                },
+                {
+                  "code": "WEST SUSSEX",
+                  "name": "WEST SUSSEX"
+                },
+                {
+                  "code": "WEST YORKSHIRE",
+                  "name": "WEST YORKSHIRE"
+                },
+                {
+                  "code": "WESTMORLAND",
+                  "name": "WESTMORLAND"
+                },
+                {
+                  "code": "WIGTOWNSHIRE",
+                  "name": "WIGTOWNSHIRE"
+                },
+                {
+                  "code": "WILTSHIRE",
+                  "name": "WILTSHIRE"
+                },
+                {
+                  "code": "WORCESTERSHIRE",
+                  "name": "WORCESTERSHIRE"
+                },
+                {
+                  "code": "WREXHAM",
+                  "name": "WREXHAM"
+                },
+                {
+                  "code": "YORKSHIRE",
+                  "name": "YORKSHIRE"
+                }
+              ]
+            },
+            {
+              "name": "Deutschland",
+              "culture": "de-de",
+              "postalCodeFormat": "#####",
+              "postalCodeRules": "required|length:5",
+              "countryCode": "DE",
+              "rewardPolicy": {
+                "fullMin": 200,
+                "halfMin": 550
+              },
+              "displayCode": "DE",
+              "addressLines": 1,
+              "icon": "flag-de",
+              "active": true,
+              "currency": "EUR",
+              "taxable": false,
+              "states": []
+            },
+            {
+              "name": "France",
+              "culture": "fr-fr",
+              "postalCodeFormat": "#####",
+              "postalCodeRules": "required|length:5",
+              "countryCode": "FR",
+              "rewardPolicy": {
+                "fullMin": 200,
+                "halfMin": 550
+              },
+              "displayCode": "FR",
+              "addressLines": 1,
+              "icon": "flag-fr",
+              "active": true,
+              "currency": "EUR",
+              "taxable": false,
+              "states": []
+            },
+            {
+              "name": "Osterreich",
+              "culture": "de-at",
+              "postalCodeFormat": "####",
+              "postalCodeRules": "required|length:4",
+              "countryCode": "AT",
+              "rewardPolicy": {
+                "fullMin": 200,
+                "halfMin": 550
+              },
+              "displayCode": "AT",
+              "addressLines": 1,
+              "icon": "flag-at",
+              "active": true,
+              "currency": "EUR",
+              "taxable": false,
+              "states": []
+            },
+            {
+              "name": "Netherlands",
+              "culture": "nl-nl",
+              "countryCode": "NL",
+              "rewardPolicy": {
+                "fullMin": 200,
+                "halfMin": 550
+              },
+              "displayCode": "NL",
+              "addressLines": 1,
+              "postalCodeFormat": "#### AA",
+              "postalCodeRules": "required|length:7",
+              "icon": "flag-nl",
+              "active": true,
+              "currency": "EUR",
+              "taxable": false,
+              "states": []
+            }
+          ]
+        },
+        {
+          "name": "South Pacific",
+          "phoneNumberFormat": "FFFFFFFFFFFFFF",
+          "postalCodeFormat": "####",
+          "countries": [
+            {
+              "name": "Australia",
+              "culture": "en-au",
+              "countryCode": "AU",
+              "rewardPolicy": {
+                "fullMin": 250,
+                "halfMin": 750
+              },
+              "displayCode": "AU",
+              "addressLines": 2,
+              "addressFields": [
+                "suburb",
+                "region"
+              ],
+              "icon": "flag-au",
+              "active": true,
+              "currency": "AUD",
+              "taxable": false,
+              "states": []
+            },
+            {
+              "name": "New Zealand",
+              "culture": "en-nz",
+              "countryCode": "NZ",
+              "rewardPolicy": {
+                "fullMin": 300,
+                "halfMin": 850
+              },
+              "displayCode": "NZ",
+              "addressLines": 2,
+              "addressFields": [
+                "suburb",
+                "city"
+              ],
+              "icon": "flag-nz",
+              "active": true,
+              "currency": "NZD",
+              "taxable": false,
+              "states": []
+            }
+          ]
+        },
+        {
+          "name": "East Asia",
+          "phoneNumberFormat": "(###) ### - ####",
+          "countries": [
+            {
+              "name": "Japan",
+              "culture": "ja-jp",
+              "countryCode": "JP",
+              "displayCode": "JP",
+              "addressLines": 1,
+              "rewardPolicy": {
+                "fullMin": 1,
+                "halfMin": 1
+              },
+              "icon": "flag-jp",
+              "active": true,
+              "currency": "JPY",
+              "taxable": false,
+              "states": []
+            }
+          ]
+        }
+      ],
+      "env": "testing",
+      "isLocaleSet": true
+    },
+    "notifications": {
+      "notification": null,
+      "timer": null,
+      "queue": [],
+      "interval": 3000
+    },
+    "persistent": {
+      "agent": null,
+      "viewAsDate": null,
+      "units": {
+        "state": null
+      },
+      "pwa": null,
+      "noTranslate": null,
+      "pwaPrompt": null
+    },
+    "shop": {
+      "query": {},
+      "params": {},
+      "orderBy": "relevance",
+      "filterValues": {
+        "colorCollections": [],
+        "colors": [],
+        "imperialSizes": [],
+        "imperialNoteCardSizes": [],
+        "imperialEnvelopeSizes": [],
+        "metricSizes": [],
+        "metricNoteCardSizes": [],
+        "metricEnvelopeSizes": [],
+        "prices": [],
+        "catalogs": [],
+        "stampSetLanguages": [],
+        "stampMaterials": [],
+        "stampSetTypes": [],
+        "salesAndSpecials": [],
+        "occasions": [],
+        "archivalQualities": [],
+        "clearBlockSizes": [],
+        "techniques": [],
+        "productSuites": [],
+        "seasons": []
+      },
+      "loaded": false,
+      "pagesLoaded": -1,
+      "contentPages": [],
+      "products": [],
+      "featuredProducts": [],
+      "product": null,
+      "allPage": 0,
+      "allResult": 0,
+      "filterOptions": {
+        "colorCollections": [],
+        "colors": [],
+        "imperialSizes": [],
+        "imperialNoteCardSizes": [],
+        "imperialEnvelopeSizes": [],
+        "metricSizes": [],
+        "metricNoteCardSizes": [],
+        "metricEnvelopeSizes": [],
+        "prices": [],
+        "catalogs": [],
+        "stampSetLanguages": [],
+        "stampMaterials": [],
+        "stampSetTypes": [],
+        "salesAndSpecials": [],
+        "occasions": [],
+        "archivalQualities": [],
+        "clearBlockSizes": [],
+        "techniques": [],
+        "productSuites": [],
+        "seasons": []
+      },
+      "suggestions": {
+        "products": [],
+        "content": []
+      }
+    },
+    "agent": {},
+    "units": {
+      "unitsState": null,
+      "unitsCookieName": "units"
+    },
+    "account": {
+      "addresses": [],
+      "countries": [],
+      "contactInfo": {
+        "email": "",
+        "firstName": "",
+        "lastName": ""
+      },
+      "demonstrators": [],
+      "payments": [],
+      "orders": [],
+      "shippingMethods": [],
+      "stagedToken": null
+    },
+    "ida": {
+      "personalInfo": null
+    },
+    "route": {
+      "name": "index",
+      "path": "/",
+      "hash": "",
+      "query": {},
+      "params": {},
+      "fullPath": "/",
+      "meta": {},
+      "from": {
+        "name": null,
+        "path": "/",
+        "hash": "",
+        "query": {},
+        "params": {},
+        "fullPath": "/",
+        "meta": {}
+      }
+    },
+    "storage": {},
+    "auth": {
+      "user": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "phoneNumber": "",
+        "culture": "en-gb",
+        "defaultCulture": "en-gb",
+        "receiveCommunications": false,
+        "role": "Anonymous",
+        "address": null,
+        "paymentInformation": null,
+        "demonstrator": null,
+        "errors": []
+      },
+      "loggedIn": true,
+      "strategy": "local"
+    }
+  },
+  "serverRendered": true,
+  "env": {
+    "HTTP_HOST": "0.0.0.0",
+    "HTTP_PORT": "3000",
+    "API_URL": "http://ordering-backend",
+    "AXIOS_PROXY": "false",
+    "APP_INSIGHTS_KEY": "cf683962-def7-4b3f-bb63-03dcc962af89",
+    "PAYPAL_OPTIONS": "disable-funding=card,credit&intent=authorize",
+    "PAYPAL_AVAILABLE_FOR": "fr,de,gb,nl,at",
+    "IMAGE_ROOT": "https://res.cloudinary.com/stampin-up/image/upload/$(0)/v1572892574/qa/images/default-source/$(1)",
+    "ENABLED_FEATURES": "filterColorCollections,filterColorSwatch,filterPrice,newsletter,wishlist",
+    "ENVIRONMENT": "testing",
+    "COOKIEBOT_JS_URL": "https://consent.cookiebot.com/ac053301-c524-4e9c-9ef3-2f7e867780b5/cd.js"
+  }
+}
