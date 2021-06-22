@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.15.0](https://github.com/stampin-up/vue-components/compare/v1.14.3...v1.15.0) (2021-06-22)
+
+
+### Features
+
+* update colors ([#73](https://github.com/stampin-up/vue-components/issues/73)) ([404aa3a](https://github.com/stampin-up/vue-components/commit/404aa3ab757fd9a7f70689349795b03e361e85b2))
+
 ### [1.14.3](https://github.com/stampin-up/vue-components/compare/v1.14.2...v1.14.3) (2021-06-22)
 
 
