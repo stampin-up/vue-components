@@ -115,6 +115,6 @@ export default class SDialog extends Vue {
 .sticky-close {
   position: fixed;
   z-index: 10;
-  margin-left: -20px;
+  margin-left: -20px !important;
 }
 </style>
