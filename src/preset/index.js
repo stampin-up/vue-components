@@ -37,9 +37,9 @@ export const preset = {
         warning: '#ffda00',
         header: '#00b3a8',
         iconDesktop: '#333333',
-        greyedOut: '#888888', // greyed out text
+        greyedOut: '#767676', // greyed out text
         border: '#cccccc', // borders
-        hover: '#888888', // hovers
+        hover: '#767676', // hovers
         backgroundDiv: '#f8f8f8', // component background
         backgroundPage: '#e8e8e8' // page background
       }
