@@ -66,4 +66,4 @@ steps:
   displayName: 'login'
   inputs:
     targetType: 'inline'
-    script: 'npm-cli-login -u $(CLI_USER) -p ''$(CLI_PASS)'' -e $(CLI_EMAIL) --quotes --config-path=$(WORKSPACE_DIR) -r https://registry.npmjs.com -s @stampinup && git push --follow-tags && npm publish'
+    script: 'git push --follow-tags && npm publish'
