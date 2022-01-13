@@ -6,6 +6,7 @@ variables:
   CLI_USER: $(NPM_USER)
   CLI_PASS: $(NPM_PASS)
   CLI_EMAIL: $(NPM_EMAIL)
+  CLI_TOKEN: $(NPM_TOKEN)
 
 pool: 'Kube1.15.7'
 
