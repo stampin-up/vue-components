@@ -63,7 +63,13 @@ steps:
     Arguments: release
 
 - task: Bash@3
-  displayName: 'login'
+  displayName: 'git push'
   inputs:
     targetType: 'inline'
     script: 'git push --follow-tags && npm publish'
+
+- task: Npm@1
+  inputs:
+    command: publish
+    publishRegistry: useExternalRegistry
+    publishEndpoint: 'registry.npmjs.com'
