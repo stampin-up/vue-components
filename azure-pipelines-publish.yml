@@ -66,7 +66,7 @@ steps:
   displayName: 'git push'
   inputs:
     targetType: 'inline'
-    script: 'git push --follow-tags && npm publish'
+    script: 'git push --follow-tags'
 
 - task: Npm@1
   inputs:
