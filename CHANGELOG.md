@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.15.3](https://github.com/stampin-up/vue-components/compare/v1.15.2...v1.15.3) (2022-01-13)
+
+
+### Bug Fixes
+
+* higher z index for dialog ([#76](https://github.com/stampin-up/vue-components/issues/76)) ([1dc9404](https://github.com/stampin-up/vue-components/commit/1dc9404bd9782c55e0823e218e350a4c001a7d24))
+
 ### [1.15.2](https://github.com/stampin-up/vue-components/compare/v1.15.1...v1.15.2) (2021-09-22)
 
 ### [1.15.1](https://github.com/stampin-up/vue-components/compare/v1.15.0...v1.15.1) (2021-09-21)
