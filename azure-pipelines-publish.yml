@@ -45,7 +45,7 @@ steps:
   displayName: 'install make'
   inputs:
     targetType: 'inline'
-    script: 'sudo apt-get update -y && sudo apt-get install -y make'
+    script: 'sudo apt-get update -y && sudo apt-get install -y make && sudo apt install -y g++'
 
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
   displayName: 'Use Yarn 1.x'
