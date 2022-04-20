@@ -19,6 +19,11 @@
   }
 }
 
+// vuetify has medium as 500 but we will use medium as 600 for semi-bold
+.v-application .font-weight-medium {
+  font-weight: 600 !important;
+}
+
 // shrink letter spacing
 .v-btn .v-btn__content {
   letter-spacing: 0;
@@ -51,7 +56,7 @@
     height: unset;
   }
   &.font-weight-black {
-    font-weight: 900 !important;
+    font-weight: 700 !important;
   }
 }
 

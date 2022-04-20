@@ -15,7 +15,7 @@
     open-delay="500"
     class="pa-3"
   >
-    <template v-slot:activator="{ on }">
+    <template #activator="{ on }">
       <SBtn
         v-show="!text"
         ref="tooltipBtn"

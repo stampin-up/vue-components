@@ -42,7 +42,7 @@ export default class SBtn extends Vue {
 
 <style lang="scss" scoped>
 .action-button {
-  font-weight : 900 !important;
+  font-weight : 700 !important;
   text-transform : uppercase !important;
   color: var(--v-primary-base);
   box-shadow: none;

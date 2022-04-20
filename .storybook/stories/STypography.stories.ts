@@ -41,17 +41,17 @@ export const Typography = () => ({
       <div style="color:#888;"><strong>Tablet:</strong> font-size: 2.286rem (32px); font-weight: 400 (regular); text-transform: uppercase; margin: 0; line-height: 1;</div>
       <div style="color:#888;"><strong>Mobile:</strong> font-size: 1.714rem (24px); font-weight: 400 (regular); text-transform: uppercase; margin: 0; line-height: 1;</div>
       <h3 class="pt-4">header 3</h3>
-      <div style="color:#888;"><strong>Desktop:</strong> font-size: 1.643rem (23px); font-weight: 700 (semi-bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
-      <div style="color:#888;"><strong>Tablet:</strong> font-size: 1.5rem (21px); font-weight: 700 (semi-bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
-      <div style="color:#888;"><strong>Mobile:</strong> font-size: 1.357rem (19px); font-weight: 700 (semi-bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
+      <div style="color:#888;"><strong>Desktop:</strong> font-size: 1.643rem (23px); font-weight: 600 (semi-bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
+      <div style="color:#888;"><strong>Tablet:</strong> font-size: 1.5rem (21px); font-weight: 600 (semi-bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
+      <div style="color:#888;"><strong>Mobile:</strong> font-size: 1.357rem (19px); font-weight: 600 (semi-bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
       <h5 class="pt-4">header 4</h5>
-      <div style="color:#888;"><strong>Desktop:</strong> font-size: 1.429rem (20px); font-weight: 900 (bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
-      <div style="color:#888;"><strong>Tablet:</strong> font-size: 1.286rem (18px); font-weight: 900 (bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
-      <div style="color:#888;"><strong>Mobile:</strong> font-size: 1.143rem (16px); font-weight: 900 (bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
+      <div style="color:#888;"><strong>Desktop:</strong> font-size: 1.429rem (20px); font-weight: 700 (bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
+      <div style="color:#888;"><strong>Tablet:</strong> font-size: 1.286rem (18px); font-weight: 700 (bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
+      <div style="color:#888;"><strong>Mobile:</strong> font-size: 1.143rem (16px); font-weight: 700 (bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
       <h6 class="pt-4">header 5</h6>
       <div style="color:#888;"><strong>Desktop:</strong> font-size: 1.286rem (18px); font-weight: 400 (regular); text-transform: uppercase; margin: 0; line-height: 1;</div>
       <div style="color:#888;"><strong>Tablet:</strong> font-size: 1.143rem (16px); font-weight: 400 (regular); text-transform: uppercase; margin: 0; line-height: 1;</div>
-      <div style="color:#888;"><strong>Mobile:</strong> font-size: 1rem (14px); font-weight: 700 (semi-bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
+      <div style="color:#888;"><strong>Mobile:</strong> font-size: 1rem (14px); font-weight: 600 (semi-bold); text-transform: uppercase; margin: 0; line-height: 1;</div>
     </VCard>
     <VCard class="elevation-2 pa-8 my-12">
       <h3 class="text-capitalize">Body Types</h3>
