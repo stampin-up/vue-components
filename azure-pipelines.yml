@@ -13,8 +13,7 @@ trigger:
 variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
 
-pool:
-  vmImage: 'Kube1.15.7'
+pool: 'Kube1.15.7'
 
 steps:
 
