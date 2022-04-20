@@ -8,7 +8,7 @@
     v-on="$listeners"
     @click:outside="close"
   >
-    <template v-slot:activator="slotData">
+    <template #activator="slotData">
       <slot name="activator" v-bind="slotData" />
     </template>
     <VCard class="text-center pa-2" :max-height="cardMaxHeight" data-testid="confirm-dialog">

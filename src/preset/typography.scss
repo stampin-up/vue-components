@@ -1,50 +1,10 @@
 @font-face {
-  font-family: proxima_nova;
-  src: url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_scosf_thin_webfont.woff) format("woff"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_scosf_thin_webfont.ttf) format("truetype");
-  font-weight: 100;
+  font-family: 'proxima_nova';
+  src: url('https://stampinup-media.azureedge.net/core/fonts/proxima-nova/ProximaVara_subset.woff2') format('woff2-variations');
+  font-weight: 100 950;
+  font-stretch: 50% 200%;
   font-style: normal;
-  font-display: swap;
 }
-
-@font-face {
-  font-family: proxima_nova;
-  src: url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_light_webfont.eot?#iefix) format("embedded-opentype"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_light_webfont.woff) format("woff"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_light_webfont.ttf) format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: proxima_nova;
-  src: url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_reg-webfont.eot?#iefix) format("embedded-opentype"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_reg-webfont.woff) format("woff"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_reg-webfont.ttf) format("truetype"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_reg-webfont.svg#proxima_nova_rgregular) format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: proxima_nova;
-  src: url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_sbold-webfont.eot?#iefix) format("embedded-opentype"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_sbold-webfont.woff) format("woff"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_sbold-webfont.ttf) format("truetype"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_sbold-webfont.svg#proxima_nova_ltbold) format("svg");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: proxima_nova;
-  src: url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_bold-webfont.eot?#iefix) format("embedded-opentype"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_bold-webfont.woff) format("woff"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_bold-webfont.ttf) format("truetype"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_bold-webfont.svg#proxima_nova_rgbold) format("svg");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: proxima_nova;
-  src: url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_light_italic_webfont.eot?#iefix) format("embedded-opentype"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_light_italic_webfont.woff) format("woff"), url(https://stampinup-media.azureedge.net/core/fonts/proxima-nova/proxima_nova_light_italic_webfont.ttf) format("truetype");
-  font-style: italic;
-  font-display: swap;
-}
-
 
 :root {
   font-size: 14px;
@@ -68,14 +28,14 @@ h2, .display-h2 {
 
 h3, .display-h3 {
   font-size: 1.643rem; /* 23px */
-  font-weight: 700; // semi-bold
+  font-weight: 600; // semi-bold
   text-transform: uppercase;
   line-height: 1;
 }
 
 h4 {
   font-size: 1.429rem; /* 20px */
-  font-weight: 900; // bold
+  font-weight: 700; // bold
   text-transform: uppercase;
   line-height: 1;
 }
@@ -109,7 +69,7 @@ hr {
   h2 { font-size: 1.714rem; }
   h3 { font-size: 1.357rem; }
   h4 { font-size: 1.143rem; }
-  h5 { font-size: 1rem; font-weight: 700;}
+  h5 { font-size: 1rem; font-weight: 600;}
   p { font-size: 1rem; }
 }
 
@@ -161,7 +121,7 @@ hr {
 
 .font-weight-bold.active-bolder {
   &:hover, &:focus {
-    font-weight: 900 !important;
+    font-weight: 700 !important;
   }
 }
  

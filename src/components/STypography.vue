@@ -58,14 +58,14 @@ h2, .display-h2 {
 
 h3, h4, .display-h3 {
   font-size: 1.643rem;
-  font-weight: 700; // semi-bold
+  font-weight: 600; // semi-bold
   text-transform: uppercase;
   line-height: 1;
 }
 
 h5 {
   font-size: 1.429rem;
-  font-weight: 900; // bold
+  font-weight: 700; // bold
   text-transform: uppercase;
   line-height: 1;
 }
@@ -92,7 +92,7 @@ h6 {
   h3 { font-size: 1.357rem; }
   h4 { font-size: 1.5rem; }
   h5 { font-size: 1.143rem; }
-  h6 { font-size: 1rem; font-weight: 700;}
+  h6 { font-size: 1rem; font-weight: 600;}
   p { font-size: 1rem; }
 }
 
