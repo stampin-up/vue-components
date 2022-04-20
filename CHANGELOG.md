@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.16.0](https://github.com/stampin-up/vue-components/compare/v1.15.5...v1.16.0) (2022-04-20)
+
+
+### Features
+
+* **fonts:** adding new variable font and updating font weights ([#81](https://github.com/stampin-up/vue-components/issues/81)) ([4f090a1](https://github.com/stampin-up/vue-components/commit/4f090a12291707e5d81b3e4b471c3245fca5f7c8))
+
 ### [1.15.5](https://github.com/stampin-up/vue-components/compare/v1.15.4...v1.15.5) (2022-01-13)
 
 ### [1.15.4](https://github.com/stampin-up/vue-components/compare/v1.15.3...v1.15.4) (2022-01-13)
