@@ -14,7 +14,7 @@ variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
 
 pool:
-  vmImage: 'Ubuntu-16.04'
+  vmImage: 'Kube1.15.7'
 
 steps:
 
@@ -27,6 +27,12 @@ steps:
 
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
   displayName: 'Use Yarn 1.x'
+
+- task: Bash@3
+  displayName: 'install make'
+  inputs:
+    targetType: 'inline'
+    script: 'sudo apt-get update -y && sudo apt-get install -y make && sudo apt install -y g++'
 
 - task: Cache@2
   displayName: 'Yarn Cache'
