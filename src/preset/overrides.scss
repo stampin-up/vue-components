@@ -44,7 +44,7 @@
   margin: 0px;
   height: unset;
   font-size: map-get($font-sizes, 14);
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   text-transform: uppercase;
   border-radius: 0;
   &.v-btn:not(.v-btn--round).v-size--default,
@@ -55,7 +55,7 @@
     min-width: 0;
     height: unset;
   }
-  &.font-weight-black {
+  &.font-weight-bold {
     font-weight: 700 !important;
   }
 }
