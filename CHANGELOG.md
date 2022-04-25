@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.3](https://github.com/stampin-up/vue-components/compare/v1.16.2...v1.16.3) (2022-04-25)
+
+
+### Bug Fixes
+
+* **v-btn--text:** updating button text to semi-bold ([#85](https://github.com/stampin-up/vue-components/issues/85)) ([57933cf](https://github.com/stampin-up/vue-components/commit/57933cfda1b7899fb6788704ebf544a54e870548)), closes [#25614](https://github.com/stampin-up/vue-components/issues/25614)
+
 ### [1.16.2](https://github.com/stampin-up/vue-components/compare/v1.16.1...v1.16.2) (2022-04-20)
 
 ### [1.16.1](https://github.com/stampin-up/vue-components/compare/v1.16.0...v1.16.1) (2022-04-20)
