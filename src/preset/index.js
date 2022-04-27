@@ -36,6 +36,7 @@ export const preset = {
         success: '#62c2ba',
         warning: '#ffda00',
         header: '#00b3a8',
+        demoHeader: '#223E6D',
         iconDesktop: '#333333',
         greyedOut: '#767676', // greyed out text
         border: '#cccccc', // borders
