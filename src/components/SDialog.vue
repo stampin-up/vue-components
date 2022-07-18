@@ -34,7 +34,7 @@
       >
         <VRow no-gutters>
           <VCol cols="12" class="px-4 py-2">
-            <h4>
+            <h4 :class="textClass">
               {{ title }}
             </h4>
           </VCol>
@@ -42,7 +42,8 @@
       </VCardTitle>
       <VCardText
         v-if="text"
-        class="text--primary font14 py-2"
+        class="font14 py-2"
+        :class="textClass ? textClass : 'text--primary'"
       >
         {{ text }}
       </VCardText>
@@ -87,6 +88,7 @@ export default class SDialog extends Vue {
   @Prop({ required: false, type: Boolean }) stickyClose!: boolean
   @Prop({ required: false, type: String }) cardMaxHeight?: string
   @Prop({ required: false, type: String, default: 'Close' }) ariaClose!: string
+  @Prop({ required: false, type: String }) textClass!: string
 
   innerValue: boolean = false
 
