@@ -15,7 +15,7 @@
 
 <script lang="ts">
 // adapted from https://github.com/alexjoverm/v-lazy-image/blob/master/src/index.js
-import { Component, Vue, Prop } from 'nuxt-property-decorator'
+import { Component, Vue, Prop } from 'vue-property-decorator'
 
 @Component({
   components: {
