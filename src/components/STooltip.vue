@@ -43,7 +43,7 @@
   </VTooltip>
 </template>
 <script lang="ts">
-import { Component, Prop, Vue } from 'nuxt-property-decorator'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 import { mdiHelpCircleOutline } from '@mdi/js'
 import SBtn from '../components/SBtn.vue'
 
