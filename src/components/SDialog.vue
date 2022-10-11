@@ -11,7 +11,7 @@
     <template #activator="slotData">
       <slot name="activator" v-bind="slotData" />
     </template>
-    <VCard class="text-center pa-2" :max-height="cardMaxHeight" data-testid="confirm-dialog">
+    <VCard class="text-center pa-2 confirm-dialog" :max-height="cardMaxHeight" data-testid="confirm-dialog">
       <VRow no-gutters>
         <VCol cols="12" class="text-right">
           <SBtn
