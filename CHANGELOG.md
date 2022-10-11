@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.2](https://github.com/stampin-up/vue-components/compare/v1.17.1...v1.17.2) (2022-10-11)
+
+
+### Bug Fixes
+
+* add class to dialog ([c340231](https://github.com/stampin-up/vue-components/commit/c34023175bb80865d340bf0dd1f15837bea3725d))
+
 ### [1.17.1](https://github.com/stampin-up/vue-components/compare/v1.17.0...v1.17.1) (2022-10-06)
 
 
