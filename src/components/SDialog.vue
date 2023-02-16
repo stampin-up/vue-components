@@ -3,6 +3,7 @@
     v-model="innerValue"
     v-bind="$attrs"
     :width="width"
+    :keep-content-alive="false"
     scrollable
     style="z-index:2147483640;"
     v-on="$listeners"
