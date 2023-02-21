@@ -30,26 +30,10 @@ steps:
     script: 'sudo apt-add-repository ppa:git-core/ppa -y && sudo apt-get update && sudo apt-get install git -y'
 
 - task: Bash@3
-  displayName: 'nvm install'
-  inputs:
-    targetType: 'inline'
-    script: 'sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash'
-
-- task: Bash@3
-  displayName: 'Configure nvm'
-  inputs:
-    targetType: 'inline'
-    script: '[ -s /home/AzDevOps/.nvm/nvm.sh ] && \. /home/AzDevOps/.nvm/nvm.sh && [ -s /home/AzDevOps/.nvm/bash_completion ] && \. /home/AzDevOps/.nvm/bash_completion'
-  env:
-    NVM_DIR: /home/AzDevOps/.nvm
-
-- task: Bash@3
   displayName: 'install node 16.18.0'
   inputs:
     targetType: 'inline'
-    script: 'env | sort && sudo /home/AzDevOps/.nvm/nvm install 16.18.0'
-  env:
-    NVM_DIR: /home/AzDevOps/.nvm
+    script: 'sudo n 16.18.0'
 
 - task: Bash@3
   displayName: 'npm install -g npm-cli-login'
