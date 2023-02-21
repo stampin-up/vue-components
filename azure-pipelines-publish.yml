@@ -80,6 +80,12 @@ steps:
     targetType: 'inline'
     script: 'git push --follow-tags'
 
+- task: Bash@3
+  displayName: 'Fix permissions for .npm folder'
+  inputs:
+    targetType: 'inline'
+    script: 'sudo chown -R 1000:1000 "/home/AzDevOps/.npm"'
+
 - task: Npm@1
   inputs:
     command: publish
