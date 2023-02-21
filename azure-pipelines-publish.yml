@@ -36,10 +36,10 @@ steps:
     script: 'sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash'
 
 - task: Bash@3
-  displayName: 'install node version 16.18.0'
+  displayName: 'install node 16.18.0'
   inputs:
     targetType: 'inline'
-    script: 'sudo nvm install 16.18.0'
+    script: 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" && sudo nvm install 16.18.0'
 
 - task: Bash@3
   displayName: 'npm install -g npm-cli-login'
