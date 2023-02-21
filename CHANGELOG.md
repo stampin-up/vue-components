@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.4](https://github.com/stampin-up/vue-components/compare/v1.17.3...v1.17.4) (2023-02-21)
+
+### [1.17.3](https://github.com/stampin-up/vue-components/compare/v1.17.2...v1.17.3) (2023-02-21)
+
+
+### Bug Fixes
+
+* **SDialog:** destory copmonent when closed ([#94](https://github.com/stampin-up/vue-components/issues/94)) ([8974daf](https://github.com/stampin-up/vue-components/commit/8974dafa7a9eb0c4ce04dfc1179c38d8a426bc18)), closes [#33024](https://github.com/stampin-up/vue-components/issues/33024)
+
 ### [1.17.2](https://github.com/stampin-up/vue-components/compare/v1.17.1...v1.17.2) (2022-10-11)
 
 

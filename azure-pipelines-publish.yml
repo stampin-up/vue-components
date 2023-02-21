@@ -30,10 +30,16 @@ steps:
     script: 'sudo apt-add-repository ppa:git-core/ppa -y && sudo apt-get update && sudo apt-get install git -y'
 
 - task: Bash@3
+  displayName: 'install node 16.18.0'
+  inputs:
+    targetType: 'inline'
+    script: 'sudo n 16.18.0'
+
+- task: Bash@3
   displayName: 'npm install -g npm-cli-login'
   inputs:
     targetType: 'inline'
-    script: 'sudo npm install -g npm-cli-login && sudo chown -R AzDevOps:AzDevOps ~/.config'
+    script: 'sudo npm install -g npm-cli-login'
 
 - task: Bash@3
   displayName: 'git switch master'
@@ -73,6 +79,12 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'git push --follow-tags'
+
+- task: Bash@3
+  displayName: 'Fix permissions for .npm folder'
+  inputs:
+    targetType: 'inline'
+    script: 'sudo chown -R 1000:1000 "/home/AzDevOps/.npm"'
 
 - task: Npm@1
   inputs:
