@@ -33,7 +33,7 @@ steps:
   displayName: 'npm install -g npm-cli-login'
   inputs:
     targetType: 'inline'
-    script: 'sudo npm install -g npm-cli-login && sudo chown -R AzDevOps:AzDevOps ~/.config'
+    script: 'sudo npm install -g npm-cli-login'
 
 - task: Bash@3
   displayName: 'git switch master'
