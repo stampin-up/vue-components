@@ -39,7 +39,9 @@ steps:
   displayName: 'install node 16.18.0'
   inputs:
     targetType: 'inline'
-    script: 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" && sudo nvm install 16.18.0'
+    script: 'env && sudo nvm install 16.18.0'
+  env:
+    NVM_DIR: $HOME/.nvm
 
 - task: Bash@3
   displayName: 'npm install -g npm-cli-login'
