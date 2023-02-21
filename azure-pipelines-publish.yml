@@ -47,7 +47,7 @@ steps:
   displayName: 'install node 16.18.0'
   inputs:
     targetType: 'inline'
-    script: 'env | sort && sudo nvm install 16.18.0'
+    script: 'env | sort && sudo /home/AzDevOps/.nvm/nvm install 16.18.0'
   env:
     NVM_DIR: /home/AzDevOps/.nvm
 
