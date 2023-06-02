@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.18.0](https://github.com/stampin-up/vue-components/compare/v1.17.4...v1.18.0) (2023-06-02)
+
+
+### Features
+
+* **header fonts:** update font sizes ([#96](https://github.com/stampin-up/vue-components/issues/96)) ([5d819ff](https://github.com/stampin-up/vue-components/commit/5d819ff70aad4d3c1e18e197e613acf34b7a1536))
+
 ### [1.17.4](https://github.com/stampin-up/vue-components/compare/v1.17.3...v1.17.4) (2023-02-21)
 
 ### [1.17.3](https://github.com/stampin-up/vue-components/compare/v1.17.2...v1.17.3) (2023-02-21)
