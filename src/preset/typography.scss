@@ -11,7 +11,7 @@
 }
 
 h1, .display-h1 {
-  font-size: 4rem; /* 56px */
+  font-size: 3.429rem;
   font-weight: 300; // light
   text-transform: uppercase;
   margin: 0;
@@ -19,7 +19,7 @@ h1, .display-h1 {
 }
 
 h2, .display-h2 {
-  font-size: 2.857rem; /* 40px */
+  font-size: 2.571rem;
   font-weight: 400; // regular
   margin: 0;
   text-transform: uppercase;
@@ -57,17 +57,17 @@ hr {
 }
 
 @media only screen and (min-width: 600px) and (max-width: 959px) {
-  h1 { font-size: 3.429rem; }
-  h2 { font-size: 2.286rem; }
+  h1 { font-size: 2.857em; }
+  h2 { font-size: 2rem; }
   h3 { font-size: 1.5rem; }
   h4 { font-size: 1.286rem; }
   h5 { font-size: 1.143rem; }
 }
 
 @media only screen and (max-width: 599px) {
-  h1 { font-size: 2.857rem; }
-  h2 { font-size: 1.714rem; }
-  h3 { font-size: 1.357rem; }
+  h1 { font-size: 2.286rem; }
+  h2 { font-size: 1.429em; }
+  h3 { font-size: 1.286rem; }
   h4 { font-size: 1.143rem; }
   h5 { font-size: 1rem; font-weight: 600;}
   p { font-size: 1rem; }
