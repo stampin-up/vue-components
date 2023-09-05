@@ -40,9 +40,9 @@ steps:
     path: $(YARN_CACHE_FOLDER)
     cacheHitVar: 'YARN_CACHE_HIT'
   enabled: true
-  
-  - task: Bash@3
-  displayName: 'npx browserslist@latest --update-db'
+
+- task: Bash@3
+  displayName: 'npx browserslist'
   inputs:
     targetType: 'inline'
     script: 'sudo npx browserslist@latest --update-db'
