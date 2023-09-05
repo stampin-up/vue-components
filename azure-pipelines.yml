@@ -41,6 +41,12 @@ steps:
     cacheHitVar: 'YARN_CACHE_HIT'
   enabled: true
   
+  - task: Bash@3
+  displayName: 'npx browserslist@latest --update-db'
+  inputs:
+    targetType: 'inline'
+    script: 'sudo npx browserslist@latest --update-db'
+
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
   displayName: 'Yarn Install'
   inputs:
