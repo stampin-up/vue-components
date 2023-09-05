@@ -6,6 +6,7 @@
       'link--small': linkSmall,
       'link--medium': linkMedium,
       'link--large': linkLarge,
+      'rounded': rounded,
       'link': isText,
     }"
     :text="isText"
@@ -16,28 +17,33 @@
     <slot />
   </VBtn>
 </template>
-
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator'
-
-@Component({
+export  default {
   inheritAttrs: false
-})
-export default class SBtn extends Vue {
-  @Prop({ required: false, default: false, type: Boolean }) action!: boolean
-  @Prop({ required: false, default: false, type: Boolean }) linkSmall!: boolean
-  @Prop({ required: false, default: false, type: Boolean }) linkMedium!: boolean
-  @Prop({ required: false, default: false, type: Boolean }) linkLarge!: boolean
-  @Prop({ required: false, type: [String, Object] }) to?: string | object
-
-  get isLink () {
-    return !!this.to
-  }
-
-  get isText () {
-    return this.linkSmall || this.linkLarge || this.linkMedium || this.$attrs.text
-  }
 }
+</script>
+<script lang="ts" setup>
+import { computed, useAttrs } from "vue";
+
+interface Props {
+ action?: boolean
+ linkSmall?: boolean
+ linkMedium?: boolean
+ linkLarge?: boolean
+ rounded?: boolean
+ to?: string | object
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  action: false,
+  linkSmall: false,
+  linkMedium: false,
+  linkLarge: false,
+  rounded: false
+})
+const attrs = useAttrs()
+const isLink = computed(() => !!props.to)
+const isText = computed(() => props.linkSmall || props.linkLarge || props.linkMedium || attrs.text)
 </script>
 
 <style lang="scss" scoped>
@@ -79,6 +85,9 @@ export default class SBtn extends Vue {
 
 .link--large {
   font-size: 1.143rem !important;
+}
+.rounded {
+  border-radius: 4px !important;
 }
 
 .link {
