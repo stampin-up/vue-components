@@ -30,10 +30,10 @@ steps:
     script: 'sudo apt-add-repository ppa:git-core/ppa -y && sudo apt-get update && sudo apt-get install git -y'
 
 - task: Bash@3
-  displayName: 'install node 16.18.0'
+  displayName: 'install node 18.14.0'
   inputs:
     targetType: 'inline'
-    script: 'sudo n 16.18.0'
+    script: 'sudo n 18.14.0'
 
 - task: Bash@3
   displayName: 'npm install -g npm-cli-login'
