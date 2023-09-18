@@ -41,11 +41,11 @@ steps:
     targetType: 'inline'
     script: 'sudo npm install -g npm-cli-login'
 
-- task: Bash@3
-  displayName: 'git switch master'
-  inputs:
-    targetType: 'inline'
-    script: 'git switch master'
+#- task: Bash@3
+#  displayName: 'git switch master'
+#  inputs:
+#    targetType: 'inline'
+#    script: 'git switch master'
 
 - task: Bash@3
   displayName: 'install make'
