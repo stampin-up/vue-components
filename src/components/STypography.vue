@@ -17,26 +17,29 @@
     <slot />
   </VBtn>
 </template>
-
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator'
-
-@Component({
+export default {
   inheritAttrs: false
-})
-export default class STypography extends Vue {
-  @Prop({ required: false, default: false, type: Boolean }) h1!: boolean
-  @Prop({ required: false, default: false, type: Boolean }) h2!: boolean
-  @Prop({ required: false, default: false, type: Boolean }) h3!: boolean
-  @Prop({ required: false, default: false, type: Boolean }) h4!: boolean
-  @Prop({ required: false, default: false, type: Boolean }) h5!: boolean
-  @Prop({ required: false, default: false, type: Boolean }) h6!: boolean
-  @Prop({ required: false, default: false, type: Boolean }) p!: boolean
-
-  get isText () {
-    return this.h1 || this.h2 || this.h3 || this.$attrs.text
-  }
 }
+</script>
+<script lang="ts" setup>
+import { computed, useAttrs } from 'vue'
+
+interface Props {
+ h1?: boolean
+ h2?: boolean
+ h3?: boolean
+ h4?: boolean
+ h5?: boolean
+ h6?: boolean
+ p?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+})
+const attrs = useAttrs()
+const isText = computed(() => props.h1 || props.h2 || props.h3 || attrs.text)
+
 </script>
 
 <style lang="scss" scoped>

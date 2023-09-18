@@ -4,6 +4,7 @@
   font-weight: 100 950;
   font-stretch: 50% 200%;
   font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -83,14 +84,14 @@ hr {
 
 .footer-link {
   color: var(--v-primary-base)!important;
-  font-size: 1rem; 
+  font-size: 1rem;
   display: block;
   justify-content: start;
 }
 
 .footer-link--legal {
   color: var(--v-hover-base)!important;
-  font-size: .8571rem; 
+  font-size: .8571rem;
   text-transform: uppercase;
 }
 
@@ -124,7 +125,7 @@ hr {
     font-weight: 700 !important;
   }
 }
- 
+
 .details, .reward-details {
   font-size: .7857rem;
   text-transform: uppercase;

@@ -13,23 +13,21 @@
     <slot />
   </div>
 </template>
-
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator'
-
-@Component({
+export default {
   inheritAttrs: false
-})
-export default class SBackgroundPane extends Vue {
-  @Prop({ default: false, type: Boolean })
-  padded!: true
-
-  @Prop({ default: false, type: Boolean })
-  xBorders!: boolean
-
-  @Prop({ default: true, type: Boolean })
-  addBackground!: boolean
 }
+</script>
+<script lang="ts" setup>
+interface Props {
+ padded?: boolean
+ xBorders?: boolean
+ addBackground?: boolean
+}
+
+withDefaults(defineProps<Props>(), {
+  addBackground: true
+})
 </script>
 
 <style lang="scss" scoped>

@@ -18,12 +18,12 @@
   </VBtn>
 </template>
 <script lang="ts">
-export  default {
+export default {
   inheritAttrs: false
 }
 </script>
 <script lang="ts" setup>
-import { computed, useAttrs } from "vue";
+import { computed, useAttrs } from 'vue'
 
 interface Props {
  action?: boolean
@@ -39,7 +39,8 @@ const props = withDefaults(defineProps<Props>(), {
   linkSmall: false,
   linkMedium: false,
   linkLarge: false,
-  rounded: false
+  rounded: false,
+  to: undefined
 })
 const attrs = useAttrs()
 const isLink = computed(() => !!props.to)
