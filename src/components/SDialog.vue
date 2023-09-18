@@ -66,53 +66,57 @@
     </VCard>
   </VDialog>
 </template>
-
 <script lang="ts">
-import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
-import { mdiClose } from '@mdi/js'
-import SBtn from '../components/SBtn.vue'
-
-@Component({
-  components: {
-    SBtn
-  },
+export default {
   inheritAttrs: false
-})
-export default class SDialog extends Vue {
-  icons = { mdiClose }
+}
+</script>
+<script lang="ts" setup>
+import { ref, watch } from 'vue'
+import { mdiClose } from '@mdi/js'
+import SBtn from "../components/SBtn.vue";
 
-  @Prop({ required: false, type: String }) title?: string
-  @Prop({ required: false, type: String }) text?: string
-  @Prop({ required: false, type: String }) cancelText?: string
-  @Prop({ required: false, default: 325, type: Number }) width!: number
-  @Prop({ required: true, type: Boolean }) showDialog!: boolean
-  @Prop({ required: false, type: Boolean }) stickyClose!: boolean
-  @Prop({ required: false, type: String }) cardMaxHeight?: string
-  @Prop({ required: false, type: String, default: 'Close' }) ariaClose!: string
-  @Prop({ required: false, type: String }) textClass!: string
-
-  innerValue: boolean = false
-
-  @Watch('innerValue')
-  public onInnerChange (val: this['innerValue']) {
-    this.$emit('update:show-dialog', val)
-  }
-
-  @Watch('showDialog')
-  public onOuterChange (newVal: this['showDialog']) {
-    this.innerValue = newVal
-  }
-
-  created () {
-    this.innerValue = this.showDialog
-  }
-
-  close () {
-    this.$emit('update:show-dialog', false)
-    this.$emit('close')
-  }
+interface Props {
+ title?: string
+ text?: string
+ cancelText?: string
+ width?: number
+ showDialog: boolean
+ stickyClose?: boolean
+ cardMaxHeight?: string
+ ariaClose?: string
+ textClass?: string
 }
 
+const props = withDefaults(defineProps<Props>(), {
+  width: 325,
+  ariaClose: 'Close',
+  title: undefined,
+  text: undefined,
+  cancelText: undefined,
+  cardMaxHeight: undefined,
+  textClass: undefined
+})
+
+const emits = defineEmits<{
+  (e: 'update:show-dialog', show: boolean): void
+  (e: 'close'): void
+}>()
+
+const icons = { mdiClose }
+const innerValue = ref(props.showDialog)
+
+watch(innerValue, (val) => {
+  emits('update:show-dialog', val)
+})
+watch(() => props.showDialog, (newVal) => {
+  innerValue.value = newVal
+})
+
+const close = () => {
+  emits('update:show-dialog', false)
+  emits('close')
+}
 </script>
 
 <style lang="scss" scoped>

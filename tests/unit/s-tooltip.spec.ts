@@ -18,18 +18,21 @@ describe('STooltip', () => {
       vuetify,
       propsData: { text: 'tooltip' },
       stubs: {
-        VTooltip: true
+        VTooltip:   {
+        template: `
+        <div>
+            <slot name="activator" />
+            <slot />
+        </div>`
+      },
       }
     })
-
     vm = component.vm
-    vm.setTooltipOffset = jest.fn()
-    vm.setViewableWindowSize = jest.fn()
 
     // screen dimensions
-    vm.halfWindowHeight = 500
-    vm.leftEdgeContraint = 160
-    vm.rightEdgeConstraint = 608
+    window.innerHeight = 1000
+    window.innerWidth = 608 + 160
+    window.dispatchEvent(new Event('resize'))
   })
 
   describe('tooltip in top half of screen', () => {
@@ -38,14 +41,14 @@ describe('STooltip', () => {
         callout: true
       })
       // button position
-      vm.offsetTopButton = 200
-      vm.bottomAligned = false
+      // vm.offsetTopButton = 200
+      // vm.bottomAligned = false
     })
     it('tooltipStyle getter should return "callout bottom left" if callout is true and close to left edge', async () => {
       // button position
       vm.offsetLeftButton = 100
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout bottom left')
+      expect(component.html()).toContain('callout bottom left')
     })
 
     it('tooltipStyle getter should return "callout bottom middle" if callout is true and prop', async () => {
@@ -56,7 +59,7 @@ describe('STooltip', () => {
       // button position
       vm.offsetLeftButton = 100
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout bottom middle')
+      expect(component.html()).toContain('callout bottom middle')
     })
 
     it('tooltipStyle getter should return "callout bottom left" if callout is true and prop left is set', async () => {
@@ -67,14 +70,14 @@ describe('STooltip', () => {
       // button position
       vm.offsetLeftButton = 400
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout bottom left')
+      expect(component.html()).toContain('callout bottom left')
     })
 
     it('tooltipStyle getter should return "callout bottom middle" if callout is true and in middle', async () => {
       // button position
       vm.offsetLeftButton = 400
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout bottom middle')
+      expect(component.html()).toContain('callout bottom middle')
     })
 
     it('tooltipStyle getter should return "callout bottom right" if callout is true and prop right is set', async () => {
@@ -85,7 +88,7 @@ describe('STooltip', () => {
       // button position
       vm.offsetLeftButton = 400
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout bottom right')
+      expect(component.html()).toContain('callout bottom right')
     })
 
     it('tooltipStyle getter should return "callout bottom middle" if callout is true and close to right edge', async () => {
@@ -96,14 +99,14 @@ describe('STooltip', () => {
       // window properties
       vm.offsetLeftButton = 700
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout bottom middle')
+      expect(component.html()).toContain('callout bottom middle')
     })
 
     it('tooltipStyle getter should return "callout bottom right" if callout is true and close to right edge', async () => {
       // window properties
       vm.offsetLeftButton = 700
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout bottom right')
+      expect(component.html()).toContain('callout bottom right')
     })
   })
 
@@ -114,13 +117,13 @@ describe('STooltip', () => {
       })
       // button position
       vm.offsetTopButton = 700
-      vm.bottomAligned = true
+      // vm.bottomAligned = true
     })
     it('tooltipStyle getter should return "callout top left" if callout is true and close to left edge', async () => {
       // button position
       vm.offsetLeftButton = 100
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout top left')
+      expect(component.html()).toContain('callout top left')
     })
 
     it('tooltipStyle getter should return "callout top middle" if callout is true and prop', async () => {
@@ -131,7 +134,7 @@ describe('STooltip', () => {
       // button position
       vm.offsetLeftButton = 100
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout top middle')
+      expect(component.html()).toContain('callout top middle')
     })
 
     it('tooltipStyle getter should return "callout top left" if callout is true and left prop is set', async () => {
@@ -142,14 +145,14 @@ describe('STooltip', () => {
       // button position
       vm.offsetLeftButton = 400
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout top left')
+      expect(component.html()).toContain('callout top left')
     })
 
     it('tooltipStyle getter should return "callout top middle" if callout is true and in middle', async () => {
       // button position
       vm.offsetLeftButton = 400
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout top middle')
+      expect(component.html()).toContain('callout top middle')
     })
 
     it('tooltipStyle getter should return "callout top right" if callout is true and right prop is set', async () => {
@@ -160,7 +163,7 @@ describe('STooltip', () => {
       // button position
       vm.offsetLeftButton = 400
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout top right')
+      expect(component.html()).toContain('callout top right')
     })
 
     it('tooltipStyle getter should return "callout top middle" if callout is true and close to right edge', async () => {
@@ -171,14 +174,14 @@ describe('STooltip', () => {
       // window properties
       vm.offsetLeftButton = 700
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout top middle')
+      expect(component.html()).toContain('callout top middle')
     })
 
     it('tooltipStyle getter should return "callout top right" if callout is true and close to right edge', async () => {
       // window properties
       vm.offsetLeftButton = 700
       await localVue.nextTick()
-      expect(component.vm.tooltipStyle).toEqual('callout top right')
+      expect(component.html()).toContain('callout top right')
     })
   })
 

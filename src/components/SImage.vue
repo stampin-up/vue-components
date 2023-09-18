@@ -1,5 +1,6 @@
 <template>
   <img
+    ref="root"
     :src="srcImage"
     :srcset="srcsetImage"
     :src-placeholder="placeholder"
@@ -14,69 +15,71 @@
 </template>
 
 <script lang="ts">
-// adapted from https://github.com/alexjoverm/v-lazy-image/blob/master/src/index.js
-import { Component, Vue, Prop } from 'vue-property-decorator'
-
-@Component({
-  components: {
-  },
+export default {
   inheritAttrs: false
+}
+</script>
+<script lang="ts" setup>
+import { computed, onMounted, onUnmounted, ref } from 'vue'
+
+interface Props {
+ placeholder?: string
+ src?: string
+ srcset?: string
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  placeholder: 'https://res.cloudinary.com/stampin-up/image/upload/w_360,f_auto/v1588185111/loading_image.png',
+  src: undefined,
+  srcset: undefined
 })
-export default class SImage extends Vue {
-  @Prop({ required: false, default: 'https://res.cloudinary.com/stampin-up/image/upload/w_360,f_auto/v1588185111/loading_image.png', type: String }) placeholder!: string
-  @Prop({ required: false, type: String }) src?: string
-  @Prop({ required: false, type: String }) srcset?: string
 
-  observer: IntersectionObserver | null = null
-  intersected = false
-  loaded = false
-  intersectionOptions = {}
+const emits = defineEmits<{
+  (e: 'update:show-dialog', show: boolean): void
+  (e: 'load'): void
+  (e: 'intersect'): void
+}>()
 
-  get srcImage () {
-    return this.intersected && this.src ? this.src : this.placeholder
-  }
+const observer = ref<IntersectionObserver>()
+const intersected = ref(false)
+const loaded = ref(false)
+const intersectionOptions = ref({})
+const root = ref<HTMLElement>()
 
-  get srcsetImage () {
-    return this.intersected && this.srcset ? this.srcset : false
-  }
-
-  get intersectionAvailable () {
-    return typeof window !== 'undefined' && 'IntersectionObserver' in window
-  }
-
-  load () {
-    if (this.$el.getAttribute('src') !== this.placeholder) {
-      this.loaded = true
-      this.$emit('load')
-    }
-  }
-
-  mounted () {
-    if (this.intersectionAvailable) {
-      this.observer = new IntersectionObserver((entries) => {
-        const [image] = entries.slice(-1)
-        if (image.isIntersecting) {
-          this.intersected = true
-          this.cleanup()
-          this.$emit('intersect')
-        }
-      }, this.intersectionOptions)
-      this.observer.observe(this.$el)
-    } else {
-      this.intersected = true
-    }
-  }
-
-  cleanup () {
-    if (this.observer) {
-      this.observer.disconnect()
-    }
-  }
-
-  destroyed () {
-    this.cleanup()
+const srcImage = computed(() => intersected.value && props.src ? props.src : props.placeholder)
+const srcsetImage = computed(() => intersected.value && props.srcset ? props.srcset : false)
+const intersectionAvailable = computed(() => typeof window !== 'undefined' && 'IntersectionObserver' in window)
+const load = () => {
+  if (root.value!.$el.getAttribute('src') !== props.placeholder) {
+    loaded.value = true
+    emits('load')
   }
 }
+
+onMounted(() => {
+  if (intersectionAvailable.value) {
+    observer.value = new IntersectionObserver((entries) => {
+      const [image] = entries.slice(-1)
+      if (image.isIntersecting) {
+        intersected.value = true
+        cleanup()
+        emits('intersect')
+      }
+    }, intersectionOptions.value)
+    observer.value.observe(root.value!.$el)
+  } else {
+    intersected.value = true
+  }
+})
+
+const cleanup = () => {
+  if (observer.value) {
+    observer.value.disconnect()
+  }
+}
+
+onUnmounted(cleanup)
+
 </script>
 
 <style lang="scss" scoped>

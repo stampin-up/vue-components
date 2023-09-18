@@ -16,23 +16,19 @@
   </VRow>
 </template>
 
-<script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator'
-
-@Component({})
-export default class SLoadingOverlay extends Vue {
-  @Prop({ required: false, type: Boolean })
-  loading!: boolean
-
-  @Prop({ default: '60', type: String })
-  spinnerSize!: string
-
-  @Prop({ default: '6', type: String })
-  spinnerWidth!: string
-
-  @Prop({ default: '#888', type: String })
-  spinnerColor!: string
+<script lang="ts" setup>
+interface Props {
+ loading?: boolean
+ spinnerSize?: string
+ spinnerWidth?: string
+ spinnerColor?: string
 }
+
+withDefaults(defineProps<Props>(), {
+  spinnerSize: '60',
+  spinnerWidth: '6',
+  spinnerColor: '#888'
+})
 </script>
 
 <style lang="scss" scoped>
