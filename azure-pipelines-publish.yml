@@ -48,10 +48,10 @@ steps:
     script: 'env | sort'
 
 - task: Bash@3
-  displayName: 'git switch master'
+  displayName: 'git checkout master'
   inputs:
     targetType: 'inline'
-    script: 'cd $(WORKSPACE_DIR)/s && git switch master'
+    script: 'pwd && git checkout master'
 
 - task: Bash@3
   displayName: 'install make'
