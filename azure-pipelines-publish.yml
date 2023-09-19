@@ -27,7 +27,7 @@ steps:
   displayName: 'install latest Git'
   inputs:
     targetType: 'inline'
-    script: 'sudo apt-add-repository ppa:git-core/ppa -y && sudo apt-get update && sudo apt-get install git -y'
+    script: 'sudo apt-add-repository ppa:git-core/ppa -y && sudo apt-get update && sudo apt-get install git -y && git version'
 
 - task: Bash@3
   displayName: 'install node 18.14.0'
@@ -41,11 +41,11 @@ steps:
     targetType: 'inline'
     script: 'sudo npm install -g npm-cli-login'
 
-#- task: Bash@3
-#  displayName: 'git switch master'
-#  inputs:
-#    targetType: 'inline'
-#    script: 'git switch master'
+- task: Bash@3
+  displayName: 'git switch master'
+  inputs:
+    targetType: 'inline'
+    script: 'git switch master'
 
 - task: Bash@3
   displayName: 'install make'
