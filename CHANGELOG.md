@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.19.0](https://github.com/stampin-up/vue-components/compare/v1.18.1...v1.19.0) (2023-09-19)
+
+
+### Features
+
+* allow rounded btns and convert btn to composition ([#99](https://github.com/stampin-up/vue-components/issues/99)) ([4583eaf](https://github.com/stampin-up/vue-components/commit/4583eafa3b690953f7874b7f7ce3659b77ace5e5))
+
 ### [1.18.1](https://github.com/stampin-up/vue-components/compare/v1.18.0...v1.18.1) (2023-06-05)
 
 ## [1.18.0](https://github.com/stampin-up/vue-components/compare/v1.17.4...v1.18.0) (2023-06-02)
