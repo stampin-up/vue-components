@@ -42,10 +42,16 @@ steps:
     script: 'sudo npm install -g npm-cli-login'
 
 - task: Bash@3
+  displayName: 'show environment Variables'
+  inputs:
+    targetType: 'inline'
+    script: 'env | sort'
+
+- task: Bash@3
   displayName: 'git switch master'
   inputs:
     targetType: 'inline'
-    script: 'cd $(WORKSPACE_DIR) && git switch master'
+    script: 'cd $(WORKSPACE_DIR)/s && git switch master'
 
 - task: Bash@3
   displayName: 'install make'
