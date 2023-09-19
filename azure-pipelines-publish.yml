@@ -23,7 +23,7 @@ steps:
   submodules: false
   persistCredentials: true
 
- - task: Bash@3
+- task: Bash@3
   displayName: 'install latest Git'
   inputs:
     targetType: 'inline'
