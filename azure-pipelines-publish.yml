@@ -96,7 +96,7 @@ steps:
   displayName: 'npm install -g npm-cli-login'
   inputs:
     targetType: 'inline'
-    script: 'sudo npm install -g npm-cli-login'
+    script: 'sudo npm install -g npm-cli-login && npm-cli-login'
 
 - task: Npm@1
   inputs:
