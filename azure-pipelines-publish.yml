@@ -23,11 +23,11 @@ steps:
   submodules: false
   persistCredentials: true
 
-- task: Bash@3
-  displayName: 'install latest Git'
-  inputs:
-    targetType: 'inline'
-    script: 'sudo apt-add-repository ppa:git-core/ppa -y && sudo apt-get update && sudo apt-get install git -y && git version'
+# - task: Bash@3
+#  displayName: 'install latest Git'
+#  inputs:
+#    targetType: 'inline'
+#    script: 'sudo apt-add-repository ppa:git-core/ppa -y && sudo apt-get update && sudo apt-get install git -y && git version'
 
 - task: Bash@3
   displayName: 'install node 18.14.0'
@@ -48,10 +48,10 @@ steps:
     script: 'env | sort'
 
 - task: Bash@3
-  displayName: 'git checkout master'
+  displayName: 'git switch master'
   inputs:
     targetType: 'inline'
-    script: 'pwd && git checkout master'
+    script: 'pwd && ls -la && git switch master'
 
 - task: Bash@3
   displayName: 'install make'
