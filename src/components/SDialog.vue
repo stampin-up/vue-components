@@ -74,7 +74,7 @@ export default {
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
 import { mdiClose } from '@mdi/js'
-import SBtn from "../components/SBtn.vue";
+import SBtn from '../components/SBtn.vue'
 
 interface Props {
  title?: string

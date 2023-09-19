@@ -18,13 +18,13 @@ describe('STooltip', () => {
       vuetify,
       propsData: { text: 'tooltip' },
       stubs: {
-        VTooltip:   {
-        template: `
+        VTooltip: {
+          template: `
         <div>
             <slot name="activator" />
             <slot />
         </div>`
-      },
+        }
       }
     })
     vm = component.vm
