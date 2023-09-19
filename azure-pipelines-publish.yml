@@ -92,9 +92,15 @@ steps:
     targetType: 'inline'
     script: 'sudo chown -R 1000:1000 "/home/AzDevOps/.npm"'
 
-- task: Npm@1
+- task: Bash@3
+  displayName: 'npm publish'
   inputs:
-    command: publish
-    verbose: true
-    publishRegistry: useExternalRegistry
-    publishEndpoint: 'registry.npmjs.com'
+    targetType: 'inline'
+    script: 'npm publish'
+
+#- task: Npm@1
+#  inputs:
+#    command: publish
+#    verbose: true
+#    publishRegistry: useExternalRegistry
+#    publishEndpoint: 'registry.npmjs.com'
