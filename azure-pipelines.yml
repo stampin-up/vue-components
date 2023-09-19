@@ -12,6 +12,7 @@ trigger:
 
 variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
+  WORKSPACE_DIR: $(Pipeline.Workspace)
 
 pool: 'Kube1.15.7'
 
