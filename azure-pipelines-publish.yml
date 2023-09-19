@@ -8,8 +8,7 @@ variables:
   CLI_EMAIL: $(NPM_EMAIL)
   NPM_TOKEN: $(NPM_TOKEN)
 
-pool: 
-  vmImage: ubuntu-20.04
+pool: 'Kube1.15.7'
 
 steps:
 #- task: Bash@3
@@ -19,16 +18,16 @@ steps:
 #    script: 'rm -rf $(WORKSPACE_DIR)/* && rm -rf $(YARN_CACHE_FOLDER)/'
 
 - checkout: self
-  clean: false
+  clean: true
   lfs: false
   submodules: false
   persistCredentials: true
 
-- task: Bash@3
-  displayName: 'install latest Git'
-  inputs:
-    targetType: 'inline'
-    script: 'sudo apt-add-repository ppa:git-core/ppa -y && sudo apt-get update && sudo apt-get install git -y && git version'
+#- task: Bash@3
+#  displayName: 'install latest Git'
+#  inputs:
+#    targetType: 'inline'
+#    script: 'sudo apt-add-repository ppa:git-core/ppa -y && sudo apt-get update && sudo apt-get install git -y && git version'
 
 - task: Bash@3
   displayName: 'git switch master'
