@@ -92,6 +92,12 @@ steps:
     targetType: 'inline'
     script: 'sudo chown -R 1000:1000 "/home/AzDevOps/.npm"'
 
+- task: Bash@3
+  displayName: 'npm install -g npm-cli-login'
+  inputs:
+    targetType: 'inline'
+    script: 'sudo npm install -g npm-cli-login && sudo chown -R AzDevOps:AzDevOps ~/.config'
+
 - task: Npm@1
   inputs:
     command: publish
