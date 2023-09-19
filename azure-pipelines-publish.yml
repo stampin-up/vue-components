@@ -96,7 +96,7 @@ steps:
   displayName: 'npm install -g npm-cli-login'
   inputs:
     targetType: 'inline'
-    script: 'sudo npm install -g npm-cli-login && sudo chown -R AzDevOps:AzDevOps ~/.config'
+    script: 'sudo npm install -g npm-cli-login'
 
 - task: Npm@1
   inputs:
