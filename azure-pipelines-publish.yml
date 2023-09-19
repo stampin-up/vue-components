@@ -45,7 +45,7 @@ steps:
   displayName: 'git switch master'
   inputs:
     targetType: 'inline'
-    script: 'git switch master'
+    script: 'cd $(WORKSPACE_DIR) && git switch master'
 
 - task: Bash@3
   displayName: 'install make'
