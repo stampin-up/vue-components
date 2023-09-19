@@ -8,7 +8,7 @@ variables:
   CLI_EMAIL: $(NPM_EMAIL)
   NPM_TOKEN: $(NPM_TOKEN)
 
-pool: 'Kube1.15.7'
+pool: 'Azure Pipelines'
 
 steps:
 #- task: Bash@3
@@ -18,22 +18,22 @@ steps:
 #    script: 'rm -rf $(WORKSPACE_DIR)/* && rm -rf $(YARN_CACHE_FOLDER)/'
 
 - checkout: self
-  clean: true
+  clean: false
   lfs: false
   submodules: false
   persistCredentials: true
 
-# - task: Bash@3
-#  displayName: 'install latest Git'
-#  inputs:
-#    targetType: 'inline'
-#    script: 'sudo apt-add-repository ppa:git-core/ppa -y && sudo apt-get update && sudo apt-get install git -y && git version'
-
-- task: Bash@3
-  displayName: 'git checkout origin/master'
+ - task: Bash@3
+  displayName: 'install latest Git'
   inputs:
     targetType: 'inline'
-    script: 'pwd && ls -la && git checkout origin/master'
+    script: 'sudo apt-add-repository ppa:git-core/ppa -y && sudo apt-get update && sudo apt-get install git -y && git version'
+
+- task: Bash@3
+  displayName: 'git switch master'
+  inputs:
+    targetType: 'inline'
+    script: 'pwd && ls -la && git switch master'
 
 - task: Bash@3
   displayName: 'install node 18.14.0'
