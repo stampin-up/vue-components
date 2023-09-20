@@ -3,10 +3,6 @@ trigger: none
 variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
   WORKSPACE_DIR: $(Pipeline.Workspace)
-  CLI_USER: $(NPM_USER)
-  CLI_PASS: $(NPM_PASS)
-  CLI_EMAIL: $(NPM_EMAIL)
-  NPM_TOKEN: $(NPM_TOKEN)
 
 pool: 'Kube1.15.7'
 
@@ -40,12 +36,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'sudo n 18.14.0'
-
-- task: Bash@3
-  displayName: 'npm install -g npm-cli-login'
-  inputs:
-    targetType: 'inline'
-    script: 'sudo npm install -g npm-cli-login'
 
 - task: Bash@3
   displayName: 'show environment Variables'
@@ -92,15 +82,15 @@ steps:
     targetType: 'inline'
     script: 'sudo chown -R 1000:1000 "/home/AzDevOps/.npm"'
 
+- task: Npm@1
+  inputs:
+    command: publish
+    verbose: true
+    publishRegistry: useExternalRegistry
+    publishEndpoint: 'npmjs.com'
+
 - task: Bash@3
-  displayName: 'npm publish'
+  displayName: 'show environment Variables end'
   inputs:
     targetType: 'inline'
-    script: 'npm publish'
-
-#- task: Npm@1
-#  inputs:
-#    command: publish
-#    verbose: true
-#    publishRegistry: useExternalRegistry
-#    publishEndpoint: 'registry.npmjs.com'
+    script: 'env | sort'
