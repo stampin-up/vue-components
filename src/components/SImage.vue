@@ -50,7 +50,7 @@ const srcImage = computed(() => intersected.value && props.src ? props.src : pro
 const srcsetImage = computed(() => intersected.value && props.srcset ? props.srcset : false)
 const intersectionAvailable = computed(() => typeof window !== 'undefined' && 'IntersectionObserver' in window)
 const load = () => {
-  if (root.value!.$el.getAttribute('src') !== props.placeholder) {
+  if (root.value!.getAttribute('src') !== props.placeholder) {
     loaded.value = true
     emits('load')
   }
@@ -66,7 +66,7 @@ onMounted(() => {
         emits('intersect')
       }
     }, intersectionOptions.value)
-    observer.value.observe(root.value!.$el)
+    observer.value.observe(root.value!)
   } else {
     intersected.value = true
   }
