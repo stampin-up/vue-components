@@ -47,8 +47,8 @@ const props = withDefaults(defineProps<Props>(), {
 })
 const attrs = useAttrs()
 const isLink = computed(() => !!props.to)
-const isCustomLink = computed(() => props.linkSmall || props.linkLarge || props.linkMedium )
-const isUnderlinedLink = computed(() => isCustomLink.value || (!!attrs.text || attrs.text === '') )
+const isCustomLink = computed(() => props.linkSmall || props.linkLarge || props.linkMedium)
+const isUnderlinedLink = computed(() => isCustomLink.value || (!!attrs.text || attrs.text === ''))
 const isText = computed(() => isUnderlinedLink.value || props.linkSimple)
 </script>
 
