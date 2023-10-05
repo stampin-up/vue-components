@@ -58,6 +58,9 @@ const isText = computed(() => isUnderlinedLink.value || props.linkSimple)
   text-transform : uppercase !important;
   color: var(--v-primary-base);
   box-shadow: none;
+  font-size: 1.143rem !important;
+  height: 44px !important;
+  padding: 12px 24px;
 
   &.black-button {
     border-radius: 0 !important;
@@ -71,9 +74,6 @@ const isText = computed(() => isUnderlinedLink.value || props.linkSimple)
     &:hover {
       background-color: var(--v-hover-base) !important;
     }
-  }
-  &.small {
-    height: 46px !important;
   }
   @media #{map-get($display-breakpoints, 'sm-and-up')} {
     &:hover { background-color: var(--v-hover-base) !important; }
@@ -106,20 +106,6 @@ const isText = computed(() => isUnderlinedLink.value || props.linkSimple)
 .link {
   text-transform: uppercase;
   text-decoration: underline !important;
-}
-
-@media #{map-get($display-breakpoints, 'md-and-up')}  {
-  .action-button {
-    font-size: 1.5rem !important;
-    height: 56px !important;
-  }
-}
-
-@media #{map-get($display-breakpoints, 'sm-and-down')}  {
-  .action-button {
-    font-size: 1.286rem !important;
-    height: 46px !important;
-  }
 }
 
 .secondary-button {
