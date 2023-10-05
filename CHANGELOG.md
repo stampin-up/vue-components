@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.20.0](https://github.com/stampin-up/vue-components/compare/v1.19.15...v1.20.0) (2023-10-05)
+
+
+### Features
+
+* new simple link style without underline and text transform ([#103](https://github.com/stampin-up/vue-components/issues/103)) ([5fbe3ad](https://github.com/stampin-up/vue-components/commit/5fbe3adb87c741496afbd44170a150e1efaabe73))
+
 ### [1.19.15](https://github.com/stampin-up/vue-components/compare/v1.19.14...v1.19.15) (2023-10-03)
 
 ### [1.19.14](https://github.com/stampin-up/vue-components/compare/v1.19.13...v1.19.14) (2023-10-02)
