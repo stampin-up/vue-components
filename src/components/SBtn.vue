@@ -6,8 +6,9 @@
       'link--small': linkSmall,
       'link--medium': linkMedium,
       'link--large': linkLarge,
+      'link--simple': linkSimple,
       'rounded': rounded,
-      'link': isText,
+      'link': isCustomLink,
     }"
     :text="isText"
     :nuxt="isLink"
@@ -30,6 +31,7 @@ interface Props {
  linkSmall?: boolean
  linkMedium?: boolean
  linkLarge?: boolean
+ linkSimple?: boolean
  rounded?: boolean
  to?: string | object
 }
@@ -39,12 +41,15 @@ const props = withDefaults(defineProps<Props>(), {
   linkSmall: false,
   linkMedium: false,
   linkLarge: false,
+  linkSimple: false,
   rounded: false,
   to: undefined
 })
 const attrs = useAttrs()
 const isLink = computed(() => !!props.to)
-const isText = computed(() => props.linkSmall || props.linkLarge || props.linkMedium || attrs.text)
+const isCustomLink = computed(() => props.linkSmall || props.linkLarge || props.linkMedium)
+const isUnderlinedLink = computed(() => isCustomLink.value || (!!attrs.text || attrs.text === ''))
+const isText = computed(() => isUnderlinedLink.value || props.linkSimple)
 </script>
 
 <style lang="scss" scoped>
@@ -78,6 +83,13 @@ const isText = computed(() => props.linkSmall || props.linkLarge || props.linkMe
 
 .link--small {
   font-size:  0.8571rem !important;
+}
+
+.link--simple {
+  text-decoration: none !important;
+  text-transform: none !important;
+  font-size:  0.8571rem;
+  color: var(--v-header-base) !important;
 }
 
 .link--medium {
