@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.21.0](https://github.com/stampin-up/vue-components/compare/v1.20.0...v1.21.0) (2023-10-19)
+
+
+### Features
+
+* **sbtn:** update acttion styles ([#104](https://github.com/stampin-up/vue-components/issues/104)) ([44df6d6](https://github.com/stampin-up/vue-components/commit/44df6d6c8f3c05a7e4b0d6e48d9a7575639b8d93))
+
 ## [1.20.0](https://github.com/stampin-up/vue-components/compare/v1.19.15...v1.20.0) (2023-10-05)
 
 
