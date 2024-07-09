@@ -4,7 +4,7 @@ variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
   WORKSPACE_DIR: $(Pipeline.Workspace)
 
-pool: 'Kube1.15.7'
+pool: 'Agent Pool'
 
 steps:
 #- task: Bash@3
