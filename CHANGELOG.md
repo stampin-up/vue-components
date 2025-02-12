@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.21.5](https://github.com/stampin-up/vue-components/compare/v1.21.4...v1.21.5) (2025-02-12)
+
+
+### Bug Fixes
+
+* **font-face:** removing fallback as it was causing error and times new roman was loading ([#108](https://github.com/stampin-up/vue-components/issues/108)) ([739a59c](https://github.com/stampin-up/vue-components/commit/739a59c25e288e65d01b562ef2b2b96f4fe05a22))
+
 ### [1.21.4](https://github.com/stampin-up/vue-components/compare/v1.21.3...v1.21.4) (2025-02-12)
 
 ### [1.21.3](https://github.com/stampin-up/vue-components/compare/v1.21.2...v1.21.3) (2025-02-12)
