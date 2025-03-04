@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.22.17](https://github.com/stampin-up/vue-components/compare/v1.22.16...v1.22.17) (2025-03-04)
+
 ### [1.22.16](https://github.com/stampin-up/vue-components/compare/v1.22.15...v1.22.16) (2025-03-04)
 
 ### [1.22.15](https://github.com/stampin-up/vue-components/compare/v1.22.14...v1.22.15) (2025-03-04)
