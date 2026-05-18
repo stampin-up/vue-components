@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.23.3](https://github.com/stampin-up/vue-components/compare/v1.23.2...v1.23.3) (2026-05-18)
+
+
+### Bug Fixes
+
+* add [skip ci] to standard-version release commits to prevent CI loop ([#111](https://github.com/stampin-up/vue-components/issues/111)) ([2c8fe28](https://github.com/stampin-up/vue-components/commit/2c8fe289292429cf80d0aa16a71eac337856591d))
+
 ### [1.23.2](https://github.com/stampin-up/vue-components/compare/v1.23.1...v1.23.2) (2026-05-18)
 
 ### [1.23.1](https://github.com/stampin-up/vue-components/compare/v1.23.0...v1.23.1) (2026-05-18)
