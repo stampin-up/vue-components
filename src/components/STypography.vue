@@ -124,10 +124,4 @@ a {
   display: block;
   justify-content: start;
 }
-
-.footer-link--legal {
-  color: var(--v-hover-base)!important;
-  font-size: .8571rem;
-  text-transform: uppercase;
-}
 </style>
