@@ -34,7 +34,7 @@ steps:
   displayName: 'install node 18.14.0'
   inputs:
     targetType: 'inline'
-    script: 'sudo n 18.14.0'
+    script: 'sudo n 22'
 
 - task: Bash@3
   displayName: 'npm install -g npm-cli-login'
@@ -46,7 +46,9 @@ steps:
   displayName: 'install make'
   inputs:
     targetType: 'inline'
-    script: 'sudo apt-get update -y && sudo apt-get install -y make && sudo apt install -y g++'
+    script: |
+      sudo systemctl stop unattended-upgrades || true
+      sudo apt-get -o DPkg::Lock::Timeout=60 update -y && sudo apt-get -o DPkg::Lock::Timeout=60 install -y make && sudo apt-get -o DPkg::Lock::Timeout=60 install -y g++
 
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@3
   displayName: 'Use Yarn 1.x'
