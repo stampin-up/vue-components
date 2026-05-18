@@ -37,7 +37,7 @@ steps:
     script: 'pwd && ls -la && git switch master'
 
 - task: Bash@3
-  displayName: 'install node 18.14.0'
+  displayName: 'install node 22'
   inputs:
     targetType: 'inline'
     script: 'sudo n 22'
