@@ -29,7 +29,7 @@ export const preset = {
     themes: {
       light: {
         primary: '#333333', // all text
-        secondary: '#E33C84',
+        secondary: '#C93374',
         accent: '#82B1FF',
         error: '#ff0000',
         info: '#000000',
