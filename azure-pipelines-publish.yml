@@ -3,6 +3,8 @@ trigger:
     include:
     - master
 
+pr: none
+
 variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
   WORKSPACE_DIR: $(Pipeline.Workspace)
