@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.23.0](https://github.com/stampin-up/vue-components/compare/v1.22.60...v1.23.0) (2026-05-18)
+
+
+### Features
+
+* **preset:** WCAG 1.4.3 text contrast fixes — secondary token + footer legal ([#110](https://github.com/stampin-up/vue-components/issues/110)) ([ea98713](https://github.com/stampin-up/vue-components/commit/ea98713a203254dd8c9354d8d66a1fb5ce7e923e)), closes [#E33C84](https://github.com/stampin-up/vue-components/issues/E33C84) [#C93374](https://github.com/stampin-up/vue-components/issues/C93374) [#6e6e6](https://github.com/stampin-up/vue-components/issues/6e6e6) [AB#56777](https://github.com/stampin-up/AB/issues/56777) [#767676](https://github.com/stampin-up/vue-components/issues/767676)
+
 ### [1.22.60](https://github.com/stampin-up/vue-components/compare/v1.22.59...v1.22.60) (2026-05-18)
 
 ### [1.22.59](https://github.com/stampin-up/vue-components/compare/v1.22.58...v1.22.59) (2026-05-18)
