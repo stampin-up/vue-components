@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.23.7](https://github.com/stampin-up/vue-components/compare/v1.23.6...v1.23.7) (2026-09-15)
+
+
+### Bug Fixes
+
+* **simage-srcset-eager:** set srcset on first render when the placeholder is the src ([#113](https://github.com/stampin-up/vue-components/issues/113)) ([8b7a7e6](https://github.com/stampin-up/vue-components/commit/8b7a7e6e4f433e958a5bf9d23f55f4338d248703)), closes [AB#63504](https://github.com/stampin-up/AB/issues/63504)
+
 ### [1.23.6](https://github.com/stampin-up/vue-components/compare/v1.23.5...v1.23.6) (2026-05-19)
 
 ### [1.23.5](https://github.com/stampin-up/vue-components/compare/v1.23.4...v1.23.5) (2026-05-19)
