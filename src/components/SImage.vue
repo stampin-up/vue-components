@@ -47,10 +47,15 @@ const intersectionOptions = ref({})
 const root = ref<HTMLElement>()
 
 const srcImage = computed(() => intersected.value && props.src ? props.src : props.placeholder)
-const srcsetImage = computed(() => intersected.value && props.srcset ? props.srcset : false)
+// A placeholder equal to src means the caller opted out of the loading-image
+// swap. Withholding srcset until intersection would make the browser fetch src,
+// then abort it when srcset arrives and a candidate is re-selected.
+const eager = computed(() => !!props.src && props.placeholder === props.src)
+const srcsetImage = computed(() => (intersected.value || eager.value) && props.srcset ? props.srcset : undefined)
 const intersectionAvailable = computed(() => typeof window !== 'undefined' && 'IntersectionObserver' in window)
 const load = () => {
-  if (root.value!.getAttribute('src') !== props.placeholder) {
+  // When src and placeholder are the same URL, every load is the real image.
+  if (eager.value || root.value!.getAttribute('src') !== props.placeholder) {
     loaded.value = true
     emits('load')
   }
