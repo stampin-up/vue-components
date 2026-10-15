@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.23.10](https://github.com/stampin-up/vue-components/compare/v1.23.9...v1.23.10) (2026-10-15)
+
+
+### Bug Fixes
+
+* **sdialog-focus-trap:** keep Tab inside open dialogs and name them from their title ([#115](https://github.com/stampin-up/vue-components/issues/115)) ([0dac123](https://github.com/stampin-up/vue-components/commit/0dac1238e9f9a8c12a50e651476987bec018046e)), closes [AB#64141](https://github.com/stampin-up/AB/issues/64141)
+
 ### [1.23.9](https://github.com/stampin-up/vue-components/compare/v1.23.8...v1.23.9) (2026-09-15)
 
 ### [1.23.8](https://github.com/stampin-up/vue-components/compare/v1.23.7...v1.23.8) (2026-09-15)
