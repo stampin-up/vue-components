@@ -61,6 +61,57 @@ describe('SDialog', () => {
 
     expect(component.find('vdialog-stub').attributes().width).toEqual(`${width}`)
   })
+
+  describe('focus return', () => {
+    let opener: HTMLButtonElement
+
+    beforeEach(() => {
+      opener = document.createElement('button')
+      document.body.appendChild(opener)
+      opener.focus()
+    })
+
+    afterEach(() => {
+      opener.remove()
+    })
+
+    it('returns focus to the opener when the dialog closes', async () => {
+      const wrapper = shallowMount(SDialog, { localVue, propsData: { showDialog: true } })
+      await localVue.nextTick()
+      opener.blur()
+
+      wrapper.setProps({ showDialog: false })
+      await localVue.nextTick()
+      await localVue.nextTick()
+
+      expect(document.activeElement).toBe(opener)
+      wrapper.destroy()
+    })
+
+    it('returns focus to the opener when the dialog is destroyed while open (v-if consumers)', async () => {
+      const wrapper = shallowMount(SDialog, { localVue, propsData: { showDialog: true } })
+      await localVue.nextTick()
+      opener.blur()
+
+      wrapper.destroy()
+      await localVue.nextTick()
+
+      expect(document.activeElement).toBe(opener)
+    })
+
+    it('does not move focus when the opener is no longer in the document', async () => {
+      const wrapper = shallowMount(SDialog, { localVue, propsData: { showDialog: true } })
+      await localVue.nextTick()
+      opener.remove()
+
+      wrapper.setProps({ showDialog: false })
+      await localVue.nextTick()
+      await localVue.nextTick()
+
+      expect(document.activeElement).toBe(document.body)
+      wrapper.destroy()
+    })
+  })
 })
 
 describe('SDialog in a real VDialog', () => {

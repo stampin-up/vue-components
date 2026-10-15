@@ -77,7 +77,7 @@ export default {
 }
 </script>
 <script lang="ts" setup>
-import { nextTick, onMounted, ref, watch } from 'vue'
+import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { mdiClose } from '@mdi/js'
 import SBtn from '../components/SBtn.vue'
 
@@ -113,8 +113,38 @@ const emits = defineEmits<{
 const icons = { mdiClose }
 const innerValue = ref(props.showDialog)
 
+// WCAG 2.4.3: remember the element that had focus when the dialog opened and
+// give focus back to it when the dialog closes.
+let opener: HTMLElement | null = null
+
+const captureOpener = () => {
+  if (typeof document === 'undefined') {
+    return
+  }
+  const active = document.activeElement
+  opener = active instanceof HTMLElement && active !== document.body ? active : null
+}
+
+const restoreOpenerFocus = () => {
+  const target = opener
+  opener = null
+  if (!target) {
+    return
+  }
+  nextTick(() => {
+    if (target.isConnected) {
+      target.focus()
+    }
+  })
+}
+
 watch(innerValue, (val) => {
   emits('update:show-dialog', val)
+  if (val) {
+    captureOpener()
+  } else {
+    restoreOpenerFocus()
+  }
 })
 watch(() => props.showDialog, (newVal) => {
   innerValue.value = newVal
@@ -171,9 +201,11 @@ watch([innerValue, () => props.title, () => props.ariaLabelledby], () => {
 }, { flush: 'post' })
 onMounted(() => {
   if (innerValue.value) {
+    captureOpener()
     nameDialog()
   }
 })
+onBeforeUnmount(restoreOpenerFocus)
 
 const close = () => {
   emits('update:show-dialog', false)
