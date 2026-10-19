@@ -77,7 +77,7 @@ export default {
 }
 </script>
 <script lang="ts" setup>
-import { nextTick, onMounted, ref, watch } from 'vue'
+import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { mdiClose } from '@mdi/js'
 import SBtn from '../components/SBtn.vue'
 
@@ -113,8 +113,58 @@ const emits = defineEmits<{
 const icons = { mdiClose }
 const innerValue = ref(props.showDialog)
 
+const vDialog = ref<{ $refs: Record<string, HTMLElement | undefined> } | null>(null)
+
+// WCAG 2.4.3: remember the element that had focus when the dialog opened and
+// give focus back to it when the dialog closes or is destroyed (v-if owners).
+let opener: HTMLElement | null = null
+
+const captureOpener = () => {
+  if (typeof document === 'undefined') {
+    return
+  }
+  const active = document.activeElement
+  opener = active instanceof HTMLElement && active !== document.body ? active : null
+}
+
+// Focus has to be put back when it is nowhere useful: on <body>, or still inside
+// the dialog, including VDialog's own content element, which it focuses on open
+// and where Escape finds it when the user never tabbed in. Focus an owner moved
+// somewhere else, e.g. to a success message, stays there.
+const focusNeedsRestore = () => {
+  const active = document.activeElement
+  if (!active || active === document.body) {
+    return true
+  }
+  return !!vDialog.value?.$refs.dialog?.contains(active)
+}
+
+const restoreOpenerFocus = (unmounting = false) => {
+  const target = opener
+  opener = null
+  if (!target || !focusNeedsRestore()) {
+    return
+  }
+  nextTick(() => {
+    // Reopened before this ran (an owner that flips show-dialog straight back
+    // on): focusing the old opener would put focus behind the overlay, and
+    // nothing in Vuetify 2 pulls it back inside. On unmount the value never
+    // went false, so only the close path checks it.
+    const reopened = !unmounting && innerValue.value
+    if (reopened || !target.isConnected || !focusNeedsRestore()) {
+      return
+    }
+    target.focus()
+  })
+}
+
 watch(innerValue, (val) => {
   emits('update:show-dialog', val)
+  if (val) {
+    captureOpener()
+  } else {
+    restoreOpenerFocus()
+  }
 })
 watch(() => props.showDialog, (newVal) => {
   innerValue.value = newVal
@@ -123,7 +173,6 @@ watch(() => props.showDialog, (newVal) => {
 const FOCUSABLE = 'button, [href], input:not([type="hidden"]), select, textarea, [tabindex]:not([tabindex="-1"])'
 
 const titleId = `s-dialog-title-${++dialogCount}`
-const vDialog = ref<{ $refs: Record<string, HTMLElement | undefined> } | null>(null)
 
 const tabbables = (root: HTMLElement) => Array.from(root.querySelectorAll<HTMLElement>(FOCUSABLE))
   .filter(el => !el.hasAttribute('disabled') && el.tabIndex >= 0 && el.getClientRects().length > 0)
@@ -171,9 +220,11 @@ watch([innerValue, () => props.title, () => props.ariaLabelledby], () => {
 }, { flush: 'post' })
 onMounted(() => {
   if (innerValue.value) {
+    captureOpener()
     nameDialog()
   }
 })
+onBeforeUnmount(() => restoreOpenerFocus(true))
 
 const close = () => {
   emits('update:show-dialog', false)

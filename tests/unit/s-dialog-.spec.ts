@@ -61,6 +61,116 @@ describe('SDialog', () => {
 
     expect(component.find('vdialog-stub').attributes().width).toEqual(`${width}`)
   })
+
+  describe('focus return', () => {
+    // Exposes the `dialog` ref VDialog has, the element it focuses on open.
+    const VDialogStub = { template: '<div><div ref="dialog" tabindex="-1" data-testid="dialog-root"><slot /></div></div>' }
+    let opener: HTMLButtonElement
+
+    beforeEach(() => {
+      opener = document.createElement('button')
+      document.body.appendChild(opener)
+      opener.focus()
+    })
+
+    afterEach(() => {
+      opener.remove()
+    })
+
+    it('returns focus to the opener when the dialog closes', async () => {
+      const wrapper = shallowMount(SDialog, { localVue, propsData: { showDialog: true } })
+      await localVue.nextTick()
+      opener.blur()
+
+      wrapper.setProps({ showDialog: false })
+      await localVue.nextTick()
+      await localVue.nextTick()
+
+      expect(document.activeElement).toBe(opener)
+      wrapper.destroy()
+    })
+
+    it('returns focus to the opener when the dialog is destroyed while open (v-if consumers)', async () => {
+      const wrapper = shallowMount(SDialog, { localVue, propsData: { showDialog: true } })
+      await localVue.nextTick()
+      opener.blur()
+
+      wrapper.destroy()
+      await localVue.nextTick()
+
+      expect(document.activeElement).toBe(opener)
+    })
+
+    it('does not take focus back from something the owner focused while destroying it', async () => {
+      const other = document.createElement('input')
+      document.body.appendChild(other)
+      const wrapper = shallowMount(SDialog, { localVue, propsData: { showDialog: true } })
+      await localVue.nextTick()
+      opener.blur()
+
+      wrapper.destroy()
+      other.focus()
+      await localVue.nextTick()
+
+      expect(document.activeElement).toBe(other)
+      other.remove()
+    })
+
+    // VDialog focuses its own content element on open, so Escape pressed before
+    // tabbing in finds focus there rather than on a control inside the card.
+    it('returns focus to the opener when focus is on the dialog element itself', async () => {
+      const host = document.body.appendChild(document.createElement('div'))
+      const wrapper = shallowMount(SDialog, { localVue, attachTo: host, propsData: { showDialog: true }, stubs: { VDialog: VDialogStub } })
+      await localVue.nextTick()
+      ;(wrapper.find('[data-testid=dialog-root]').element as HTMLElement).focus()
+      expect(document.activeElement).not.toBe(opener)
+
+      wrapper.setProps({ showDialog: false })
+      await localVue.nextTick()
+      await localVue.nextTick()
+
+      expect(document.activeElement).toBe(opener)
+      wrapper.destroy()
+      host.remove()
+    })
+
+    it('leaves focus inside the dialog when the owner reopens it before the restore runs', async () => {
+      const host = document.body.appendChild(document.createElement('div'))
+      // An owner that answers every close by opening the dialog again.
+      const wrapper: Wrapper<Vue> = shallowMount(SDialog, {
+        localVue,
+        attachTo: host,
+        propsData: { showDialog: true },
+        stubs: { VDialog: VDialogStub },
+        listeners: { 'update:show-dialog': (val: boolean) => { if (!val) { wrapper.setProps({ showDialog: true }) } } }
+      })
+      await localVue.nextTick()
+      const dialogRoot = wrapper.find('[data-testid=dialog-root]').element as HTMLElement
+      dialogRoot.focus()
+
+      wrapper.setProps({ showDialog: false })
+      await localVue.nextTick()
+      await localVue.nextTick()
+
+      expect(wrapper.props('showDialog')).toBe(true)
+      expect(document.activeElement).toBe(dialogRoot)
+      wrapper.destroy()
+      host.remove()
+    })
+
+    it('does not move focus when the opener is no longer in the document', async () => {
+      const wrapper = shallowMount(SDialog, { localVue, propsData: { showDialog: true } })
+      await localVue.nextTick()
+      opener.remove()
+
+      wrapper.setProps({ showDialog: false })
+      await localVue.nextTick()
+      await localVue.nextTick()
+
+      expect(document.activeElement).toBe(document.body)
+      wrapper.destroy()
+    })
+  })
 })
 
 describe('SDialog in a real VDialog', () => {
