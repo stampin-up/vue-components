@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.23.11](https://github.com/stampin-up/vue-components/compare/v1.23.10...v1.23.11) (2026-10-19)
+
+
+### Bug Fixes
+
+* **a11y:** return focus to previous element after a dialog is closed ([#114](https://github.com/stampin-up/vue-components/issues/114)) ([1ac91be](https://github.com/stampin-up/vue-components/commit/1ac91bea8ed492190ca6f2bce5d5273fd0b26195))
+
 ### [1.23.10](https://github.com/stampin-up/vue-components/compare/v1.23.9...v1.23.10) (2026-10-15)
 
 
