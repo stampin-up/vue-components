@@ -113,8 +113,10 @@ const emits = defineEmits<{
 const icons = { mdiClose }
 const innerValue = ref(props.showDialog)
 
+const vDialog = ref<{ $refs: Record<string, HTMLElement | undefined> } | null>(null)
+
 // WCAG 2.4.3: remember the element that had focus when the dialog opened and
-// give focus back to it when the dialog closes.
+// give focus back to it when the dialog closes or is destroyed (v-if owners).
 let opener: HTMLElement | null = null
 
 const captureOpener = () => {
@@ -125,16 +127,34 @@ const captureOpener = () => {
   opener = active instanceof HTMLElement && active !== document.body ? active : null
 }
 
-const restoreOpenerFocus = () => {
+// Focus has to be put back when it is nowhere useful: on <body>, or still inside
+// the dialog, including VDialog's own content element, which it focuses on open
+// and where Escape finds it when the user never tabbed in. Focus an owner moved
+// somewhere else, e.g. to a success message, stays there.
+const focusNeedsRestore = () => {
+  const active = document.activeElement
+  if (!active || active === document.body) {
+    return true
+  }
+  return !!vDialog.value?.$refs.dialog?.contains(active)
+}
+
+const restoreOpenerFocus = (unmounting = false) => {
   const target = opener
   opener = null
-  if (!target) {
+  if (!target || !focusNeedsRestore()) {
     return
   }
   nextTick(() => {
-    if (target.isConnected) {
-      target.focus()
+    // Reopened before this ran (an owner that flips show-dialog straight back
+    // on): focusing the old opener would put focus behind the overlay, and
+    // nothing in Vuetify 2 pulls it back inside. On unmount the value never
+    // went false, so only the close path checks it.
+    const reopened = !unmounting && innerValue.value
+    if (reopened || !target.isConnected || !focusNeedsRestore()) {
+      return
     }
+    target.focus()
   })
 }
 
@@ -153,7 +173,6 @@ watch(() => props.showDialog, (newVal) => {
 const FOCUSABLE = 'button, [href], input:not([type="hidden"]), select, textarea, [tabindex]:not([tabindex="-1"])'
 
 const titleId = `s-dialog-title-${++dialogCount}`
-const vDialog = ref<{ $refs: Record<string, HTMLElement | undefined> } | null>(null)
 
 const tabbables = (root: HTMLElement) => Array.from(root.querySelectorAll<HTMLElement>(FOCUSABLE))
   .filter(el => !el.hasAttribute('disabled') && el.tabIndex >= 0 && el.getClientRects().length > 0)
@@ -205,7 +224,7 @@ onMounted(() => {
     nameDialog()
   }
 })
-onBeforeUnmount(restoreOpenerFocus)
+onBeforeUnmount(() => restoreOpenerFocus(true))
 
 const close = () => {
   emits('update:show-dialog', false)
