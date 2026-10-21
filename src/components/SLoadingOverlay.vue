@@ -49,6 +49,23 @@ const ensureRegion = (): HTMLElement => {
   return region
 }
 
+const announceAfterThreshold = () => {
+  announceTimer = setTimeout(() => {
+    announceTimer = undefined
+    // Removed during the wait: a region recreated now would get its text in the same tick and
+    // not be announced, so give the new one the full wait to register first.
+    if (!region?.isConnected) {
+      ensureRegion()
+      announceAfterThreshold()
+      return
+    }
+    const [firstLabel] = active.values()
+    if (firstLabel) {
+      region.textContent = firstLabel()
+    }
+  }, ANNOUNCE_AFTER_MS)
+}
+
 const startLoading = (owner: object, getLabel: () => string) => {
   active.set(owner, getLabel)
   const target = ensureRegion()
@@ -56,13 +73,7 @@ const startLoading = (owner: object, getLabel: () => string) => {
   if (announceTimer || target.textContent) {
     return
   }
-  announceTimer = setTimeout(() => {
-    announceTimer = undefined
-    const [firstLabel] = active.values()
-    if (firstLabel) {
-      ensureRegion().textContent = firstLabel()
-    }
-  }, ANNOUNCE_AFTER_MS)
+  announceAfterThreshold()
 }
 
 const stopLoading = (owner: object) => {

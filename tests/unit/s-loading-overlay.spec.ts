@@ -189,6 +189,20 @@ describe('SLoadingOverlay', () => {
       expect(announced()).toBe('Loading')
     })
 
+    // A region recreated and filled in the same tick would not be announced.
+    it('gives a region removed mid-wait the full wait again before writing to it', async () => {
+      mountOverlay({ propsData: { loading: true } })
+      jest.advanceTimersByTime(300)
+      announcer()!.remove()
+
+      await waitPastThreshold()
+      expect(announcer()).not.toBeNull()
+      expect(announced()).toBe('')
+
+      await waitPastThreshold()
+      expect(announced()).toBe('Loading')
+    })
+
     it('uses the label prop over the provided label', async () => {
       mountOverlay({
         propsData: { loading: true, label: 'Loading PayPal' },
