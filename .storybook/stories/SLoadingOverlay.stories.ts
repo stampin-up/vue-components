@@ -23,6 +23,8 @@ export const asDefault = () => ({
     spinnerSize: { default: number('spinnerSize', 60 ) },
     spinnerWidth: { default: number('spinnerWidth', 6 ) },
     spinnerColor: { default: text('spinnerColor', '#888' ) },
+    label: { default: text('label', 'Loading' ) },
+    inline: { default: boolean('inline', false ) },
     text: { default: text('Text', lipsum) }
   },
   template: `
