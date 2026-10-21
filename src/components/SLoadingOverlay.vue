@@ -33,8 +33,8 @@ const active = new Map<object, () => string>()
 let region: HTMLElement | null = null
 let announceTimer: ReturnType<typeof setTimeout> | undefined
 
-// Created on the first load, at least ANNOUNCE_AFTER_MS before its first text, so screen
-// readers have registered it by then. Recreated if something removed it from the page.
+// Created when the first overlay mounts, so it is on the page before any load and screen
+// readers have registered it by the time text arrives. Recreated if something removed it.
 const ensureRegion = (): HTMLElement => {
   if (region?.isConnected) {
     return region
@@ -114,7 +114,10 @@ const report = (loading: boolean) => loading
   : stopLoading(owner)
 
 watch(() => props.loading, report)
-onMounted(() => report(props.loading))
+onMounted(() => {
+  ensureRegion()
+  report(props.loading)
+})
 onBeforeUnmount(() => stopLoading(owner))
 </script>
 

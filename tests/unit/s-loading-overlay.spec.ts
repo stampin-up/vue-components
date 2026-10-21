@@ -118,10 +118,15 @@ describe('SLoadingOverlay', () => {
       expect(announced()).toBe('')
     })
 
-    it('says nothing while not loading', async () => {
+    // The region has to be registered before its text arrives, so it is on the page as soon as
+    // an overlay mounts, loading or not.
+    it('puts the empty status region on the page before anything loads, and says nothing', async () => {
       mountOverlay({ propsData: { loading: false } })
-      await waitPastThreshold()
 
+      expect(announcer()?.getAttribute('role')).toBe('status')
+      expect(announcer()?.getAttribute('aria-live')).toBe('polite')
+
+      await waitPastThreshold()
       expect(announced()).toBe('')
     })
 
