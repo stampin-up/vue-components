@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.24.0](https://github.com/stampin-up/vue-components/compare/v1.23.11...v1.24.0) (2026-10-22)
+
+
+### Features
+
+* **sloadingoverlay:** announce loading to screen readers, add label and inline props ([#116](https://github.com/stampin-up/vue-components/issues/116)) ([b4b7ba7](https://github.com/stampin-up/vue-components/commit/b4b7ba7aade8b912be3045a929ee4e69c4c456db)), closes [AB#65043](https://github.com/stampin-up/AB/issues/65043) [AB#65043](https://github.com/stampin-up/AB/issues/65043) [AB#65043](https://github.com/stampin-up/AB/issues/65043) [AB#65043](https://github.com/stampin-up/AB/issues/65043) [AB#65043](https://github.com/stampin-up/AB/issues/65043)
+
 ### [1.23.11](https://github.com/stampin-up/vue-components/compare/v1.23.10...v1.23.11) (2026-10-19)
 
 
