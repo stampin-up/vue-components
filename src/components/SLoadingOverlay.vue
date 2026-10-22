@@ -46,6 +46,11 @@ const ensureRegion = (): HTMLElement => {
   // Inline, so it stays visually hidden whatever stylesheet the app loads.
   region.style.cssText = 'position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;'
   document.body.appendChild(region)
+  // A pending announcement would reach the new region before it has registered: restart the wait.
+  if (announceTimer) {
+    clearTimeout(announceTimer)
+    announceAfterThreshold()
+  }
   return region
 }
 

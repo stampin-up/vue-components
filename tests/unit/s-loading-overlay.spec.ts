@@ -203,6 +203,21 @@ describe('SLoadingOverlay', () => {
       expect(announced()).toBe('Loading')
     })
 
+    // Another overlay recreating the region during the wait must not let the pending
+    // announcement land on it early.
+    it('restarts the wait when another overlay recreates the region mid-wait', async () => {
+      mountOverlay({ propsData: { loading: true } })
+      jest.advanceTimersByTime(300)
+      announcer()!.remove()
+      mountOverlay({ propsData: { loading: true } })
+
+      jest.advanceTimersByTime(499)
+      expect(announced()).toBe('')
+
+      await waitPastThreshold()
+      expect(announced()).toBe('Loading')
+    })
+
     it('uses the label prop over the provided label', async () => {
       mountOverlay({
         propsData: { loading: true, label: 'Loading PayPal' },
