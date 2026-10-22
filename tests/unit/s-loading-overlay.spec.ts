@@ -4,6 +4,9 @@ import SLoadingOverlay from '~/components/SLoadingOverlay.vue'
 
 let localVue: typeof Vue
 
+// Mirrors ANNOUNCE_AFTER_MS in SLoadingOverlay.vue, which the .vue shim can't export to TypeScript.
+const ANNOUNCE_AFTER_MS = 500
+
 describe('SLoadingOverlay', () => {
   let component: Wrapper<SLoadingOverlay>
   const spinnerSize = '65'
@@ -81,7 +84,7 @@ describe('SLoadingOverlay', () => {
     }
 
     const waitPastThreshold = async () => {
-      jest.advanceTimersByTime(500)
+      jest.advanceTimersByTime(ANNOUNCE_AFTER_MS)
       await localVue.nextTick()
     }
 
@@ -101,7 +104,7 @@ describe('SLoadingOverlay', () => {
       expect(announcer()?.getAttribute('role')).toBe('status')
       expect(announcer()?.getAttribute('aria-live')).toBe('polite')
 
-      jest.advanceTimersByTime(499)
+      jest.advanceTimersByTime(ANNOUNCE_AFTER_MS - 1)
       expect(announced()).toBe('')
 
       await waitPastThreshold()
@@ -211,7 +214,7 @@ describe('SLoadingOverlay', () => {
       announcer()!.remove()
       mountOverlay({ propsData: { loading: true } })
 
-      jest.advanceTimersByTime(499)
+      jest.advanceTimersByTime(ANNOUNCE_AFTER_MS - 1)
       expect(announced()).toBe('')
 
       await waitPastThreshold()
