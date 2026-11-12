@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { shallowMount, createLocalVue } from '@vue/test-utils'
+import { mount, shallowMount, createLocalVue } from '@vue/test-utils'
 import { Vue } from 'vue/types/vue'
 import Vuetify from 'vuetify'
 import STooltip from '~/components/STooltip.vue'
@@ -227,5 +227,37 @@ describe('STooltip', () => {
       }
     } as HTMLElement
     expect(vm.getOffset(element)).toEqual({ left: 10, top: 120 })
+  })
+})
+
+describe('STooltip icon button name', () => {
+  const mountTooltip = (propsData = {}) => mount(STooltip, {
+    localVue: createLocalVue(),
+    vuetify,
+    propsData,
+    stubs: {
+      VTooltip: {
+        template: `
+        <div>
+            <slot name="activator" :on="{}" />
+            <slot />
+        </div>`
+      }
+    }
+  })
+
+  it('puts the ariaHelp name on the icon button only', () => {
+    const component = mountTooltip({ ariaHelp: 'Help with shipping' })
+    const icon = component.find('button.icon-btn .v-icon')
+
+    expect(component.find('button.icon-btn').attributes('aria-label')).toBe('Help with shipping')
+    // The icon stays decorative, so the name is announced once.
+    expect(icon.attributes('aria-hidden')).toBe('true')
+    expect(icon.attributes('aria-label')).toBeUndefined()
+    expect(component.find('button.link-btn').attributes('aria-label')).toBeUndefined()
+  })
+
+  it('falls back to the default name when ariaHelp is not passed', () => {
+    expect(mountTooltip().find('button.icon-btn').attributes('aria-label')).toBe('More Information')
   })
 })
