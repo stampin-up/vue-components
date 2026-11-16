@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.24.1](https://github.com/stampin-up/vue-components/compare/v1.24.0...v1.24.1) (2026-11-16)
+
+
+### Bug Fixes
+
+* **a11y:** move aria label to the button for it to be always announced ([#117](https://github.com/stampin-up/vue-components/issues/117)) ([fa49de4](https://github.com/stampin-up/vue-components/commit/fa49de4d1b57f8690f89ae4618601c430d16f2e8))
+
 ## [1.24.0](https://github.com/stampin-up/vue-components/compare/v1.23.11...v1.24.0) (2026-10-22)
 
 
