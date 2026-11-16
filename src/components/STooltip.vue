@@ -23,9 +23,10 @@
         :width="size"
         icon
         class="icon-btn"
+        :aria-label="ariaHelp"
         v-on="on"
       >
-        <VIcon :color="color" :size="size" :aria-label="ariaHelp">
+        <VIcon :color="color" :size="size">
           {{ icons.mdiHelpCircleOutline }}
         </VIcon>
       </SBtn>
